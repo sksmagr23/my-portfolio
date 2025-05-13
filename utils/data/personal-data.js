@@ -1,0 +1,15 @@
+export const personalData = {
+  name: "SAKSHAM AGRAWAL",
+  profile: '/profile.png',
+  designation: "Software Developer",
+  description: "Sophomore at IIT (BHU) Varanasi ,passionate about web development and modern programming. I aim to bridge the gap between academic learning and real-world application, leveraging strong problem-solving and communication skills. Skilled in various dev techs and modern frameworks, I enjoy creating dynamic, user-friendly web applications with a focus on detail. Always eager to learn and contribute to innovative projects, I am open to new opportunities to expand my technical expertise and deliver impactful solutions in the tech industry.",
+  email: 'sakshamag34@gmail.com',
+  phone: '+91 7317000031',
+  address: 'Varanasi, Uttar Pradesh, India',
+  github: 'https://github.com/sksmagr23',
+  instagram: 'https://www.instagram.com/saksham_verse_24',
+  linkedIn: 'https://linkedin.com/in/saksham-agrawal-a10387286',
+  twitter: 'https://x.com/Agr49081Saksham',
+  leetcode : 'https://leetcode.com/u/algofire24/',
+  resume: '/resume.pdf',
+}
