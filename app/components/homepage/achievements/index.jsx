@@ -1,3 +1,4 @@
+'use client';
 import { achievements } from "@/utils/data/achievements";
 import Image from "next/image";
 import { BsTrophy } from "react-icons/bs";
