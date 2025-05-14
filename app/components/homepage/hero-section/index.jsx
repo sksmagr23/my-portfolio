@@ -12,7 +12,7 @@ import { SiGmail } from "react-icons/si";
 
 function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-between py-8 lg:py-16 min-h-screen">
+    <section className="relative flex flex-col items-center justify-between py-8 lg:py-16 max-h-screen mb-28">
       <Image
         src="/hero.svg"
         alt="Hero"
@@ -22,7 +22,7 @@ function HeroSection() {
       />
 
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-10">
-        <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
+        <div className="order-1 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
           <h1 className="text-2xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.3rem] lg:leading-[3rem]">
             Hello, <br />
             This is {' '}
@@ -74,7 +74,7 @@ function HeroSection() {
             </Link>
           </div>
 
-          <div className="flex items-center gap-3 mb-16">
+          <div className="flex items-center gap-3 gap-y-6">
             <Link href="https://sksm.tech/" className="bg-gradient-to-r to-[#4db9f0] from-[#ffc300] p-[1.5px] rounded-full transition-all duration-300 hover:from-[#4db9f0] hover:to-[#ffc300]">
               <button className="px-2 text-xs md:px-6 py-3 md:py-4 bg-[#07113b] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-2 hover:gap-3">
                 <span>My Terminal</span>
@@ -90,7 +90,7 @@ function HeroSection() {
           </div>
 
         </div>
-        <div className="order-1 lg:order-2 from-[#040819] border-[#1c3aa5a0] relative rounded-lg border bg-gradient-to-r to-[#00054b] transition-all duration-200 shadow-xl shadow-sky-800/80 drop-shadow-xl">
+        <div className="order-2 lg:order-2 from-[#040819] border-[#1c3aa5a0] relative rounded-lg border bg-gradient-to-r to-[#00054b] transition-all duration-200 shadow-xl shadow-sky-800/80 drop-shadow-xl mx-4">
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent to-[#0056be] via-[#ffc300]"></div>
             <div className="h-[1px] w-full bg-gradient-to-r from-[#0056be] to-transparent"></div>

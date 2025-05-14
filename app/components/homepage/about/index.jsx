@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function AboutSection() {
   return (
-    <div id="about" className="max-h-screen py-6 lg:py-10 relative">
+    <div id="about" className="max-h-screen py-3 lg:py-6 relative">
       <Image
         src="/hero.svg"
         alt="Hero"
@@ -12,7 +12,7 @@ function AboutSection() {
         height={800}
         className="absolute -top-[100px] -z-10"
       />
-      <div className="max-w-7xl mx-auto px-4 py-4">
+      <div className="max-w-7xl mx-auto px-4 py-2">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center justify-center">
           <div className="order-2">
             <p className="font-medium mb-2 text-[#ffc300] text-xl uppercase p-2">

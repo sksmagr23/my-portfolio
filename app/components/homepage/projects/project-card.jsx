@@ -3,7 +3,7 @@ import * as React from 'react';
 function ProjectCard({ project }) {
 
   return (
-    <div className="from-[#040819] border-[#1c3aa5a0] to-[#00054b] relative rounded-lg border bg-gradient-to-r w-full shadow-xl shadow-sky-800/80 drop-shadow-md">
+    <div className="from-[#040819] border-[#1c3aa5a0] to-[#00054b] relative rounded-lg border bg-gradient-to-r w-full shadow-xl shadow-sky-800/80 drop-shadow-md mx-4">
       <div className="flex flex-row">
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent to-[#0056be] via-[#ffc300]"></div>
         <div className="h-[1px] w-full bg-gradient-to-r from-[#0056be] to-transparent"></div>
