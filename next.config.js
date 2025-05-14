@@ -21,6 +21,16 @@ module.exports = {
         hostname: 'media2.dev.to',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'github-readme-stats.vercel.app',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'github-readme-streak-stats.herokuapp.com',
+        pathname: '**',
+      },
     ],
   },
 }

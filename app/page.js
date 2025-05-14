@@ -8,6 +8,7 @@ const HeroSection = dynamic(() => import("./components/homepage/hero-section"), 
 const Projects = dynamic(() => import("./components/homepage/projects"), { ssr: false });
 const Skills = dynamic(() => import("./components/homepage/skills"), { ssr: false });
 const Achievement = dynamic(() => import("./components/homepage/achievements"), { ssr: false });
+const GitHubStats = dynamic(() => import("./components/homepage/github"), { ssr: false });
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Achievement />
       <Education />
       <Projects />
+      <GitHubStats />
     </div>
   )
 };

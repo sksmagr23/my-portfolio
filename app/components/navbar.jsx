@@ -11,7 +11,8 @@ function Navbar() {
     { href: "/#skills", label: "Skills" },
     { href: "/#education", label: "Education" },
     { href: "/#projects", label: "Projects" },
-    { href: "/#achievement", label: "Achievements"}
+    { href: "/#achievement", label: "Achievements"},
+    { href: "/#github", label: "Contrib Stats" }
   ];
 
   return (

@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 
 function Skills() {
   return (
-    <div id="skills" className="relative z-50 border-t my-14 lg:my-20 border-[#1a1abb]">
+    <div id="skills" className="relative z-50 border-t my-14 lg:my-20 border-[#1a1abb] mt-48">
       {/* <Image
         src="/hero.svg"
         alt="Hero"
