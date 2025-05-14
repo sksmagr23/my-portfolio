@@ -23,7 +23,7 @@ function AboutSection() {
             </p>
           </div>
           <div className="order-1 lg:order-2 flex justify-center">
-            <div className="overflow-hidden shadow-xl shadow-[#374a78]">
+            <div className="overflow-hidden shadow-xl shadow-[#374a78] mt-40 md:mt-0">
               <Image
                 src={personalData.profile}
                 width={300}
