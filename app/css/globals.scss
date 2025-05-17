@@ -7,7 +7,7 @@
 }
 
 :root {
-  --foreground-rgb: rgb(163, 173, 204);
+  --foreground-rgb: rgb(206, 218, 255);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,7 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to right, rgba(0, 15, 31, 0.95), rgba(0, 5, 16, 0.95)), url(https://static.vecteezy.com/system/resources/previews/000/139/741/large_2x/blue-grunge-free-vector-background.jpg);
+  background: linear-gradient(to right, rgba(0, 12, 44, 0.75), rgba(0, 5, 42, 0.75)), url(/blue.png) no-repeat fixed;
   background-size: cover;
 }
 

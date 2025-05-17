@@ -1,6 +1,5 @@
 'use client';
 import dynamic from "next/dynamic";
-
 const AboutSection = dynamic(() => import("./components/homepage/about"), { ssr: false });
 const Education = dynamic(() => import("./components/homepage/education"), { ssr: false });
 const Experience = dynamic(() => import("./components/homepage/experience"), { ssr: false });

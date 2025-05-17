@@ -22,11 +22,11 @@ function Navbar() {
           <div className="w-full max-w-3xl relative">
             {/* Hamburger Button */}
             <button
-              className="md:hidden absolute right-1.5 top-3 -translate-y-1/2 text-white my-4 z-50"
+              className="md:hidden absolute right-1.5 top-3 -translate-y-1/2 text-[#fbd967] my-4 z-50"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg
-                className="w-8 h-8"
+                className="w-7 h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -50,12 +50,12 @@ function Navbar() {
             </button>
 
             {/* Desktop Menu */}
-            <ul className="hidden md:flex flex-wrap justify-center gap-1.5 rounded-full bg-[#040521]/40 px-3 py-1.5 backdrop-blur-md ring-2 ring-blue-200/10">
+            <ul className="hidden md:flex flex-wrap justify-center gap-1.5 rounded-full bg-[#040521]/40 px-3 py-1.5 backdrop-blur-md ring-2 ring-blue-300/30">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="relative block px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-[#ffd60a] rounded-full hover:bg-white/5"
+                    className="relative block px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-cyan-300 rounded-full hover:bg-white/5"
                   >
                     {link.label}
                   </Link>
@@ -70,7 +70,7 @@ function Navbar() {
                   <li key={index}>
                     <Link
                       href={link.href}
-                      className="block px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-[#ffd60a] rounded-full hover:bg-white/5"
+                      className="block px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-cyan-300 rounded-full hover:bg-white/5"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {link.label}

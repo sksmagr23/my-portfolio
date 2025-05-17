@@ -6,14 +6,7 @@ import Marquee from "react-fast-marquee";
 
 function Skills() {
   return (
-    <div id="skills" className="relative z-50 border-t my-14 lg:my-20 border-[#1a1abb] mt-48">
-      {/* <Image
-        src="/hero.svg"
-        alt="Hero"
-        width={1000}
-        height={16}
-        className="absolute top-0 -z-10"
-      /> */}
+    <div id="skills" className="relative z-50 border-t my-8 lg:my-20 border-[#1a1abb] mt-80 sm:mt-32">
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
 
       <div className="flex justify-center -translate-y-[1px]">

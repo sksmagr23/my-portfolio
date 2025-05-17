@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import GitHubCalendar from "react-github-calendar";
 
 function GitHubStats() {
@@ -20,14 +19,6 @@ function GitHubStats() {
 
     return (
         <div id="github" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-            <Image
-                src="/section.svg"
-                alt="Hero"
-                width={1572}
-                height={895}
-                className="absolute top-0 -z-10"
-            />
-
             <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
 
             <div className="flex justify-center -translate-y-[1px]">

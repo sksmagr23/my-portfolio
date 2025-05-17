@@ -7,14 +7,6 @@ import GlowCard from "../../helper/glow-card";
 function Achievement() {
     return (
         <div id="achievement" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-            <Image
-                src="/section.svg"
-                alt="Hero"
-                width={1572}
-                height={895}
-                className="absolute top-0 -z-10"
-            />
-
             <div className="flex justify-center my-5 lg:py-8">
                 <div className="flex  items-center">
                     <span className="w-24 h-[2px] bg-[#004e89]"></span>
