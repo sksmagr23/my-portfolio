@@ -12,6 +12,8 @@
   "dependencies": {
     "@emailjs/browser": "^4.3.1",
     "@next/third-parties": "15.1.1",
+    "@react-three/drei": "^10.0.7",
+    "@react-three/fiber": "^9.1.2",
     "axios": "^1.6.8",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.510.0",
@@ -25,7 +27,8 @@
     "react-icons": "^4.11.0",
     "react-toastify": "^10.0.4",
     "sharp": "^0.33.5",
-    "three": "^0.176.0"
+    "three": "^0.176.0",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "autoprefixer": "latest",

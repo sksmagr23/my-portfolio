@@ -1,4 +1,5 @@
 'use client';
+import React, { useEffect, useRef } from "react";
 import { personalData } from "@/utils/data/personal-data";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,17 +10,41 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaTerminal } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { LucideMail } from "lucide-react";
+import Typed from "typed.js";
 
 function HeroSection() {
+  const role = `${personalData.designation}`;
+  const textRef = useRef(null);
+  
+  useEffect(() => {
+    const toRotate = [role];
+    const options = {
+      strings: toRotate,
+      typeSpeed: 75,
+      backSpeed: 75,
+      startDelay: 1000, 
+      backDelay: 5000, 
+      loop: true,
+      showCursor: false
+    };
+
+    const typed = new Typed(textRef.current, options);
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
-    <section className="relative flex flex-col items-center justify-between py-8 mt-5 lg:py-12 max-h-screen mb-20">
+    <section className="relative flex flex-col items-center justify-between py-8 mt-5 lg:py-12 max-h-screen mb-20 " priority="true">
       <div className="grid grid-cols-1 items-start md:grid-cols-2 md:gap-12 gap-y-2">
         <div className="order-1 lg:order-1 flex flex-col items-start justify-center p-2 pb-16 md:pb-10 lg:pt-8">
           <h1 className="text-2xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.3rem] lg:leading-[3rem]">
             Hello, <br />
             This is {' '}
             <span className=" text-[#ffc300]">{personalData.name}</span><br />
-            <span className=" text-[#4db9f0]">{personalData.designation}</span>
+            {"{ "}
+            <span className=" text-[#4db9f0]" ref={textRef}></span>
+            {" }"}
           </h1>
           <p className="text-sm md:text-xl flex items-center gap-3 mt-6 px-1">
             <LucideMail
