@@ -10,7 +10,7 @@ function page() {
         role="button" 
         href="/"
       >
-        Back to Home
+        Back
       </Link>
     </div>
   );

@@ -23,13 +23,6 @@ function Achievement() {
                         achievements.map(ac => (
                             <GlowCard key={ac.id} identifier={`achievement-${ac.id}`}>
                                 <div className="p-3 relative">
-                                    <Image
-                                        src="/blur-23.svg"
-                                        alt="Hero"
-                                        width={1080}
-                                        height={200}
-                                        className="absolute bottom-0 opacity-80"
-                                    />
                                     <div className="flex items-center gap-x-8 px-3 py-5">
                                         <div className="text-gray-300  transition-all duration-300 hover:scale-125">
                                             <BsTrophy size={36} />

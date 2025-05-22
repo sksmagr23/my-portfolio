@@ -53,7 +53,7 @@ function Skills() {
                       alt={skill}
                       width={40}
                       height={40}
-                      className="h-full w-auto rounded-lg relative z-10 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+                      className="h-full w-auto rounded-lg relative z-10 group-hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]"
                     />
                     <div className="absolute inset-0 group-hover:bg-blue-500/20 rounded-lg blur-md transition-all duration-500"></div>
                   </div>

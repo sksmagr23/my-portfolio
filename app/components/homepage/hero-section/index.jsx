@@ -92,7 +92,7 @@ function HeroSection() {
           </div>
 
           <div className="flex items-center gap-3 gap-y-6">
-            <Link href="https://sksm.tech/" className="bg-gradient-to-r to-[#4db9f0] from-[#ffc300] p-[1.5px] rounded-full transition-all duration-300 hover:from-[#4db9f0] hover:to-[#ffc300]">
+            <Link href="https://saksham-agr-portfolio.vercel.app" target="_blank" className="bg-gradient-to-r to-[#4db9f0] from-[#ffc300] p-[1.5px] rounded-full transition-all duration-300 hover:from-[#4db9f0] hover:to-[#ffc300]">
               <button className="px-2 text-xs md:px-6 py-3 md:py-4 bg-[#07113b] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-2 hover:gap-3">
                 <span>My Terminal</span>
                 <FaTerminal size={16} />
