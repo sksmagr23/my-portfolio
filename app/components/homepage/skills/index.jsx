@@ -6,29 +6,29 @@ import Marquee from "react-fast-marquee";
 
 function Skills() {
   return (
-    <div id="skills" className="relative z-50 border-t my-8 lg:my-20 border-[#1a1abb] mt-80 sm:mt-32">
-      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
+    <div id="skills" className="relative z-50 border-t my-8 lg:my-16 border-[#1a1abb] py-10">
+      <div className="w-[150px] h-[150px] bg-indigo-500 rounded-full absolute top-10 left-[30%] filter blur-[100px] opacity-10"></div>
+      <div className="w-[120px] h-[120px] bg-amber-400 rounded-full absolute top-20 right-[30%] filter blur-[80px] opacity-10"></div>
 
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#2246c7] to-transparent  w-full" />
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#6b9dd1] to-transparent w-full" />
         </div>
       </div>
 
-      <div className="flex justify-center my-5 lg:py-6">
-        <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#004e89]"></span>
-          <span className="bg-[#004e89] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Skills
-          </span>
-          <span className="w-24 h-[2px] bg-[#004e89]"></span>
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-8 mt-4">
+          <span className="text-gradient">TECHNICAL SKILLS</span>
+        </h2>
+        
       </div>
 
-      <div className="w-full my-6 sm:my-10 lg:my-10">
+      <div className="w-full my-6 sm:my-8 lg:my-8">
         <Marquee
-          gradient={false}
-          speed={60}
+          gradient={true}
+          gradientColor={[0, 10, 38]}
+          gradientWidth={50}
+          speed={40}
           pauseOnHover={true}
           pauseOnClick={true}
           delay={0}
@@ -37,27 +37,37 @@ function Skills() {
         >
           {skillsData.map((skill, id) => (
             <div
-              className="w-28 sm:w-32 lg:w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-1 sm:m-2 lg:m-4 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
+              className="w-28 sm:w-32 lg:w-36 min-w-fit h-fit flex flex-col items-center justify-center 
+                        transition-all duration-500 m-2 sm:m-3 lg:m-5 rounded-lg group relative
+                        hover:scale-[1.1] hover-lift cursor-pointer"
               key={id}
             >
-              <div className="h-full w-full rounded-lg border border-[#0f1565] bg-gradient-to-r to-[#00054b] from-[#060d29] shadow-none shadow-gray-50 group-hover:border-[#2c56ef] transition-all duration-500">
+              <div className="h-full w-full rounded-lg glass-panel border border-[#1a2370] 
+                           bg-gradient-to-b from-[#060d29]/80 to-[#00054b]/80 
+                           shadow-lg shadow-indigo-900/10 group-hover:border-[#6b9dd1] 
+                           transition-all duration-300">
+                
                 <div className="flex -translate-y-[1px] justify-center">
-                  <div className="w-3/4">
-                    <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#4b66c8] to-transparent" />
+                  <div className="w-4/5">
+                    <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#c8a951] to-transparent" />
                   </div>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-2 sm:gap-3 p-4 sm:p-6">
-                  <div className="h-10 sm:h-12 lg:h-14 relative">
+                
+                <div className="flex flex-col items-center justify-center gap-3 p-5 sm:p-6">
+                  <div className="relative h-12 sm:h-14 lg:h-16 w-12 sm:w-14 lg:w-16 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-amber-400/20 rounded-full 
+                                 blur-md opacity-0 group-hover:opacity-70 transition-opacity duration-700"></div>
                     <Image
                       src={skillsImage(skill)?.src}
                       alt={skill}
-                      width={40}
-                      height={40}
-                      className="h-full w-auto rounded-lg relative z-10 group-hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]"
+                      width={48}
+                      height={48}
+                      className="h-auto w-auto max-h-full max-w-full rounded-md relative z-10 
+                               transition-all duration-300 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 group-hover:bg-blue-500/20 rounded-lg blur-md transition-all duration-500"></div>
                   </div>
-                  <p className="text-white text-xs sm:text-sm lg:text-md font-medium mt-1 sm:mt-2">
+                  
+                  <p className="text-white text-xs sm:text-sm font-medium mt-2 text-center">
                     {skill}
                   </p>
                 </div>

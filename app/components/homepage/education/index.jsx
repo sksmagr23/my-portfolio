@@ -1,64 +1,92 @@
 'use client';
 import { educations } from "@/utils/data/educations";
-import Image from "next/image";
-import { FaUniversity } from "react-icons/fa";
+import { HiAcademicCap } from "react-icons/hi";
 import lottieFile from '../../../assets/lottie/study.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 
 function Education() {
   return (
-    <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-      <div className="flex justify-center -translate-y-[1px]">
+    <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#1a1abb]">
+      <div className="w-[180px] h-[180px] bg-indigo-500 rounded-full absolute top-20 left-[20%] filter blur-[120px] opacity-10"></div>
+      <div className="w-[140px] h-[140px] bg-amber-400 rounded-full absolute bottom-20 right-[30%] filter blur-[100px] opacity-10"></div>
+      
+      <div className="flex justify-center translate-y-[25px]">
         <div className="w-3/4">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#2246c7] to-transparent  w-full" />
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#6b9dd1] to-transparent w-full" />
         </div>
       </div>
 
-      <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#004e89]"></span>
-          <span className="bg-[#004e89] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Education
-          </span>
-          <span className="w-24 h-[2px] bg-[#004e89]"></span>
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center my-8">
+        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-4">
+          <span className="text-gradient">EDUCATION</span>
+        </h2>
       </div>
 
-      <div className="py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="hidden justify-center items-start lg:flex">
-            <div className="w-3/4 h-3/4">
+      <div className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="hidden justify-center items-start lg:flex order-2 lg:order-1">
+            <div className="w-3/4 h-3/4 rounded-xl p-6">
               <AnimationLottie animationPath={lottieFile} />
             </div>
           </div>
 
-          <div>
+          <div className="order-1 lg:order-2">
             <div className="flex flex-col gap-6">
-              {
-                educations.map(education => (
-                  <GlowCard key={education.id} identifier={`education-${education.id}`}>
-                    <div className="p-3 relative text-white">
-                      <div className="flex justify-center">
-                        <p className="text-xs sm:text-sm text-[#ffc300]">
+              {educations.map(education => (
+                <GlowCard key={education.id} identifier={`education-${education.id}`}>
+                  <div className="p-5 sm:p-6 relative glass-panel rounded-xl">
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center gap-2">
+                        <p className="text-xs sm:text-sm text-[#c8a951] font-medium">
                           {education.duration}
                         </p>
                       </div>
-                      <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-[#ffc300]  transition-all duration-300 hover:scale-125">
-                          <FaUniversity size={36} />
+                      {education.grade && (
+                        <div className="bg-slate-800/50 px-3 py-1 rounded-full">
+                          <span className="text-xs text-white">{education.grade}</span>
                         </div>
-                        <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                            {education.title}
+                      )}
+                    </div>
+                    
+                    <div className="flex items-start gap-x-6">
+                      <div className="text-[#6b9dd1] transition-all duration-300 hover:scale-110 bg-slate-900/60 p-3 rounded-full">
+                        <HiAcademicCap size={36} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-base sm:text-xl mb-2 font-medium text-white">
+                          {education.title}
+                        </h3>
+                        <p className="text-sm sm:text-base text-[#6b9dd1] mb-3">
+                          {education.institution}
+                        </p>
+                        
+                        {education.description && (
+                          <p className="text-sm text-gray-300 mt-2 bg-slate-900/30 p-3 rounded-lg border border-slate-800/80">
+                            {education.description}
                           </p>
-                          <p className="text-sm sm:text-base text-[#74b6fc]">{education.institution}</p>
-                        </div>
+                        )}
+                        
+                        {education.courses && (
+                          <div className="mt-3">
+                            <h4 className="text-xs font-medium text-gray-400 mb-2">KEY COURSES</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {education.courses.map((course, idx) => (
+                                <span 
+                                  key={idx} 
+                                  className="text-[10px] sm:text-xs bg-slate-800/80 text-[#c8a951] px-2 py-1 rounded-full"
+                                >
+                                  {course}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
-                  </GlowCard>
-                ))
-              }
+                  </div>
+                </GlowCard>
+              ))}
             </div>
           </div>
         </div>

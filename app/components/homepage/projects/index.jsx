@@ -5,18 +5,23 @@ import ProjectCard from './project-card';
 const Projects = () => {
 
   return (
-    <div id='projects' className="relative z-50  my-12 lg:my-24">
-      <div className="sticky top-10">
-        <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl  opacity-30"></div>
-        <div className="flex items-center justify-start relative">
-          <span className="bg-[#004e89] absolute left-0  w-fit text-white px-5 py-3 text-xl rounded-md">
-            PROJECTS
-          </span>
-          <span className="w-full h-[2px] bg-[#004e89]"></span>
+    <div id='projects' className="relative z-50 border-t my-12 lg:my-20 border-[#1a1abb]">
+      <div className="w-[180px] h-[180px] bg-indigo-500 rounded-full absolute top-20 left-[20%] filter blur-[120px] opacity-10"></div>
+      <div className="w-[140px] h-[140px] bg-amber-400 rounded-full absolute bottom-20 right-[30%] filter blur-[100px] opacity-10"></div>
+      
+      <div className="flex justify-center translate-y-[25px]">
+        <div className="w-3/4">
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#6b9dd1] to-transparent w-full" />
         </div>
       </div>
 
-      <div className="pt-24">
+      <div className="sticky top-0 pt-6 pb-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-4">
+          <span className="text-gradient">PROJECTS</span>
+        </h2>
+      </div>
+
+      <div className="pt-4">
         <div className="flex flex-col gap-6">
           {projectsData.slice(0, 5).map((project, index) => (
             <div

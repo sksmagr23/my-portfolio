@@ -4,121 +4,131 @@ import Image from "next/image";
 
 function AboutSection() {
   return (
-    <div id="about" className="max-h-screen py-3 lg:py-6 relative">
-      <div className="max-w-7xl mx-2 md:mx-auto px-4 py-2">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center justify-center">
-          <div className="order-1 mt-20">
-            <p className="font-bold mb-2 text-[#ffc300] text-xl uppercase p-2">
-              My Info.
-            </p>
-            <p className="text-gray-200 text-sm lg:text-lg p-2 rounded-lg shadow-lg">
-              {personalData.description}
-            </p>
-          </div>
-          <div className="order-2">
-            <div className="from-[#040819] border-[#1c3aa5a0] relative rounded-lg border bg-gradient-to-r to-[#00054b] transition-all duration-200 shadow-xl shadow-sky-800/80 drop-shadow-xl">
-
-          <div className="flex flex-row">
-            <div className="h-[1px] w-full bg-gradient-to-r from-transparent to-[#0056be] via-[#ffc300]"></div>
-            <div className="h-[1px] w-full bg-gradient-to-r from-[#0056be] to-transparent"></div>
-          </div>
-          <div className="px-2 lg:px-4 py-4">
-            <div className="flex flex-row space-x-2">
-              <div className="h-3 w-3 rounded-full bg-red-600"></div>
-              <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-              <div className="h-3 w-3 rounded-full bg-green-600"></div>
+    <div id="about" className="m-h-screen border-t border-[#1a1abb] py-10 lg:py-14 relative">
+      <div className="flex justify-center -translate-y-[2px]">
+        <div className="w-3/4">
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-[#6b9dd1] to-transparent w-full" />
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-10">
+          <span className="text-gradient">ABOUT</span>
+        </h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="order-2 lg:order-1">
+            <div className="glass-panel rounded-xl p-6 shadow-lg hover-lift">
+              <h3 className="font-bold mb-4 text-[#c8a951] text-xl">
+                My Info.
+              </h3>
+              <p className="text-gray-200 text-base leading-relaxed">
+                {personalData.description}
+              </p>
+              
+              
             </div>
           </div>
-          <div className="border-t-[2px] border-blue-800 px-4 lg:px-8 py-4 lg:py-8">
-            <code className="text-xs md:text-sm lg:text-base">
-              <div className="blink">
-                <span className="mr-2 text-orange-400">const</span>
-                <span className="mr-2 text-white">coder</span>
-                <span className="mr-2 text-orange-400">=</span>
-                <span className="text-yellow-100">{'{'}</span>
+          
+          <div className="order-1 lg:order-2">
+            <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300 shadow-xl shadow-sky-800/20">
+              <div className="from-[#040819] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-r to-[#00054b] transition-all duration-200">
+                <div className="flex flex-row">
+                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#6b9dd1] to-[#c8a951]"></div>
+                </div>
+                
+                <div className="px-3 lg:px-4 py-3">
+                  <div className="flex flex-row space-x-2 items-center">
+                    <div className="h-3 w-3 rounded-full bg-red-500"></div>
+                    <div className="h-3 w-3 rounded-full bg-amber-400"></div>
+                    <div className="h-3 w-3 rounded-full bg-green-500"></div>
+                    <span className="text-xs text-gray-400 ml-2">developer.js</span>
+                  </div>
+                </div>
+                
+                <div className="border-t border-blue-900/50 px-4 lg:px-6 py-5 lg:py-6">
+                  <code className="text-xs md:text-sm lg:text-base font-mono">
+                    <div className="mb-1">
+                      <span className="mr-2 text-indigo-300">const</span>
+                      <span className="mr-2 text-white">developer</span>
+                      <span className="mr-2 text-indigo-300">=</span>
+                      <span className="text-gray-300">{'{'}</span>
+                    </div>
+                    <div>
+                      <span className="ml-4 lg:ml-6 mr-2 text-[#6b9dd1]">name:</span>
+                      <span className="text-[#c8a951]">{`'`}</span>
+                      <span className="text-cyan-300">Saksham Agrawal</span>
+                      <span className="text-[#c8a951]">{`',`}</span>
+                    </div>
+                    <div>
+                      <span className="ml-4 lg:ml-6 mr-2 text-[#6b9dd1]">role:</span>
+                      <span className="text-[#c8a951]">{`'`}</span>
+                      <span className="text-cyan-300">Full Stack Software Developer</span>
+                      <span className="text-[#c8a951]">{`',`}</span>
+                    </div>
+                    <div>
+                      <span className="ml-4 lg:ml-6 mr-2 text-[#6b9dd1]">contact:</span>
+                      <span className="text-[#c8a951]">{`'`}</span>
+                      <span className="text-cyan-300">sakshamag34@gmail.com</span>
+                      <span className="text-[#c8a951]">{`',`}</span>
+                    </div>
+                    <div>
+                      <span className="ml-4 lg:ml-6 mr-2 text-[#6b9dd1]">location:</span>
+                      <span className="text-[#c8a951]">{`'`}</span>
+                      <span className="text-cyan-300">Varanasi, U.P. India</span>
+                      <span className="text-[#c8a951]">{`',`}</span>
+                    </div>
+                    <div className="ml-4 lg:ml-6 mr-2">
+                      <span className="text-[#6b9dd1]">Major skills:</span>
+                      <span className="text-gray-400">{` [`}</span>
+                      <span className="text-[#c8a951]">'JS'</span>
+                      <span className="text-gray-400">, </span>
+                      <span className="text-[#c8a951]">'React'</span>
+                      <span className="text-gray-400">, </span>
+                      <span className="text-[#c8a951]">'NextJs'</span>
+                      <span className="text-gray-400">, </span>
+                      <span className="text-[#c8a951]">'NodeJs'</span>
+                      <span className="text-gray-400">,</span>
+                    
+                      <span className="text-[#c8a951]">'Express'</span>
+                      <span className="text-gray-400">, </span>
+                      <span className="text-[#c8a951]">'Tailwind'</span>
+                      <span className="text-gray-400">, </span>
+                      <span className="text-[#c8a951]">'Golang'</span>
+                      <span className="text-gray-400">, </span>
+                      <span className="text-[#c8a951]">'MongoDB'</span>
+                      <span className="text-gray-400">, </span>
+                      <span className="text-[#c8a951]">'Vercel'</span>
+                      <span className="text-gray-400">{`],`}</span>
+                    </div>
+                    <div>
+                      <span className="ml-4 lg:ml-6 mr-2 text-[#6b9dd1]">openToWork:</span>
+                      <span className="text-green-400">true</span>
+                      <span className="text-gray-400">,</span>
+                    </div>
+                    <div>
+                      <span className="ml-4 lg:ml-6 mr-2 text-[#6b9dd1]">quickLearner:</span>
+                      <span className="text-green-400">true</span>
+                      <span className="text-gray-400">,</span>
+                    </div>
+                    <div>
+                      <span className="ml-4 lg:ml-6 mr-2 text-[#6b9dd1]">caffeineLevel:</span>
+                      <span className="text-[#c8a951]">{`'`}</span>
+                      <span className="text-cyan-300">High ☕</span>
+                      <span className="text-[#c8a951]">{`',`}</span>
+                    </div>
+                    <div>
+                      <span className="ml-4 lg:ml-6 mr-2 text-[#6b9dd1]">routine:</span>
+                      <span className="text-[#c8a951]">{`'`}</span>
+                      <span className="text-cyan-300">Eat. Sleep. Code. Repeat.</span>
+                      <span className="text-[#c8a951]">{`',`}</span>
+                    </div>
+                    <div><span className="text-gray-300">{`};`}</span></div>
+                  </code>
+                </div>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
-                <span className="text-blue-300">{`'`}</span>
-                <span className="text-cyan-300">Saksham Agrawal</span>
-                <span className="text-blue-300">{`',`}</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">role:</span>
-                <span className="text-blue-300">{`'`}</span>
-                <span className="text-cyan-300">Full Stack Software Developer</span>
-                <span className="text-blue-300">{`',`}</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">contact:</span>
-                <span className="text-blue-300">{`'`}</span>
-                <span className="text-cyan-300">sakshamag34@gmail.com</span>
-                <span className="text-blue-300">{`',`}</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">location:</span>
-                <span className="text-blue-300">{`'`}</span>
-                <span className="text-cyan-300">Varanasi, U.P. India</span>
-                <span className="text-blue-300">{`',`}</span>
-              </div>
-              <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-white">Major skills:</span>
-                <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">JS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">React</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NextJs</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NodeJs</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Tailwind CSS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Golang</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MongoDB</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Vercel</span>
-                <span className="text-gray-400">{"'],"}</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">openToWork:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">quickLearner:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">caffeineLevel:</span>
-                <span className="text-blue-300">{`'`}</span>
-                <span className="text-cyan-300">High ☕</span>
-                <span className="text-blue-300">{`',`}</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">routine:</span>
-                <span className="text-blue-300">{`'`}</span>
-                <span className="text-cyan-300">Eat. Sleep. Code. Repeat.</span>
-                <span className="text-blue-300">{`',`}</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">chillMode:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
-              </div>
-              <div><span className="text-yellow-100">{`};`}</span></div>
-            </code>
-          </div>
-        </div>
+              
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500/20 to-amber-500/20 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-1000 -z-10"></div>
+            </div>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { IoStar } from "react-icons/io5";
 
 function Footer() {
   return (
-    <div className="relative border-t bg-[#071022] border-[#4f5a99] text-white">
+    <div className="relative border-t bg-[#07173c] border-[#4f5a99] text-white">
       <div className="mx-auto px-4 sm:px-8 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] py-4 lg:py-6">
         <div className="flex justify-center -z-40">
           <div className="absolute top-0 h-[1px] w-1/2  bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>

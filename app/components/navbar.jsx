@@ -50,7 +50,7 @@ function Navbar() {
             </button>
 
             {/* Desktop Menu */}
-            <ul className="hidden md:flex flex-wrap justify-center gap-1.5 rounded-full bg-[#040521]/40 px-3 py-1.5 backdrop-blur-md ring-2 ring-blue-300/30">
+            <ul className="hidden md:flex flex-wrap justify-center gap-1.5 rounded-full glass-panel px-3 py-1 backdrop-blur-md ring-2 ring-blue-600/30">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link
@@ -65,7 +65,7 @@ function Navbar() {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-              <ul className="md:hidden absolute top-full right-0 mt-2 flex flex-col gap-1 rounded-2xl bg-[#040521]/90 py-2 backdrop-blur-md ring-2 ring-blue-200/10 z-40 px-4">
+              <ul className="md:hidden absolute top-full right-0 mt-2 flex flex-col gap-1 rounded-2xl glass-panel py-2 backdrop-blur-md ring-2 ring-blue-200/10 z-40 px-4">
                 {navLinks.map((link, index) => (
                   <li key={index}>
                     <Link
