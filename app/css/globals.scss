@@ -9,9 +9,9 @@
 
 :root {
   --foreground-rgb: rgb(206, 218, 255);
-  --primary-color: #6b9dd1;
-  --secondary-color: #c8a951;
-  --bg-dark: rgba(0, 10, 38, 0.9);
+  --primary-color: #59a0f8;
+  --secondary-color: #f4c433;
+  --bg-dark: rgba(5, 16, 48, 0.9);
   --bg-light: rgba(15, 25, 60, 0.8);
   --text-highlight: rgba(107, 157, 209, 0.9);
 }
@@ -31,10 +31,10 @@ body {
 }
 
 .glass-panel {
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(12, 24, 50, 0.658);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(0, 29, 124, 0.899);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .transition-standard {

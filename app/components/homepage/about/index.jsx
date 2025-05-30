@@ -10,30 +10,53 @@ function AboutSection() {
           <div className="h-[1px] bg-gradient-to-r from-transparent via-[#6b9dd1] to-transparent w-full" />
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
         <h2 className="text-2xl lg:text-3xl font-bold text-center mb-10">
           <span className="text-gradient">ABOUT</span>
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="glass-panel rounded-xl p-6 shadow-lg hover-lift">
-              <h3 className="font-bold mb-4 text-[#c8a951] text-xl">
-                My Info.
-              </h3>
-              <p className="text-gray-200 text-base leading-relaxed">
-                {personalData.description}
-              </p>
+          <div className="order-1 lg:order-1">
+            <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300 shadow-2xl shadow-sky-800/20">
+              <div className="from-[#0a1128] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-r to-[#00054b] transition-all duration-200">
+                <div className="flex flex-row">
+                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#6b9dd1] to-transparent"></div>
+                </div>
+                
+                <div className="px-3 lg:px-4 py-3">
+                  <div className="flex flex-row space-x-2 items-center">
+                    <div className="h-3 w-3 rounded-full bg-pink-400"></div>
+                    <div className="h-3 w-3 rounded-full bg-emerald-400"></div>
+                    <div className="h-3 w-3 rounded-full bg-blue-400"></div>
+                    <span className="text-xs text-gray-400 ml-2">about-me.md</span>
+                  </div>
+                </div>
+                
+                <div className="border-t border-blue-900/50 px-3 lg:px-5 py-5 lg:py-6">
+                  <code className="text-xs md:text-sm block">
+                    
+                    <div className="mb-3 text-gray-200 leading-relaxed">
+                      {personalData.description.split('\n').map((paragraph, index) => (
+                        <p key={index} className="mb-2">
+                          <span className="text-green-400 text-md italic">{'>'} </span>
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                    
+                  </code>
+                </div>
+              </div>
               
-              
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-1000 -z-10"></div>
             </div>
           </div>
           
-          <div className="order-1 lg:order-2">
-            <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300 shadow-xl shadow-sky-800/20">
-              <div className="from-[#040819] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-r to-[#00054b] transition-all duration-200">
+          <div className="order-2 lg:order-2">
+            <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300 shadow-2xl shadow-sky-800/20">
+              <div className="from-[#0a1128] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-r to-[#00054b] transition-all duration-200">
                 <div className="flex flex-row">
-                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#6b9dd1] to-[#c8a951]"></div>
+                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#ffc423] to-transparent"></div>
                 </div>
                 
                 <div className="px-3 lg:px-4 py-3">

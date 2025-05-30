@@ -2,7 +2,7 @@ export const personalData = {
   name: "SAKSHAM AGRAWAL",
   profile: '/profile.png',
   designation: "Software Developer",
-  description: "Sophomore at IIT (BHU) Varanasi ,passionate about web development and modern programming. I aim to bridge the gap between academic learning and real-world application, leveraging strong problem-solving and communication skills. Skilled in various dev techs and modern frameworks, I enjoy creating dynamic, user-friendly web applications with a focus on detail. Always eager to learn and contribute to innovative projects, I am open to new opportunities to expand my technical expertise and deliver impactful solutions in the tech industry.",
+  description: "\"As a pre-final year student at IIT (BHU) Varanasi, I'm on a mission to transform ideas into elegant code. I believe in building bridges between academic theory and real-world impact. Every line of code I write is driven by curiosity and attention to detail. My toolkit spans from React and Node to Go and MongoDB, but my true strength lies in never stopping at 'good enough.' Whether I'm crafting responsive UIs or optimizing backend systems, I'm committed to creating solutions that matter. Always debugging, always learning, always ready for the next challenge.\"",
   email: 'sakshamag34@gmail.com',
   phone: '+91 7317000031',
   address: 'Varanasi, Uttar Pradesh, India',

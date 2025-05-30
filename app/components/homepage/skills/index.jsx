@@ -28,7 +28,7 @@ function Skills() {
           gradient={true}
           gradientColor={[0, 10, 38]}
           gradientWidth={50}
-          speed={40}
+          speed={50}
           pauseOnHover={true}
           pauseOnClick={true}
           delay={0}
@@ -45,7 +45,7 @@ function Skills() {
               <div className="h-full w-full rounded-lg glass-panel border border-[#1a2370] 
                            bg-gradient-to-b from-[#060d29]/80 to-[#00054b]/80 
                            shadow-lg shadow-indigo-900/10 group-hover:border-[#6b9dd1] 
-                           transition-all duration-300">
+                           transition-all duration-300 glass-panel">
                 
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-4/5">
@@ -55,7 +55,7 @@ function Skills() {
                 
                 <div className="flex flex-col items-center justify-center gap-3 p-5 sm:p-6">
                   <div className="relative h-12 sm:h-14 lg:h-16 w-12 sm:w-14 lg:w-16 flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-amber-400/20 rounded-full 
+                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-yellow-400/20 rounded-full 
                                  blur-md opacity-0 group-hover:opacity-70 transition-opacity duration-700"></div>
                     <Image
                       src={skillsImage(skill)?.src}

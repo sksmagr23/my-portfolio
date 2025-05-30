@@ -20,12 +20,12 @@ function GitHubStats() {
   const stats = [
     {
       id: 1,
-      url: `https://github-readme-stats.vercel.app/api?username=${username}&count_private=true&show_icons=true&theme=react&hide_border=true&rank_icon=github&text_bold=true&bg_color=45,001105,1a2370`,
+      url: `https://github-readme-stats.vercel.app/api?username=${username}&count_private=true&show_icons=true&theme=react&hide_border=true&rank_icon=github&text_bold=true&bg_color=45,0a1128,00054b`,
       alt: "GitHub Stats",
     },
     {
       id: 2,
-      url: `https://github-readme-streak-stats.herokuapp.com/?user=${username}&count_private=true&theme=react&hide_border=true&text_bold=true&background=45,001105,1a2370`,
+      url: `https://github-readme-streak-stats.herokuapp.com/?user=${username}&count_private=true&theme=react&hide_border=true&text_bold=true&background=45,0a1128,00054b`,
       alt: "GitHub Streak Stats",
     },
   ];
@@ -57,7 +57,7 @@ function GitHubStats() {
               <div className="rounded-lg glass-panel border border-[#1a2370] bg-gradient-to-r to-[#00054b]/90 from-[#060d29]/90 shadow-lg shadow-indigo-900/10">
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-4/5">
-                    <div className="h-[2px] bg-gradient-to-r from-transparent via-[#c8a951] to-transparent" />
+                    <div className="h-[2px] bg-gradient-to-r from-transparent via-yellow-400 to-transparent" />
                   </div>
                 </div>
                 <div className="relative">
@@ -74,14 +74,11 @@ function GitHubStats() {
         </div>
 
         <div className="mt-16 flex flex-col items-center">
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 text-white">
-            Contribution <span className="text-[#c8a951]">Calendar</span>
-          </h3>
 
           <div className="w-full max-w-6xl card-highlight rounded-lg glass-panel border border-[#1a2370] shadow-lg shadow-indigo-900/10">
             <div className="flex -translate-y-[1px] justify-center">
               <div className="w-4/5">
-                <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#6b9dd1] to-transparent" />
+                <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-yellow-400 to-transparent" />
               </div>
             </div>
 
