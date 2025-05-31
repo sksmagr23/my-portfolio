@@ -8,11 +8,11 @@
 }
 
 :root {
-  --foreground-rgb: rgb(206, 218, 255);
-  --primary-color: #59a0f8;
-  --secondary-color: #f4c433;
-  --bg-dark: rgba(5, 16, 48, 0.9);
-  --bg-light: rgba(15, 25, 60, 0.8);
+  --foreground-rgb: rgb(233, 233, 236);
+  --primary-color: #5aa4ff;
+  --secondary-color: #78ff09;
+  --bg-dark: rgba(1, 10, 32, 0.9);
+  --bg-light: rgba(13, 24, 64, 0.8);
   --text-highlight: rgba(107, 157, 209, 0.9);
 }
 
@@ -24,16 +24,16 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(90deg, var(--bg-dark), var(--bg-light)), url(/blue.png) no-repeat fixed;
+  background: linear-gradient(90deg, var(--bg-dark), var(--bg-light)), url(/bg.png) no-repeat fixed;
   background-size: cover;
   font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv03" on;
   text-rendering: optimizeLegibility;
 }
 
 .glass-panel {
-  background: rgba(12, 24, 50, 0.658);
+  background: #0a11288b;
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 29, 124, 0.899);
+  border: 1.5px solid rgba(0, 32, 136, 0.899);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
@@ -46,7 +46,7 @@ body {
 }
 
 .hover-lift:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
 }
 

@@ -20,12 +20,12 @@ function GitHubStats() {
   const stats = [
     {
       id: 1,
-      url: `https://github-readme-stats.vercel.app/api?username=${username}&count_private=true&show_icons=true&theme=react&hide_border=true&rank_icon=github&text_bold=true&bg_color=45,0a1128,00054b`,
+      url: `https://github-readme-stats.vercel.app/api?username=${username}&count_private=true&show_icons=true&theme=chartreuse-dark&hide_border=true&rank_icon=github&text_bold=true&bg_color=45,0a1128,00054b`,
       alt: "GitHub Stats",
     },
     {
       id: 2,
-      url: `https://github-readme-streak-stats.herokuapp.com/?user=${username}&count_private=true&theme=react&hide_border=true&text_bold=true&background=45,0a1128,00054b`,
+      url: `https://github-readme-streak-stats.herokuapp.com/?user=${username}&count_private=true&theme=chartreuse-dark&hide_border=true&text_bold=true&background=45,0a1128,00054b`,
       alt: "GitHub Streak Stats",
     },
   ];
@@ -36,7 +36,7 @@ function GitHubStats() {
       className="relative z-50 border-t my-12 lg:my-24 border-[#1a1abb]"
     >
       <div className="w-[160px] h-[160px] bg-indigo-500 rounded-full absolute top-20 left-[20%] filter blur-[120px] opacity-10"></div>
-      <div className="w-[140px] h-[140px] bg-amber-400 rounded-full absolute bottom-20 right-[20%] filter blur-[100px] opacity-10"></div>
+      <div className="w-[140px] h-[140px] bg-lime-400 rounded-full absolute bottom-20 right-[20%] filter blur-[100px] opacity-10"></div>
 
       <div className="flex justify-center translate-y-[25px]">
         <div className="w-3/4">
@@ -51,20 +51,20 @@ function GitHubStats() {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto px-2 md:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto px-2 md:px-4 h-auto">
           {stats.map((stat) => (
             <div key={stat.id} className="card-highlight hover-lift w-full">
-              <div className="rounded-lg glass-panel border border-[#1a2370] bg-gradient-to-r to-[#00054b]/90 from-[#060d29]/90 shadow-lg shadow-indigo-900/10">
+              <div className="border border-[#1a2370] shadow-lg shadow-indigo-900/10">
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-4/5">
-                    <div className="h-[2px] bg-gradient-to-r from-transparent via-yellow-400 to-transparent" />
+                    <div className="h-[2px] bg-gradient-to-r from-transparent via-lime-400 to-transparent" />
                   </div>
                 </div>
                 <div className="relative">
                   <img
                     src={stat.url}
                     alt={stat.alt}
-                    className="w-full rounded-lg relative z-10 transition-all duration-300"
+                    className="w-full relative z-10 transition-all duration-300"
                     loading="lazy"
                   />
                 </div>
@@ -75,10 +75,10 @@ function GitHubStats() {
 
         <div className="mt-16 flex flex-col items-center">
 
-          <div className="w-full max-w-6xl card-highlight rounded-lg glass-panel border border-[#1a2370] shadow-lg shadow-indigo-900/10">
-            <div className="flex -translate-y-[1px] justify-center">
+          <div className="w-full max-w-6xl card-highlight glass-panel border border-[#1a2370] shadow-lg shadow-indigo-900/10">
+            <div className="flex -translate-y-[0.5px] justify-center">
               <div className="w-4/5">
-                <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-yellow-400 to-transparent" />
+                <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-lime-400 to-transparent" />
               </div>
             </div>
 

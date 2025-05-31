@@ -12,7 +12,9 @@ const GitHubStats = dynamic(() => import("./components/homepage/github"), { ssr:
 export default function Home() {
   return (
     <div>
+      <section style={{ minHeight: '90vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <HeroSection />
+      </section>
       <AboutSection />
       <Skills />
       <Experience />

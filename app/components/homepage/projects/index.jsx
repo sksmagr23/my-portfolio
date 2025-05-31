@@ -1,5 +1,5 @@
 'use client';
-import { projectsData } from '@/utils/data/projects-data';
+import { projectsData } from '@/app/data/projects-data';
 import ProjectCard from './project-card';
 
 const Projects = () => {
@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div id='projects' className="relative z-50 border-t my-12 lg:my-20 border-[#1a1abb]">
       <div className="w-[180px] h-[180px] bg-indigo-500 rounded-full absolute top-20 left-[20%] filter blur-[120px] opacity-10"></div>
-      <div className="w-[140px] h-[140px] bg-amber-400 rounded-full absolute bottom-20 right-[30%] filter blur-[100px] opacity-10"></div>
+      <div className="w-[140px] h-[140px] bg-lime-400 rounded-full absolute bottom-20 right-[30%] filter blur-[100px] opacity-10"></div>
       
       <div className="flex justify-center translate-y-[25px]">
         <div className="w-3/4">
@@ -29,7 +29,7 @@ const Projects = () => {
               key={index}
               className="sticky-card w-full mx-auto max-w-2xl sticky"
             >
-              <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
+              <div className="box-border flex items-center justify-center shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
                 <ProjectCard project={project} />
               </div>
             </div>

@@ -20,9 +20,8 @@ function Navbar() {
       <div className="container mx-auto px-2">
         <div className="flex justify-center">
           <div className="w-full max-w-3xl relative">
-            {/* Hamburger Button */}
             <button
-              className="md:hidden absolute right-1.5 top-3 -translate-y-1/2 text-[#fbd967] my-4 z-50"
+              className="md:hidden absolute right-1.5 top-3 -translate-y-1/2 text-white my-4 z-50"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg
@@ -55,7 +54,7 @@ function Navbar() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="relative block px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-cyan-300 rounded-full hover:bg-white/5"
+                    className="relative block px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-lime-400 rounded-full hover:bg-white/5"
                   >
                     {link.label}
                   </Link>
@@ -63,14 +62,13 @@ function Navbar() {
               ))}
             </ul>
 
-            {/* Mobile Menu */}
             {isMenuOpen && (
               <ul className="md:hidden absolute top-full right-0 mt-2 flex flex-col gap-1 rounded-2xl glass-panel py-2 backdrop-blur-md ring-2 ring-blue-200/10 z-40 px-4">
                 {navLinks.map((link, index) => (
                   <li key={index}>
                     <Link
                       href={link.href}
-                      className="block px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-cyan-300 rounded-full hover:bg-white/5"
+                      className="block px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-lime-300 rounded-full hover:bg-white/5"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {link.label}

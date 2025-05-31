@@ -55,26 +55,42 @@ const ThreeJSBackground = () => {
         particles.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
         particles.setAttribute('opacity', new THREE.BufferAttribute(opacities, 1));
 
-        const canvas = document.createElement('canvas');
-        canvas.width = 128;
-        canvas.height = 128;
-        const context = canvas.getContext('2d');
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.fillStyle = '#ADD8E6';
-        context.font = 'bold 64px monospace';
-        context.textAlign = 'center';
-        context.textBaseline = 'middle';
-        context.fillText('</>', 64, 64);
+        // Define an array of code symbols
+        const codeSymbols = ['</>',  '{}', '()', '[]', '=>', '++'];
+        
+        const textures = [];
+        
+        for (let symbol of codeSymbols) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 128;
+            canvas.height = 128;
+            const context = canvas.getContext('2d');
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.fillStyle = '#ADD8E6';
+            context.font = 'bold 64px monospace';
+            context.textAlign = 'center';
+            context.textBaseline = 'middle';
+            context.fillText(symbol, 64, 64);
+            
+            textures.push(new THREE.CanvasTexture(canvas));
+        }
 
-        const texture = new THREE.CanvasTexture(canvas);
+        const textureIndices = new Float32Array(particleCount);
+        for (let i = 0; i < particleCount; i++) {
+            textureIndices[i] = Math.floor(Math.random() * textures.length);
+        }
+        particles.setAttribute('textureIndex', new THREE.BufferAttribute(textureIndices, 1));
 
         const vertexShader = `
       attribute float size;
       attribute float opacity;
+      attribute float textureIndex;
       varying float vOpacity;
+      varying float vTextureIndex;
       
       void main() {
         vOpacity = opacity;
+        vTextureIndex = textureIndex;
         vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
         gl_PointSize = size * (300.0 / -mvPosition.z);
         gl_Position = projectionMatrix * mvPosition;
@@ -82,11 +98,22 @@ const ThreeJSBackground = () => {
     `;
 
         const fragmentShader = `
-      uniform sampler2D pointTexture;
+      uniform sampler2D pointTextures[${codeSymbols.length}];
       varying float vOpacity;
+      varying float vTextureIndex;
       
       void main() {
-        vec4 textureColor = texture2D(pointTexture, gl_PointCoord);
+        // Default texture
+        vec4 textureColor = texture2D(pointTextures[0], gl_PointCoord);
+        
+        // Select the right texture based on the index
+        // We need to use if statements because GLSL doesn't support dynamic indexing
+        ${Array.from({ length: codeSymbols.length - 1 }, (_, i) => `
+        if(vTextureIndex > ${i}.5 && vTextureIndex < ${i + 1}.5) {
+          textureColor = texture2D(pointTextures[${i + 1}], gl_PointCoord);
+        }
+        `).join('')}
+        
         // Gradient color effect
         vec3 color = mix(
           vec3(0.68, 0.85, 0.9),  // Light blue
@@ -97,10 +124,12 @@ const ThreeJSBackground = () => {
       }
     `;
 
+        const uniformsObject = {
+            pointTextures: { value: textures }
+        };
+
         const material = new THREE.ShaderMaterial({
-            uniforms: {
-                pointTexture: { value: texture }
-            },
+            uniforms: uniformsObject,
             vertexShader,
             fragmentShader,
             blending: THREE.AdditiveBlending,
@@ -169,7 +198,7 @@ const ThreeJSBackground = () => {
             }
             renderer.dispose();
             material.dispose();
-            texture.dispose();
+            textures.forEach(texture => texture.dispose());
             particles.dispose();
         };
     }, []);

@@ -1,5 +1,5 @@
 'use client';
-import { personalData } from "@/utils/data/personal-data";
+import { personalData } from "@/app/data/personal-data";
 import Image from "next/image";
 
 function AboutSection() {
@@ -20,7 +20,7 @@ function AboutSection() {
             <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300 shadow-2xl shadow-sky-800/20">
               <div className="from-[#0a1128] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-r to-[#00054b] transition-all duration-200">
                 <div className="flex flex-row">
-                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#6b9dd1] to-transparent"></div>
+                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#6dd51ee1] to-transparent"></div>
                 </div>
                 
                 <div className="px-3 lg:px-4 py-3">
@@ -56,7 +56,7 @@ function AboutSection() {
             <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300 shadow-2xl shadow-sky-800/20">
               <div className="from-[#0a1128] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-r to-[#00054b] transition-all duration-200">
                 <div className="flex flex-row">
-                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#ffc423] to-transparent"></div>
+                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#6dd51ebd] to-transparent"></div>
                 </div>
                 
                 <div className="px-3 lg:px-4 py-3">
@@ -103,24 +103,24 @@ function AboutSection() {
                     <div className="ml-4 lg:ml-6 mr-2">
                       <span className="text-[#6b9dd1]">Major skills:</span>
                       <span className="text-gray-400">{` [`}</span>
-                      <span className="text-[#c8a951]">'JS'</span>
+                      <span className="text-[#6dd51e]">'JS'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#c8a951]">'React'</span>
+                      <span className="text-[#6dd51e]">'React'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#c8a951]">'NextJs'</span>
+                      <span className="text-[#6dd51e]">'NextJs'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#c8a951]">'NodeJs'</span>
+                      <span className="text-[#6dd51e]">'NodeJs'</span>
                       <span className="text-gray-400">,</span>
                     
-                      <span className="text-[#c8a951]">'Express'</span>
+                      <span className="text-[#6dd51e]">'Express'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#c8a951]">'Tailwind'</span>
+                      <span className="text-[#6dd51e]">'Tailwind'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#c8a951]">'Golang'</span>
+                      <span className="text-[#6dd51e]">'Golang'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#c8a951]">'MongoDB'</span>
+                      <span className="text-[#6dd51e]">'MongoDB'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#c8a951]">'Vercel'</span>
+                      <span className="text-[#6dd51e]">'Vercel'</span>
                       <span className="text-gray-400">{`],`}</span>
                     </div>
                     <div>

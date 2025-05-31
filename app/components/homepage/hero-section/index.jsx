@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from "react";
-import { personalData } from "@/utils/data/personal-data";
+import { personalData } from "@/app/data/personal-data";
 import Link from "next/link";
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
@@ -61,7 +61,7 @@ function HeroSection() {
           <div className="my-10 flex items-center gap-7 px-2">
             {[
               { icon: <BsGithub size={28} />, href: personalData.github, color: "text-slate-200" },
-              { icon: <FaLinkedin size={30} />, href: personalData.linkedIn, color: "text-cyan-400" },
+              { icon: <FaLinkedin size={30} />, href: personalData.linkedIn, color: "text-sky-400" },
               { icon: <FaInstagram size={30} />, href: personalData.instagram, color: "text-orange-400" },
               { icon: <SiLeetcode size={28} />, href: personalData.leetcode, color: "text-yellow-400" },
               { icon: <FaXTwitter size={28} />, href: personalData.twitter, color: "text-slate-200" }
@@ -78,11 +78,11 @@ function HeroSection() {
             ))}
           </div>
 
-          <div className="flex items-center gap-3 gap-y-4 mt-2">
+          <div className="flex items-center gap-4 gap-y-4 mt-2">
             <Link 
               href="https://saksham-agr-portfolio.vercel.app" 
               target="_blank" 
-              className="card-highlight group relative overflow-hidden rounded-full shadow-lg hover:shadow-cyan-500/30 transition-standard"
+              className="card-highlight group relative overflow-hidden rounded-full shadow-xl hover:shadow-cyan-500/30 transition-standard"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-90"></span>
               <div className="relative z-10 px-3 py-3.5 md:px-4 md:py-4 bg-slate-900/90 mx-[1px] my-[1.5px] rounded-full border-none flex items-center gap-2.5 group-hover:gap-4 transition-standard">
@@ -94,28 +94,28 @@ function HeroSection() {
             <Link 
               href={personalData.resume}
               target="_blank" 
-              className="card-highlight group relative overflow-hidden rounded-full shadow-lg hover:shadow-yellow-400/20 transition-standard"
+              className="card-highlight group relative overflow-hidden rounded-full shadow-xl hover:shadow-lime-400/20 transition-standard"
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-400 opacity-90"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-lime-500 to-lime-400 opacity-90"></span>
               <div className="relative z-10 px-3 py-3.5 md:px-4 md:py-4 bg-slate-900/90 mx-[1px] my-[1.5px] rounded-full border-none flex items-center gap-2 group-hover:gap-4 transition-standard">
                 <span className="text-xs md:text-sm font-medium uppercase tracking-wider text-white">Resume</span>
-                <MdDownload size={16} className="text-amber-300" />
+                <MdDownload size={16} className="text-lime-300" />
               </div>
             </Link>
           </div>
         </div>
         
         <div className="order-2 lg:order-2 flex justify-center items-center rounded-full">
-          <div className="relative group card-highlight rounded-full">
-            <div className="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 to-yellow-500 rounded-full blur opacity-30 group-hover:opacity-40 transition duration-100"></div>
-            <div className="relative overflow-hidden rounded-full glass-panel">
+          <div className="relative group card-highlight rounded-full glass-panel">
+            <div className="absolute -inset-1.5 rounded-full blur opacity-30 group-hover:opacity-40 transition duration-100"></div>
+            <div className="relative overflow-hidden rounded-full">
               <div className="absolute inset-0 z-0 rounded-full"></div>
               <Image
                 src={personalData.profile}
                 width={380}
                 height={380}
                 alt={personalData.name}
-                className="relative z-10 cursor-pointer object-cover transition-transform duration-500 group-hover:scale-105"
+                className="relative z-10 cursor-pointer object-cover transition-transform duration-500 group-hover:scale-105 "
                 priority
               />
             </div>

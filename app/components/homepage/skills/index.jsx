@@ -1,6 +1,6 @@
 'use client';
-import { skillsData } from "@/utils/data/skills";
-import { skillsImage } from "@/utils/skill-image";
+import { skillsData } from "@/app/data/skills";
+import { skillsImage } from "@/app/data/skill-image";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -8,7 +8,7 @@ function Skills() {
   return (
     <div id="skills" className="relative z-50 border-t my-8 lg:my-16 border-[#1a1abb] py-10">
       <div className="w-[150px] h-[150px] bg-indigo-500 rounded-full absolute top-10 left-[30%] filter blur-[100px] opacity-10"></div>
-      <div className="w-[120px] h-[120px] bg-amber-400 rounded-full absolute top-20 right-[30%] filter blur-[80px] opacity-10"></div>
+      <div className="w-[120px] h-[120px] bg-lime-400 rounded-full absolute top-20 right-[30%] filter blur-[80px] opacity-10"></div>
 
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
@@ -49,14 +49,14 @@ function Skills() {
                 
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-4/5">
-                    <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#c8a951] to-transparent" />
+                    <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#4ada02a9] to-transparent" />
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center justify-center gap-3 p-5 sm:p-6">
                   <div className="relative h-12 sm:h-14 lg:h-16 w-12 sm:w-14 lg:w-16 flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-yellow-400/20 rounded-full 
-                                 blur-md opacity-0 group-hover:opacity-70 transition-opacity duration-700"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-sky-500/20 to-lime-400/30 rounded-full 
+                                 blur-lg opacity-0 group-hover:opacity-70 transition-opacity duration-700"></div>
                     <Image
                       src={skillsImage(skill)?.src}
                       alt={skill}
@@ -67,7 +67,7 @@ function Skills() {
                     />
                   </div>
                   
-                  <p className="text-white text-xs sm:text-sm font-medium mt-2 text-center">
+                  <p className="text-cyan-300 text-xs sm:text-sm font-medium mt-2 text-center">
                     {skill}
                   </p>
                 </div>
