@@ -80,7 +80,7 @@ function HeroSection() {
 
           <div className="flex items-center gap-4 gap-y-4 mt-2">
             <Link 
-              href="https://saksham-agr-portfolio.vercel.app" 
+              href="https://sksm-terminal.vercel.app/" 
               target="_blank" 
               className="card-highlight group relative overflow-hidden rounded-full shadow-xl hover:shadow-cyan-500/30 transition-standard"
             >
