@@ -18,9 +18,9 @@ function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="order-1 lg:order-1">
             <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300 shadow-2xl shadow-sky-800/20">
-              <div className="from-[#09112a] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-b to-[#060946] transition-all duration-200">
+              <div className="from-[#060c1e] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-b to-[#050839] transition-all duration-200">
                 <div className="flex flex-row">
-                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#6dd51ee1] to-transparent"></div>
+                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#64ffb9a8] to-transparent"></div>
                 </div>
                 
                 <div className="px-3 lg:px-4 py-3">
@@ -38,7 +38,7 @@ function AboutSection() {
                     <div className="mb-3 text-gray-200 leading-relaxed">
                       {personalData.description.split('\n').map((paragraph, index) => (
                         <p key={index} className="mb-2">
-                          <span className="text-green-400 text-md italic">{'>'} </span>
+                          <span className="text-teal-400 text-md italic">{'>'} </span>
                           {paragraph}
                         </p>
                       ))}
@@ -54,9 +54,9 @@ function AboutSection() {
           
           <div className="order-2 lg:order-2">
             <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300 shadow-2xl shadow-sky-800/20">
-              <div className="from-[#060946] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-b to-[#09112a] transition-all duration-200">
+              <div className="from-[#0b0d31] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-b to-[#070e23] transition-all duration-200">
                 <div className="flex flex-row">
-                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#6dd51ebd] to-transparent"></div>
+                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#64ffb9b0] to-transparent"></div>
                 </div>
                 
                 <div className="px-3 lg:px-4 py-3">
@@ -103,24 +103,24 @@ function AboutSection() {
                     <div className="ml-4 lg:ml-6 mr-2">
                       <span className="text-[#6b9dd1]">Major skills:</span>
                       <span className="text-gray-400">{` [`}</span>
-                      <span className="text-[#6dd51e]">'JS'</span>
+                      <span className="text-[#64ffb9]">'JS'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#6dd51e]">'React'</span>
+                      <span className="text-[#64ffb9]">'React'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#6dd51e]">'NextJs'</span>
+                      <span className="text-[#64ffb9]">'NextJs'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#6dd51e]">'NodeJs'</span>
+                      <span className="text-[#64ffb9]">'NodeJs'</span>
                       <span className="text-gray-400">,</span>
                     
-                      <span className="text-[#6dd51e]">'Express'</span>
+                      <span className="text-[#64ffb9]">'Express'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#6dd51e]">'Tailwind'</span>
+                      <span className="text-[#64ffb9]">'Tailwind'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#6dd51e]">'Golang'</span>
+                      <span className="text-[#64ffb9]">'Golang'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#6dd51e]">'MongoDB'</span>
+                      <span className="text-[#64ffb9]">'MongoDB'</span>
                       <span className="text-gray-400">, </span>
-                      <span className="text-[#6dd51e]">'Vercel'</span>
+                      <span className="text-[#64ffb9]">'Vercel'</span>
                       <span className="text-gray-400">{`],`}</span>
                     </div>
                     <div>

@@ -7,7 +7,7 @@ function Skills() {
   return (
     <div id="skills" className="relative z-50 border-t my-8 lg:my-16 border-[#1a1abb] py-10">
       <div className="w-[150px] h-[150px] bg-indigo-500 rounded-full absolute top-10 left-[30%] filter blur-[100px] opacity-10"></div>
-      <div className="w-[120px] h-[120px] bg-lime-400 rounded-full absolute top-20 right-[30%] filter blur-[80px] opacity-10"></div>
+      <div className="w-[120px] h-[120px] bg-teal-400 rounded-full absolute top-20 right-[30%] filter blur-[80px] opacity-10"></div>
 
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
@@ -48,7 +48,7 @@ function Skills() {
                 
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-4/5">
-                    <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#4ada02a9] to-transparent" />
+                    <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#64ffb9a5] to-transparent" />
                   </div>
                 </div>
                 
@@ -66,7 +66,7 @@ function Skills() {
                     />
                   </div>
                   
-                  <p className="text-cyan-300 text-xs sm:text-sm font-medium mt-2 text-center">
+                  <p className="text-teal-300 text-xs sm:text-sm font-medium mt-2 text-center">
                     {skill}
                   </p>
                 </div>

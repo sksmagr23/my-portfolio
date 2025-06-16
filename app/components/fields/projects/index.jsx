@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div id='projects' className="relative z-50 border-t my-12 lg:my-20 border-[#1a1abb]">
       <div className="w-[180px] h-[180px] bg-indigo-500 rounded-full absolute top-20 left-[20%] filter blur-[120px] opacity-10"></div>
-      <div className="w-[140px] h-[140px] bg-lime-400 rounded-full absolute bottom-20 right-[30%] filter blur-[100px] opacity-10"></div>
+      <div className="w-[140px] h-[140px] bg-teal-400 rounded-full absolute bottom-20 right-[30%] filter blur-[100px] opacity-10"></div>
       
       <div className="flex justify-center translate-y-[25px]">
         <div className="w-3/4">

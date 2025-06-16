@@ -11,12 +11,14 @@ import "./css/globals.scss";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
 
 const roboto = Roboto({
   subsets: ["latin"],
   variable: "--font-roboto",
   weight: ["100", "300", "400", "500", "700", "900"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -26,16 +28,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${roboto.variable} ${inter.variable}`}>
+    <html lang="en" className={`${roboto.variable} ${inter.variable}`} style={{scrollBehavior: 'smooth'}}>
       <body className="font-roboto">
         <ToastContainer />
         <ThreeJSBackground />
-        <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
-          <Navbar />
-          {children}
-          <ScrollToTop />
-        </main>
-        <Footer />
+          <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
+            <Navbar />
+            {children}
+            <ScrollToTop />
+          </main>
+          <Footer />
       </body>
     </html>
   );

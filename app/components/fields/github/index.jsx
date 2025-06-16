@@ -20,12 +20,12 @@ function GitHubStats() {
   const stats = [
     {
       id: 1,
-      url: `https://github-readme-stats.vercel.app/api?username=${username}&count_private=true&show_icons=true&theme=chartreuse-dark&hide_border=true&rank_icon=github&text_bold=true&bg_color=45,0a1128,00054b`,
+      url: `https://github-readme-stats.vercel.app/api?username=${username}&count_private=true&show_icons=true&theme=dark&hide_border=true&rank_icon=github&text_color=64FFDA&text_bold=true&bg_color=45,0a1118,00094a`,
       alt: "GitHub Stats",
     },
     {
       id: 2,
-      url: `https://github-readme-streak-stats.herokuapp.com/?user=${username}&count_private=true&theme=chartreuse-dark&hide_border=true&text_bold=true&background=45,0a1128,00054b`,
+      url: `https://github-readme-streak-stats.herokuapp.com/?user=${username}&count_private=true&theme=dark&hide_border=true&text_color=64FFDA&text_bold=true&background=45,0a1118,00094a`,
       alt: "GitHub Streak Stats",
     },
   ];
@@ -36,7 +36,7 @@ function GitHubStats() {
       className="relative z-50 border-t my-12 lg:my-24 border-[#1a1abb]"
     >
       <div className="w-[160px] h-[160px] bg-indigo-500 rounded-full absolute top-20 left-[20%] filter blur-[120px] opacity-10"></div>
-      <div className="w-[140px] h-[140px] bg-lime-400 rounded-full absolute bottom-20 right-[20%] filter blur-[100px] opacity-10"></div>
+      <div className="w-[140px] h-[140px] bg-teal-400 rounded-full absolute bottom-20 right-[20%] filter blur-[100px] opacity-10"></div>
 
       <div className="flex justify-center translate-y-[25px]">
         <div className="w-3/4">
@@ -57,7 +57,7 @@ function GitHubStats() {
               <div className="border border-[#1a2370] shadow-lg shadow-indigo-900/10">
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-4/5">
-                    <div className="h-[2px] bg-gradient-to-r from-transparent via-lime-400 to-transparent" />
+                    <div className="h-[2px] bg-gradient-to-r from-transparent via-teal-400 to-transparent" />
                   </div>
                 </div>
                 <div className="relative">
@@ -78,7 +78,7 @@ function GitHubStats() {
           <div className="w-full max-w-6xl card-highlight glass-panel border border-[#1a2370] shadow-lg shadow-indigo-900/10">
             <div className="flex -translate-y-[0.5px] justify-center">
               <div className="w-4/5">
-                <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-lime-400 to-transparent" />
+                <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-teal-400 to-transparent" />
               </div>
             </div>
 
@@ -95,7 +95,7 @@ function GitHubStats() {
                     "#90e0ef",
                     "#caf0f8",
                   ],
-                  dark: ["#1a2370", "#00b4d8", "#9af9ac", "#caf0f8","#bdff09"],
+                  dark: ["#1a2360", "#00b4d8", "#1a29aa", "#caf0f8","#64ffb9"],
                 }}
                 fontSize={windowWidth < 768 ? 12 : 16}
                 style={{

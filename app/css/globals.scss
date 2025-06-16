@@ -10,9 +10,9 @@
 :root {
   --foreground-rgb: rgb(233, 233, 236);
   --primary-color: #3892ff;
-  --secondary-color: #bdff09;
-  --bg-dark: rgba(1, 10, 37, 0.842);
-  --bg-light: rgba(6, 16, 50, 0.8);
+  --secondary-color: #64ffb9;
+  --bg-dark: rgba(2, 8, 33, 0.9);
+  --bg-light: rgba(2, 8, 33, 0.7);
   --text-highlight: rgba(107, 157, 209, 0.9);
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 .glass-panel {
-  background: rgba(6, 16, 41, 0.45);
+  background: rgba(3, 12, 35, 0.481);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);

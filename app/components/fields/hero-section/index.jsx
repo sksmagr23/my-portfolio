@@ -86,7 +86,7 @@ function HeroSection() {
             >
               <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-90"></span>
               <div className="relative z-10 px-3 py-3.5 md:px-4 md:py-4 bg-slate-900/90 mx-[1px] my-[1.5px] rounded-full border-none flex items-center gap-2.5 group-hover:gap-4 transition-standard">
-                <span className="text-xs md:text-sm font-medium uppercase tracking-wider text-white">My Terminal</span>
+                <span className="text-xs md:text-sm font-medium uppercase tracking-wider text-cyan-300">My Terminal</span>
                 <FaTerminal size={15} className="text-blue-300" />
               </div>
             </Link>
@@ -96,10 +96,10 @@ function HeroSection() {
               target="_blank" 
               className="card-highlight group relative overflow-hidden rounded-full shadow-xl hover:shadow-lime-400/20 transition-standard"
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-lime-500 to-lime-400 opacity-90"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-teal-500 to-teal-400 opacity-90"></span>
               <div className="relative z-10 px-3 py-3.5 md:px-4 md:py-4 bg-slate-900/90 mx-[1px] my-[1.5px] rounded-full border-none flex items-center gap-2 group-hover:gap-4 transition-standard">
-                <span className="text-xs md:text-sm font-medium uppercase tracking-wider text-white">Resume</span>
-                <MdDownload size={16} className="text-lime-300" />
+                <span className="text-xs md:text-sm font-medium uppercase tracking-wider text-teal-300">Resume</span>
+                <MdDownload size={16} className="text-teal-300" />
               </div>
             </Link>
           </div>

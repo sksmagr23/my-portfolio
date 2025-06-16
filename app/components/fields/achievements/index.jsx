@@ -10,7 +10,7 @@ function Achievement() {
       id="achievement"
       className="relative z-50 border-t my-12 lg:my-24 border-[#1a1abb]"
     >
-      <div className="w-[160px] h-[160px] bg-lime-400 rounded-full absolute top-20 left-[30%] filter blur-[120px] opacity-10"></div>
+      <div className="w-[160px] h-[160px] bg-teal-400 rounded-full absolute top-20 left-[30%] filter blur-[120px] opacity-10"></div>
       <div className="w-[140px] h-[140px] bg-indigo-500 rounded-full absolute bottom-20 right-[25%] filter blur-[100px] opacity-10"></div>
 
       <div className="flex justify-center translate-y-[25px]">
@@ -35,11 +35,11 @@ function Achievement() {
               <div className="p-5 sm:p-6 relative glass-panel rounded-xl">
                 <div className="flex flex-col sm:flex-row items-center sm:items-center gap-5 sm:gap-8">
                   <div className="flex flex-col items-center">
-                    <div className="text-[#6dd51e] transition-all duration-300 hover:scale-110 bg-slate-900/60 p-4 rounded-full">
+                    <div className="text-[#64ffb9] transition-all duration-300 hover:scale-110 bg-slate-900/60 p-4 rounded-full">
                       <BsTrophy size={40} />
                     </div>
                     <div className="mt-2 flex items-center justify-center">
-                      <FaMedal className="text-lime-400 mr-1" size={14} />
+                      <FaMedal className="text-teal-400 mr-1" size={14} />
                       <span className="text-xs font-medium text-white">
                         {achievement.position}
                       </span>

@@ -1,13 +1,12 @@
 'use client';
-import dynamic from "next/dynamic";
-const AboutSection = dynamic(() => import("./components/fields/about"), { ssr: false });
-const Education = dynamic(() => import("./components/fields/education"), { ssr: false });
-const Experience = dynamic(() => import("./components/fields/experience"), { ssr: false });
-const HeroSection = dynamic(() => import("./components/fields/hero-section"), { ssr: false });
-const Projects = dynamic(() => import("./components/fields/projects"), { ssr: false });
-const Skills = dynamic(() => import("./components/fields/skills"), { ssr: false });
-const Achievement = dynamic(() => import("./components/fields/achievements"), { ssr: false });
-const GitHubStats = dynamic(() => import("./components/fields/github"), { ssr: false });
+import AboutSection from "./components/fields/about";
+import Education from "./components/fields/education";
+import Experience from "./components/fields/experience";
+import HeroSection from "./components/fields/hero-section";
+import Projects from "./components/fields/projects";
+import Skills from "./components/fields/skills";
+import Achievement from "./components/fields/achievements";
+import GitHubStats from "./components/fields/github";
 
 export default function Home() {
   return (

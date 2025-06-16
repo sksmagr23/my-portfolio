@@ -55,23 +55,23 @@ function Navbar() {
                   <Link
                     href={link.href}
                     className="relative px-3 py-2 text-sm font-medium text-gray-200 
-                              transition-all duration-300 hover:text-lime-400 rounded-full flex items-center group"
+                              transition-all duration-300 hover:text-teal-400 rounded-full flex items-center group"
                   >
                     {link.label}
                     <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-gradient-to-r 
-                                    from-lime-500 to-lime-400 scale-x-0 group-hover:scale-x-100"></span>
+                                    from-teal-500 to-teal-400 scale-x-0 group-hover:scale-x-100"></span>
                   </Link>
                 </li>
               ))}
             </ul>
 
             {isMenuOpen && (
-              <ul className="md:hidden absolute top-full right-0 mt-2 flex flex-col gap-1 rounded-2xl glass-panel py-2 backdrop-blur-md ring-2 ring-blue-200/10 z-40 px-4">
+              <ul className="md:hidden absolute top-full right-0 mt-2 flex flex-col gap-1 rounded-2xl py-2 backdrop-blur-xl ring-2 ring-blue-200/10 z-40 px-4">
                 {navLinks.map((link, index) => (
                   <li key={index}>
                     <Link
                       href={link.href}
-                      className="block px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-lime-300 rounded-full hover:bg-white/5"
+                      className="block px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:text-teal-300 rounded-full hover:bg-white/5"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {link.label}
