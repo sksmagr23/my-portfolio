@@ -55,7 +55,7 @@ const ThreeJSBackground = () => {
         particles.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
         particles.setAttribute('opacity', new THREE.BufferAttribute(opacities, 1));
 
-        const codeSymbols = ['</>',  '{}', '()', '[]', '=>', '++'];
+        const codeSymbols = ['</>',  '{}', '!=', '=>', '++'];
         
         const textures = [];
         
@@ -65,7 +65,7 @@ const ThreeJSBackground = () => {
             canvas.height = 128;
             const context = canvas.getContext('2d');
             context.clearRect(0, 0, canvas.width, canvas.height);
-            context.fillStyle = '#ADD8E6';
+            context.fillStyle = '#435cb5';
             context.font = 'bold 64px monospace';
             context.textAlign = 'center';
             context.textBaseline = 'middle';

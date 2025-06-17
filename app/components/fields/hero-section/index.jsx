@@ -50,12 +50,12 @@ function HeroSection() {
             <span className="text-gray-200 opacity-90">{' }'}</span>
           </h1>
           
-          <p className="text-md md:text-lg flex items-center gap-3 mt-8 px-1">
+          <p className="text-md md:text-lg flex items-center gap-2 mt-8 px-1">
             <LucideMail
-              className="p-2 rounded-full glass-panel hover-lift text-white cursor-pointer"
+              className="p-1.5 rounded-full hover-lift text-teal-300 cursor-pointer"
               size={38}
             />
-            <span className="text-slate-300">{personalData.email}</span>
+            <span className="text-teal-300">{personalData.email}</span>
           </p>
           
           <div className="my-10 flex items-center gap-7 px-2">

@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/footer";
 import ScrollToTop from "./components/utils/scroll-to-top";
 import Navbar from "./components/navbar";
-import ThreeJSBackground from "./components/code-background-3d";
+import ThreeJSBackground from "./components/utils/code-background-3d";
 import "./css/card.scss";
 import "./css/globals.scss";
 

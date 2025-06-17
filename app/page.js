@@ -7,6 +7,7 @@ import Projects from "./components/fields/projects";
 import Skills from "./components/fields/skills";
 import Achievement from "./components/fields/achievements";
 import GitHubStats from "./components/fields/github";
+import ContactSection from "./components/fields/contact";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Education />
       <Projects />
       <GitHubStats />
+      <ContactSection />
     </div>
   )
 };
