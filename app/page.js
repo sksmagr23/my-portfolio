@@ -2,7 +2,7 @@
 import AboutSection from "./components/fields/about";
 import Education from "./components/fields/education";
 import Experience from "./components/fields/experience";
-import HeroSection from "./components/fields/hero-section";
+import Hero from "./components/fields/hero";
 import Projects from "./components/fields/projects";
 import Skills from "./components/fields/skills";
 import Achievement from "./components/fields/achievements";
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <section style={{ minHeight: '90vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <HeroSection />
+      <Hero />
       </section>
       <AboutSection />
       <Skills />

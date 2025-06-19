@@ -65,7 +65,7 @@ const ThreeJSBackground = () => {
             canvas.height = 128;
             const context = canvas.getContext('2d');
             context.clearRect(0, 0, canvas.width, canvas.height);
-            context.fillStyle = '#435cb5';
+            context.fillStyle = '#013d8e';
             context.font = 'bold 64px monospace';
             context.textAlign = 'center';
             context.textBaseline = 'middle';
@@ -111,7 +111,7 @@ const ThreeJSBackground = () => {
         `).join('')}
         
         vec3 color = mix(
-          vec3(0.68, 0.85, 0.9),
+          vec3(0.7, 0.85, 0.9),
           vec3(0.4, 0.7, 1.0),
           gl_FragCoord.y / 1000.0
         );

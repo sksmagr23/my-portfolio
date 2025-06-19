@@ -1,18 +1,18 @@
 "use client"
 import { useEffect } from 'react';
 
-const GlowCard = ({ children , identifier}) => {
+const GlowCard = ({ children, identifier }) => {
   useEffect(() => {
     const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
     const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
 
     const CONFIG = {
-      proximity: 50,
-      spread: 100,
-      blur: 20,
-      gap: 32,
+      proximity: 40,
+      spread: 80,
+      blur: 10,
+      gap: 24,
       vertical: false,
-      opacity: 0,
+      opacity: 0.05,
     };
 
     const UPDATE = (event) => {
@@ -25,7 +25,7 @@ const GlowCard = ({ children , identifier}) => {
           event?.y > CARD_BOUNDS.top - CONFIG.proximity &&
           event?.y < CARD_BOUNDS.top + CARD_BOUNDS.height + CONFIG.proximity
         ) {
-          CARD.style.setProperty('--active', 1);
+          CARD.style.setProperty('--active', 0.7);
         } else {
           CARD.style.setProperty('--active', CONFIG.opacity);
         }
@@ -68,7 +68,7 @@ const GlowCard = ({ children , identifier}) => {
 
   return (
     <div className={`glow-container-${identifier} glow-container`}>
-      <article className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-[#063f85] transition-all duration-300 relative bg-[#07193c] bg-opacity-50 text-gray-200 rounded-xl hover:border-transparent w-full`}>
+      <article className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-slate-700 transition-all duration-300 relative bg-slate-900 bg-opacity-80 text-slate-100 rounded-lg hover:border-slate-600 w-full`}>
         <div className="glows"></div>
         {children}
       </article>
