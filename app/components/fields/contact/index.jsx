@@ -85,7 +85,7 @@ function ContactSection() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0d2169] rounded-md focus:outline-none focus:ring-1 focus:ring-[#64ffb9] text-gray-200"
+                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0d2169] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
                       placeholder="Your Name"
                     />
                   </div>
@@ -100,7 +100,7 @@ function ContactSection() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0d226c] rounded-md focus:outline-none focus:ring-1 focus:ring-[#64ffb9] text-gray-200"
+                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0d226c] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -115,7 +115,7 @@ function ContactSection() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#1c3aa5] rounded-md focus:outline-none focus:ring-1 focus:ring-[#64ffb9] text-gray-200"
+                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0d226c] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
                       placeholder="Message Subject"
                     />
                   </div>
@@ -130,25 +130,23 @@ function ContactSection() {
                       onChange={handleChange}
                       required
                       rows="4"
-                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0c216b] rounded-md focus:outline-none focus:ring-1 focus:ring-[#64ffb9] text-gray-200"
+                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0c216b] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
                       placeholder="Your message here..."
                     ></textarea>
                   </div>
                   
                   <div className="pt-2">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full py-2 px-4 bg-gradient-to-r from-[#13427c] to-[#64ffb97d] text-gray-200 font-medium rounded-md hover:opacity-90 transition-opacity disabled:opacity-70 disabled:cursor-not-allowed"
-                    >
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
-                    </button>
+                    <button className="bg-gradient-to-t from-blue-950 to-blue-900 text-blue-300 border border-blue-600 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-xl hover:brightness-150 active:opacity-80 outline-none duration-300 group disabled:opacity-60 disabled:cursor-not-allowed w-full" type="submit"
+                    disabled={isSubmitting} >
+                    <span className="bg-blue-500 shadow-blue-600 absolute -top-[150%] left-0 inline-flex w-full h-[5px] rounded-xl opacity-30 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.1)]"></span>
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </button>
                     
                     {submitStatus === 'success' && (
                       <motion.div 
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="mt-3 p-2 bg-emerald-400/20 border border-emerald-400/50 rounded-md text-emerald-400 text-sm text-center"
+                        className="mt-3 p-2 bg-teal-400/20 border border-teal-400/50 rounded-md text-emerald-400 text-sm text-center"
                       >
                         Message sent successfully! I'll get back to you soon.
                       </motion.div>

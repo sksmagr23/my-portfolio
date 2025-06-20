@@ -15,15 +15,15 @@ import Typed from "typed.js";
 function HeroSection() {
   const role = `${personalData.designation}`;
   const textRef = useRef(null);
-  
+
   useEffect(() => {
     const toRotate = [role];
     const options = {
       strings: toRotate,
       typeSpeed: 75,
       backSpeed: 75,
-      startDelay: 1000, 
-      backDelay: 5000, 
+      startDelay: 1000,
+      backDelay: 5000,
       loop: true,
       showCursor: false
     };
@@ -49,7 +49,7 @@ function HeroSection() {
             <span className="text-[#6b9dd1]" ref={textRef}></span>
             <span className="text-gray-200 opacity-90">{' }'}</span>
           </h1>
-          
+
           <p className="text-md md:text-lg flex items-center gap-2 mt-8 px-1">
             <LucideMail
               className="p-1.5 rounded-full hover-lift text-teal-300 cursor-pointer"
@@ -57,7 +57,7 @@ function HeroSection() {
             />
             <span className="text-teal-300">{personalData.email}</span>
           </p>
-          
+
           <div className="my-10 flex items-center gap-7 px-2">
             {[
               { icon: <BsGithub size={28} />, href: personalData.github, color: "text-slate-200" },
@@ -78,33 +78,31 @@ function HeroSection() {
             ))}
           </div>
 
-          <div className="flex items-center gap-4 gap-y-4 mt-2">
-            <Link 
-              href="https://sksm-terminal.vercel.app/" 
-              target="_blank" 
-              className="card-highlight group relative overflow-hidden rounded-full shadow-xl hover:shadow-cyan-500/30 transition-standard"
+          <div className="flex items-center gap-6 gap-y-4 mt-2">
+            <Link
+              href="https://sksm-terminal.vercel.app/"
+              target="_blank"
+              className=""
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-90"></span>
-              <div className="relative z-10 px-3 py-3.5 md:px-4 md:py-4 bg-slate-900/90 mx-[1px] my-[1.5px] rounded-full border-none flex items-center gap-2.5 group-hover:gap-4 transition-standard">
-                <span className="text-xs md:text-sm font-medium uppercase tracking-wider text-cyan-300">My Terminal</span>
-                <FaTerminal size={15} className="text-blue-300" />
-              </div>
+              <button className="bg-cyan-950 text-cyan-400 border border-cyan-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-xl hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                <span className="bg-cyan-400 shadow-cyan-400 absolute -top-[150%] left-0 inline-flex w-96 h-[5px] rounded-xl opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="flex items-center gap-3">My Terminal <FaTerminal size={15} className="text-blue-300" /></span>
+              </button>
             </Link>
 
-            <Link 
+            <Link
               href={personalData.resume}
-              target="_blank" 
-              className="card-highlight group relative overflow-hidden rounded-full shadow-xl hover:shadow-teal-400/20 transition-standard"
+              target="_blank"
+              className=""
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-teal-500 to-teal-400 opacity-90"></span>
-              <div className="relative z-10 px-3 py-3.5 md:px-4 md:py-4 bg-slate-900/90 mx-[1px] my-[1.5px] rounded-full border-none flex items-center gap-2 group-hover:gap-4 transition-standard">
-                <span className="text-xs md:text-sm font-medium uppercase tracking-wider text-teal-300">Resume</span>
-                <FaFilePdf size={15} className="text-teal-300" />
-              </div>
+              <button className="bg-teal-950 text-teal-400 border border-teal-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-xl hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                <span className="bg-teal-400 shadow-teal-400 absolute -top-[150%] left-0 inline-flex w-96 h-[5px] rounded-xl opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="flex items-center gap-3">Resume <FaFilePdf size={15} className="text-teal-300" /></span>
+              </button>
             </Link>
           </div>
         </div>
-        
+
         <div className="order-2 lg:order-2 flex justify-center items-center rounded-full">
           <div className="relative group card-highlight rounded-full glass-panel">
             <div className="absolute -inset-1.5 rounded-full blur opacity-30 group-hover:opacity-40 transition duration-100"></div>
