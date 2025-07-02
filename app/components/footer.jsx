@@ -10,7 +10,7 @@ function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-y-2">
           <p className="text-sm">
-            © {new Date().getFullYear()} Portfolio by <Link target="_blank" href="https://github.com/sksmagr23" className="text-[#24d7f6]">Saksham Agrawal</Link>
+            © {new Date().getFullYear()} Portfolio by <Link target="_blank" href="https://github.com/sksmagr23" className="text-[#24d7f6]">sksmagr23</Link>
           </p>
           <div className="flex items-center justify-center">
             <span className='text-sm mr-2'>Made with Next.js & Tailwind</span>

@@ -55,7 +55,7 @@ const ThreeJSBackground = () => {
         particles.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
         particles.setAttribute('opacity', new THREE.BufferAttribute(opacities, 1));
 
-        const codeSymbols = ['</>',  '{}', '!=', '=>', '++'];
+        const codeSymbols = ['</>', '{}', '!=', '☕'];
         
         const textures = [];
         

@@ -37,11 +37,11 @@ function HeroSection() {
   return (
     <section className="relative flex flex-col items-center justify-between py-10 mt-4 lg:py-12 mb-20" priority="true">
       <div className="grid grid-cols-1 items-center md:grid-cols-2 md:gap-16 gap-y-4">
-        <div className="order-1 lg:order-1 flex flex-col items-start justify-center p-3 pb-16 md:pb-10 lg:pt-8">
-          <h1 className="text-2xl font-bold leading-tight text-white md:font-extrabold lg:text-[2.4rem] lg:leading-[3rem]">
+        <div className="order-1 lg:order-1 flex flex-col items-start justify-center p-2 pb-16 md:pb-10 lg:pt-8">
+          <h1 className="text-2xl font-bold leading-tight text-white lg:text-[2.4rem] lg:leading-[3rem]">
             Hello, <br />
             This is {' '}
-            <span className="text-gradient font-bold">
+            <span className="text-gradient">
               {personalData.name}
             </span>
             <br />

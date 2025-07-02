@@ -20,12 +20,12 @@ function GitHubStats() {
   const stats = [
     {
       id: 1,
-      url: `https://github-readme-stats.vercel.app/api?username=${username}&count_private=true&show_icons=true&theme=dark&hide_border=true&rank_icon=github&text_color=64FFDA&text_bold=true&bg_color=45,0a1118,00094a`,
+      url: `https://github-readme-stats.vercel.app/api?username=${username}&count_private=true&show_icons=true&theme=dark&hide_border=true&rank_icon=github&text_color=64FFDA&text_bold=true&bg_color=180,00000000,00094a`,
       alt: "GitHub Stats",
     },
     {
       id: 2,
-      url: `https://github-readme-streak-stats.herokuapp.com/?user=${username}&count_private=true&theme=dark&hide_border=true&text_color=64FFDA&text_bold=true&background=45,0a1118,00094a`,
+      url: `https://github-readme-streak-stats.herokuapp.com/?user=${username}&count_private=true&theme=dark&hide_border=true&text_color=64FFDA&text_bold=true&background=180,00000000,00094a`,
       alt: "GitHub Streak Stats",
     },
   ];
@@ -54,7 +54,7 @@ function GitHubStats() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto px-2 md:px-4 h-auto">
           {stats.map((stat) => (
             <div key={stat.id} className="card-highlight hover-lift w-full">
-              <div className="border border-[#1a2370] shadow-lg shadow-indigo-900/10">
+              <div className="border border-[#1a2370] shadow-lg">
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-4/5">
                     <div className="h-[2px] bg-gradient-to-r from-transparent via-teal-400 to-transparent" />

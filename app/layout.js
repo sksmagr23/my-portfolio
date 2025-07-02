@@ -1,12 +1,9 @@
-import { Inter, Roboto } from "next/font/google";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Inter, Quantico } from "next/font/google";
 import Footer from "./components/footer";
 import ScrollToTop from "./components/utils/scroll-to-top";
 import Navbar from "./components/navbar";
 import ThreeJSBackground from "./components/utils/code-background-3d";
-import "./css/card.scss";
-import "./css/globals.scss";
+import "./globals.scss";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,10 +11,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const roboto = Roboto({
+const quantico = Quantico({
   subsets: ["latin"],
-  variable: "--font-roboto",
-  weight: ["100", "300", "400", "500", "700", "900"],
+  variable: "--font-quantico",
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -26,13 +23,16 @@ export const metadata = {
   description: "Made by Saksham Agrawal, a software developer with a passion for building web applications.",
 };
 
+export const viewport = {
+  themeColor: '#1c3aa5',
+}
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${roboto.variable} ${inter.variable}`} style={{scrollBehavior: 'smooth'}}>
-      <body className="font-roboto">
-        <ToastContainer />
+    <html lang="en" className={`${inter.variable} ${quantico.variable} `} style={{scrollBehavior: 'smooth'}}>
+      <body className="font-quantico">
         <ThreeJSBackground />
-          <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
+          <main className="min-h-screen relative mx-auto px-6 sm:px-8 lg:max-w-[74rem] xl:max-w-[82rem] 2xl:max-w-[98rem] text-white">
             <Navbar />
             {children}
             <ScrollToTop />
