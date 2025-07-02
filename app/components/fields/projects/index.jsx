@@ -86,7 +86,7 @@ const Projects = () => {
       </div>
 
       <div className="pt-4">
-          <div className="max-w-6xl mx-auto px-4 relative">
+          <div className="max-w-7xl mx-auto md:px-2 relative">
             <Carousel
               showArrows={true}
               showStatus={false}
@@ -131,7 +131,7 @@ const Projects = () => {
             >
               {isMobile ? (
                 projectsData.map((project, index) => (
-                  <div key={index} className="carousel-slide px-1 py-2 flex justify-start">
+                  <div key={index} className="carousel-slide px-0.5 py-2 flex justify-start">
                     <ProjectCard project={project} />
                   </div>
                 ))
@@ -156,7 +156,7 @@ const Projects = () => {
               
               .carousel.carousel-slider {
                 overflow: visible;
-                padding: 0 5px;
+                padding: 0 4px;
               }
               
               .carousel .carousel-status {

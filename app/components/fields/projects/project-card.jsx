@@ -29,7 +29,7 @@ function ProjectCard({ project }) {
         </div>
       </div>
       
-      <div className="overflow-hidden border-t border-indigo-900/30 px-3 lg:px-6 py-4 lg:py-6 text-sm md:text-base">
+      <div className="overflow-hidden border-t border-indigo-900/30 px-3 lg:px-6 py-4 lg:py-6 text-xs md:text-base">
           <div>
             <span className="mr-2 text-orange-300">const</span>
             <span className="mr-2 text-purple-300">project</span>

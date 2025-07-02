@@ -33,8 +33,8 @@ function AboutSection() {
                 <div className="border-t border-blue-900/50 px-3 lg:px-5 py-5 lg:py-6">
                   <div className="mb-3 text-gray-200 leading-relaxed">
                     {personalData.description.split('\n').map((paragraph, index) => (
-                      <p key={index} className="mb-2">
-                        <span className="text-teal-400 text-xs md:text-md">{'>'} </span>
+                      <p key={index} className="mb-2 text-xs md:text-base">
+                        <span className="text-teal-400 text-xs md:text-base">{'>'} </span>
                         {paragraph}
                       </p>
                     ))}
@@ -62,7 +62,7 @@ function AboutSection() {
                   </div>
                 </div>
 
-                <div className="border-t border-blue-900/50 px-4 lg:px-6 py-5 lg:py-6">
+                <div className="border-t border-blue-900/50 text-xs md:text-base px-4 lg:px-6 py-5 lg:py-6">
                   <div className="mb-1">
                     <span className="mr-2 text-orange-300">const</span>
                     <span className="mr-2 text-purple-300">developer</span>
