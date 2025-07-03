@@ -86,7 +86,7 @@ const Projects = () => {
       </div>
 
       <div className="pt-4">
-          <div className="max-w-7xl mx-auto md:px-2 relative">
+          <div className="max-w-6xl mx-auto md:px-2 relative">
             <Carousel
               showArrows={true}
               showStatus={false}
@@ -114,7 +114,7 @@ const Projects = () => {
                       width: '10px',
                       height: '10px',
                       borderRadius: '50%',
-                      backgroundColor: isSelected ? '#64ffb9' : 'rgba(107, 157, 209, 0.5)',
+                      backgroundColor: isSelected ? '#1ec7ff' : 'rgba(107, 157, 209, 0.5)',
                       cursor: 'pointer',
                       transition: 'background-color 0.3s ease'
                     }}
@@ -137,7 +137,7 @@ const Projects = () => {
                 ))
               ) : (
                 projectPairs.map((pair, index) => (
-                  <div key={index} className="carousel-slide px-1 py-1 grid grid-cols-2 gap-6">
+                  <div key={index} className="carousel-slide px-1 py-0.5 grid grid-cols-2 gap-6">
                     {pair.map((project, projectIndex) => (
                       <div key={projectIndex} className="flex justify-start">
                         <ProjectCard project={project} />

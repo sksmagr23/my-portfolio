@@ -13,17 +13,15 @@ import { LucideMail } from "lucide-react";
 import Typed from "typed.js";
 
 function HeroSection() {
-  const role = `${personalData.designation}`;
   const textRef = useRef(null);
 
   useEffect(() => {
-    const toRotate = [role];
     const options = {
-      strings: toRotate,
+      strings: personalData.designation,
       typeSpeed: 75,
       backSpeed: 75,
-      startDelay: 1000,
-      backDelay: 5000,
+      startDelay: 500,
+      backDelay: 2500,
       loop: true,
       showCursor: false
     };
@@ -45,9 +43,9 @@ function HeroSection() {
               {personalData.name}
             </span>
             <br />
-            <span className="text-gray-200 opacity-90">{'{ '}</span>
-            <span className="text-[#6b9dd1]" ref={textRef}></span>
-            <span className="text-gray-200 opacity-90">{' }'}</span>
+            <span className="text-gray-300 opacity-90 italic">{'{ '}</span>
+            <span className="text-[#1ec7ff] italic" ref={textRef}></span>
+            <span className="text-gray-300 opacity-90 italic">{' }'}</span>
           </h1>
 
           <p className="text-md md:text-lg flex items-center gap-2 mt-8 px-1">

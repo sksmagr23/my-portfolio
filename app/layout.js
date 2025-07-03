@@ -29,7 +29,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${quantico.variable} `} style={{scrollBehavior: 'smooth'}}>
+    <html lang="en" className={`${inter.variable} ${quantico.variable} `} >
       <body className="font-quantico">
         <ThreeJSBackground />
           <main className="min-h-screen relative mx-auto px-6 sm:px-8 lg:max-w-[74rem] xl:max-w-[82rem] 2xl:max-w-[98rem] text-white">
