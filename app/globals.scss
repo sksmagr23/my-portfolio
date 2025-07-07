@@ -11,8 +11,8 @@
   --foreground-rgb: rgb(233, 233, 236);
   --primary-color: #3892ff;
   --secondary-color: #64ffb9;
-  --bg-dark: rgba(1, 11, 51, 0.85);
-  --bg-light: rgba(0, 28, 55, 0.8);
+  --bg-dark: rgba(1, 11, 51, 0.8);
+  --bg-light: rgba(0, 28, 55, 0.75);
   --text-highlight: rgba(107, 157, 209, 0.9);
 }
 
@@ -25,7 +25,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(90deg, var(--bg-dark), var(--bg-light)),
-    url(/bg.png) no-repeat fixed;
+    url(/blue.png) no-repeat fixed;
   background-size: cover;
 }
 
@@ -33,9 +33,7 @@ body {
   background: rgba(1, 16, 54, 0.511);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgb(1, 13, 100);
-  box-shadow: 0 4px 20px 1px rgba(1, 10, 82, 0.528),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+  border: 1px solid #010d64;
   position: relative;
   overflow: hidden;
 }
@@ -163,14 +161,14 @@ body {
 .glow-card {
   --active: 0.15;
   --start: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 10px 4px #01274a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .glow-card:is(:hover, :focus-visible) {
   z-index: 3;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 12px 4px #002e59;
 }
 
 .glows {

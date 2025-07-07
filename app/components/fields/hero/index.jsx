@@ -11,6 +11,7 @@ import { FaTerminal } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { LucideMail } from "lucide-react";
 import Typed from "typed.js";
+import GradientText from "../../utils/gradient";
 
 function HeroSection() {
   const textRef = useRef(null);
@@ -39,9 +40,13 @@ function HeroSection() {
           <h1 className="text-2xl font-bold leading-tight text-white lg:text-[2.4rem] lg:leading-[3rem]">
             Hello, <br />
             This is {' '}
-            <span className="text-gradient">
+            <GradientText
+              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              animationSpeed={3}
+              className="custom-class"
+            >
               {personalData.name}
-            </span>
+            </GradientText>
             <br />
             <span className="text-gray-300 opacity-90 italic">{'{ '}</span>
             <span className="text-[#1ec7ff] italic" ref={textRef}></span>
@@ -59,40 +64,40 @@ function HeroSection() {
           <div className="w-full pb-10 mt-10">
             <ul className="flex items-center">
               {[
-                { 
-                  icon: <BsGithub size={23} className="sm:text-[26px]" />, 
-                  href: personalData.github, 
-                  tooltip: "GitHub", 
+                {
+                  icon: <BsGithub size={23} className="sm:text-[26px]" />,
+                  href: personalData.github,
+                  tooltip: "GitHub",
                   social: "github",
-                  bgColor: "bg-[#24262a]" 
+                  bgColor: "bg-[#24262a]"
                 },
-                { 
-                  icon: <FaLinkedin size={23} className="sm:text-[26px]" />, 
-                  href: personalData.linkedIn, 
-                  tooltip: "LinkedIn", 
+                {
+                  icon: <FaLinkedin size={23} className="sm:text-[26px]" />,
+                  href: personalData.linkedIn,
+                  tooltip: "LinkedIn",
                   social: "linkedin",
-                  bgColor: "bg-[#1274e3]" 
+                  bgColor: "bg-[#1274e3]"
                 },
-                { 
-                  icon: <FaInstagram size={23} className="sm:text-[26px]" />, 
-                  href: personalData.instagram, 
-                  tooltip: "Instagram", 
+                {
+                  icon: <FaInstagram size={23} className="sm:text-[26px]" />,
+                  href: personalData.instagram,
+                  tooltip: "Instagram",
                   social: "instagram",
-                  bgColor: "bg-gradient-to-tr from-[#405de6] via-[#c145b4] to-[#fd1f1f]" 
+                  bgColor: "bg-gradient-to-tr from-[#405de6] via-[#c145b4] to-[#fd1f1f]"
                 },
-                { 
-                  icon: <SiLeetcode size={23} className="sm:text-[26px]" />, 
-                  href: personalData.leetcode, 
-                  tooltip: "LeetCode", 
+                {
+                  icon: <SiLeetcode size={23} className="sm:text-[26px]" />,
+                  href: personalData.leetcode,
+                  tooltip: "LeetCode",
                   social: "leetcode",
-                  bgColor: "bg-[#ffa116]" 
+                  bgColor: "bg-[#ffa116]"
                 },
-                { 
-                  icon: <FaXTwitter size={23} className="sm:text-[26px]" />, 
-                  href: personalData.twitter, 
-                  tooltip: "Twitter", 
+                {
+                  icon: <FaXTwitter size={23} className="sm:text-[26px]" />,
+                  href: personalData.twitter,
+                  tooltip: "Twitter",
                   social: "twitter",
-                  bgColor: "bg-[#100]" 
+                  bgColor: "bg-[#100]"
                 }
               ].map((item, index) => (
                 <li key={index} className="relative mr-3 sm:mr-5 group">
@@ -115,28 +120,28 @@ function HeroSection() {
           </div>
 
           <div className="flex items-center gap-4 md:gap-6 mt-2">
-              <Link
-                href="https://sksm-terminal.vercel.app/"
-                target="_blank"
-                className=""
-              >
-                <button className="bg-cyan-950 text-cyan-400 border border-cyan-400 border-b-4 font-medium overflow-hidden relative px-3 py-2 rounded-xl hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
-                  <span className="bg-cyan-400 shadow-cyan-400 absolute -top-[150%] left-0 inline-flex w-full h-[5px] rounded-xl opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-                  <span className="flex items-center gap-3 whitespace-nowrap">My Terminal <FaTerminal size={15} className="text-blue-300" /></span>
-                </button>
-              </Link>
+            <Link
+              href="https://sksm-terminal.vercel.app/"
+              target="_blank"
+              className=""
+            >
+              <button className="bg-cyan-950 text-cyan-400 border border-cyan-400 border-b-4 font-medium overflow-hidden relative px-3 py-2 rounded-xl hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                <span className="bg-cyan-400 shadow-cyan-400 absolute -top-[150%] left-0 inline-flex w-full h-[5px] rounded-xl opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="flex items-center gap-3 whitespace-nowrap">My Terminal <FaTerminal size={15} className="text-blue-300" /></span>
+              </button>
+            </Link>
 
-              <Link
-                href={personalData.resume}
-                target="_blank"
-                className=""
-              >
-                <button className="bg-teal-950 text-teal-400 border border-teal-400 border-b-4 font-medium overflow-hidden relative px-3 py-2 rounded-xl hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
-                  <span className="bg-teal-400 shadow-teal-400 absolute -top-[150%] left-0 inline-flex w-96 h-[5px] rounded-xl opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-                  <span className="flex items-center gap-3">Resume <FaFilePdf size={15} className="text-teal-300" /></span>
-                </button>
-              </Link>
-            </div>
+            <Link
+              href={personalData.resume}
+              target="_blank"
+              className=""
+            >
+              <button className="bg-teal-950 text-teal-400 border border-teal-400 border-b-4 font-medium overflow-hidden relative px-3 py-2 rounded-xl hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                <span className="bg-teal-400 shadow-teal-400 absolute -top-[150%] left-0 inline-flex w-96 h-[5px] rounded-xl opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="flex items-center gap-3">Resume <FaFilePdf size={15} className="text-teal-300" /></span>
+              </button>
+            </Link>
+          </div>
         </div>
 
         <div className="order-2 lg:order-2 flex justify-center items-center rounded-full">

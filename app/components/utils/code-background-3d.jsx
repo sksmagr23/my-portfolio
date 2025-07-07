@@ -97,11 +97,11 @@ const ThreeJSBackground = () => {
     `;
 
         const fragmentShader = `
-      uniform sampler2D pointTextures[${codeSymbols.length}];
-      varying float vOpacity;
-      varying float vTextureIndex;
-      
-      void main() {
+          uniform sampler2D pointTextures[${codeSymbols.length}];
+          varying float vOpacity;
+          varying float vTextureIndex;
+          
+          void main() {
         vec4 textureColor = texture2D(pointTextures[0], gl_PointCoord);
         
         ${Array.from({ length: codeSymbols.length - 1 }, (_, i) => `
@@ -110,14 +110,10 @@ const ThreeJSBackground = () => {
         }
         `).join('')}
         
-        vec3 color = mix(
-          vec3(0.7, 0.85, 0.9),
-          vec3(0.4, 0.7, 1.0),
-          gl_FragCoord.y / 1000.0
-        );
+        vec3 color = vec3(0.102, 0.102, 0.733); // #1a1abb
         gl_FragColor = vec4(color, textureColor.a * vOpacity * 0.7);
-      }
-    `;
+          }
+        `;
 
         const uniformsObject = {
             pointTextures: { value: textures }
