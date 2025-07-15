@@ -1,7 +1,7 @@
 'use client';
 import { experiences } from "@/app/data/experience";
-import { BsPersonWorkspace } from "react-icons/bs";
 import { FaCalendarAlt } from "react-icons/fa";
+import { FaCodeBranch } from "react-icons/fa6";
 import GlowCard from "../../utils/glow-card";
 
 function Experience() {
@@ -18,15 +18,15 @@ function Experience() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <h2 className="text-2xl lg:text-3xl font-bold text-center mb-8 mt-8">
-          <span className="text-gradient">EXPERIENCE</span>
+          <span className="text-gradient">DEV EXPERIENCE</span>
         </h2>
       </div>
 
       <div className="py-8 max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10">
           {experiences.map(experience => (
             <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
-              <div className="p-4 sm:p-6 relative glass-panel rounded-xl">
+              <div className="p-3 sm:p-5 relative glass-panel rounded-xl">
                 <div className="flex justify-between items-center mb-3">
                   <div className="flex items-center gap-2">
                     <FaCalendarAlt className="text-[#64ffb9]" size={16} />
@@ -36,9 +36,9 @@ function Experience() {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-x-6 pt-2">
-                  <div className="text-[#6b9dd1] transition-all duration-300 hover:scale-110 bg-slate-900/60 p-3 rounded-full">
-                    <BsPersonWorkspace size={32} />
+                <div className="flex items-start gap-x-5 pt-2">
+                  <div className="text-[#6b9dd1] transition-all duration-300 p-2 rounded-full">
+                    <FaCodeBranch size={32} />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-base sm:text-xl mb-3 font-semibold text-white">

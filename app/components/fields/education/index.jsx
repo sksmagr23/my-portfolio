@@ -40,7 +40,7 @@ function Education() {
                     </div>
                     
                     <div className="flex items-start gap-x-6">
-                      <div className="text-[#6b9dd1] transition-all duration-300 hover:scale-110 bg-slate-900/60 p-3 rounded-full">
+                      <div className="text-[#6b9dd1] transition-all duration-300 p-2 rounded-full">
                         <HiAcademicCap size={36} />
                       </div>
                       <div className="flex-1">

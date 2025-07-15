@@ -24,7 +24,7 @@ function ProjectCard({ project }) {
           <img
             src={`/projects/${project.id}.png`}
             alt={`${project.name} screenshot`}
-            className="w-full h-full object-cover object-center opacity-80"
+            className="w-full h-full object-cover object-center opacity-70"
           />
         </div>
       </div>

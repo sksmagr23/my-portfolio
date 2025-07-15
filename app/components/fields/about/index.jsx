@@ -16,8 +16,8 @@ function AboutSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="order-1 lg:order-1">
-            <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300 shadow-[10px_10px_8px_#002855]">
-              <div className="from-transparent border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-b to-[#050839] transition-all duration-200">
+            <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300">
+              <div className="from-transparent border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-b to-[#03063fcc] transition-all duration-200">
                 <div className="flex flex-row">
                   <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#64ffb9a8] to-transparent"></div>
                 </div>
@@ -47,8 +47,8 @@ function AboutSection() {
           </div>
 
           <div className="order-2 lg:order-2">
-            <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300 shadow-[10px_10px_8px_#002855]">
-              <div className="from-[#0b0d31] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-b to-transparent transition-all duration-200">
+            <div className="card-highlight relative rounded-xl overflow-hidden transition-all duration-300">
+              <div className="from-[#03063fcc] border-[#1c3aa5a0] relative rounded-xl border bg-gradient-to-b to-transparent transition-all duration-200">
                 <div className="flex flex-row">
                   <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#64ffb9b0] to-transparent"></div>
                 </div>

@@ -11,9 +11,9 @@
   --foreground-rgb: rgb(233, 233, 236);
   --primary-color: #3892ff;
   --secondary-color: #64ffb9;
-  --bg-dark: rgba(1, 11, 51, 0.8);
-  --bg-light: rgba(0, 28, 55, 0.75);
-  --text-highlight: rgba(107, 157, 209, 0.9);
+  --bg-dark: rgb(0, 9, 43);
+  --bg-light: rgb(0, 30, 45);
+  --text-highlight: #6b9dd1e6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,15 +24,14 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(90deg, var(--bg-dark), var(--bg-light)),
-    url(/blue.png) no-repeat fixed;
+  background: linear-gradient(90deg, var(--bg-dark), var(--bg-light));
   background-size: cover;
 }
 
 .glass-panel {
-  background: rgba(1, 16, 54, 0.511);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(1, 26, 54, 0.265);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: 1px solid #010d64;
   position: relative;
   overflow: hidden;
@@ -130,7 +129,7 @@ body {
   background: linear-gradient(
     45deg,
     transparent 50%,
-    rgba(107, 157, 209, 0.1) 100%
+    rgba(3, 41, 82, 0.1) 100%
   );
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -161,14 +160,12 @@ body {
 .glow-card {
   --active: 0.15;
   --start: 0;
-  box-shadow: 10px 10px 4px #01274a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .glow-card:is(:hover, :focus-visible) {
   z-index: 3;
   transform: translateY(-2px);
-  box-shadow: 12px 12px 4px #002e59;
 }
 
 .glows {

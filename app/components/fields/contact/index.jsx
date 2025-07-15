@@ -85,7 +85,7 @@ function ContactSection() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0d2169] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
+                      className="w-full px-3 py-2 bg-[#0e1b711f] border border-[#0d2169] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
                       placeholder="Your Name"
                     />
                   </div>
@@ -100,7 +100,7 @@ function ContactSection() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0d226c] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
+                      className="w-full px-3 py-2 bg-[#0e1b711f] border border-[#0d226c] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -115,7 +115,7 @@ function ContactSection() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0d226c] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
+                      className="w-full px-3 py-2 bg-[#0e1b711f] border border-[#0d226c] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
                       placeholder="Message Subject"
                     />
                   </div>
@@ -130,7 +130,7 @@ function ContactSection() {
                       onChange={handleChange}
                       required
                       rows="4"
-                      className="w-full px-3 py-2 bg-[#0a1035] border border-[#0c216b] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
+                      className="w-full px-3 py-2 bg-[#0e1b711f] border border-[#0c216b] rounded-md focus:outline-none focus:ring-1 focus:ring-[#1c4aff] text-gray-200"
                       placeholder="Your message here..."
                     ></textarea>
                   </div>
