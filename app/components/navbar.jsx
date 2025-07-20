@@ -49,7 +49,7 @@ function Navbar() {
               </svg>
             </button>
 
-            <ul className="hidden md:flex flex-wrap justify-center gap-1.5 rounded-full glass-panel px-3 py-1 backdrop-blur-md ring-2 ring-blue-600/30">
+            <ul className="hidden md:flex flex-wrap justify-center gap-1.5 rounded-full glass-panel px-3 py-1 backdrop-blur-md ring-2 ring-blue-600/20">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link

@@ -7,7 +7,7 @@ export const educations = [
   },
   {
     id: 2,
-    title: "Higher Secondary and Intermediate Education(CBSE)",
+    title: "Higher Secondary and Intermediate",
     duration: "2010 - 2023",
     institution: "Dalimss Sunbeam School, Varanasi",
   },

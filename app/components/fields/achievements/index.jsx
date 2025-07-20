@@ -35,7 +35,7 @@ function Achievement() {
               <div className="p-5 sm:p-6 relative glass-panel rounded-xl">
                 <div className="flex flex-col sm:flex-row items-center sm:items-center gap-5 sm:gap-8">
                   <div className="flex flex-col items-center">
-                    <div className="text-[#64ffb9] transition-all duration-300 hover:scale-110 bg-slate-900/60 p-4 rounded-full">
+                    <div className="text-[#64ffb9] transition-all duration-300 hover:scale-110 p-3 rounded-full">
                       <BsTrophy size={40} />
                     </div>
                     <div className="mt-2 flex items-center justify-center">
@@ -55,7 +55,7 @@ function Achievement() {
                     </div>
 
                     <div className="mt-3 bg-slate-900/30 rounded-lg p-4 border border-slate-800/80">
-                      <h4 className="text-sm font-medium text-[#6b9dd1] mb-2">
+                      <h4 className="text-sm font-medium text-[#3e98f8] mb-2">
                         Problem Statement:
                       </h4>
                       <p className="text-sm text-gray-300 italic">

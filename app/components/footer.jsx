@@ -3,10 +3,10 @@ import { FaGithub } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="relative border-t bg-[#06122e] border-[#0a745662] text-white">
+    <div className="relative border-t bg-[#06122e3f] border-[#0a617462] text-white">
       <div className="mx-auto px-4 sm:px-8 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] py-4 lg:py-6">
         <div className="flex justify-center -z-40">
-          <div className="absolute top-0 h-[1px] w-1/2  bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
+          <div className="absolute top-0 h-[1px] w-1/2  bg-gradient-to-r from-transparent via-blue-600 to-transparent"></div>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-y-2">
           <p className="text-sm">

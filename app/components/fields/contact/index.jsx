@@ -76,7 +76,7 @@ function ContactSection() {
               <div className="border-t border-blue-900/50 px-4 lg:px-6 py-5 lg:py-6">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-[#6b9dd1] mb-1">
+                    <label className="block text-sm font-medium text-[#57a8ff] mb-1">
                       Name
                     </label>
                     <input
@@ -91,7 +91,7 @@ function ContactSection() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-[#6b9dd1] mb-1">
+                    <label className="block text-sm font-medium text-[#57a8ff] mb-1">
                       Email
                     </label>
                     <input
@@ -106,7 +106,7 @@ function ContactSection() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-[#6b9dd1] mb-1">
+                    <label className="block text-sm font-medium text-[#57a8ff] mb-1">
                       Subject
                     </label>
                     <input
@@ -121,7 +121,7 @@ function ContactSection() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-[#6b9dd1] mb-1">
+                    <label className="block text-sm font-medium text-[#57a8ff] mb-1">
                       Message
                     </label>
                     <textarea

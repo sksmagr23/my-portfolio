@@ -12,7 +12,7 @@
   --primary-color: #3892ff;
   --secondary-color: #64ffb9;
   --bg-dark: rgb(0, 9, 43);
-  --bg-light: rgb(0, 30, 45);
+  --bg-light: rgb(0, 27, 45);
   --text-highlight: #6b9dd1e6;
 }
 
@@ -29,9 +29,9 @@ body {
 }
 
 .glass-panel {
-  background: rgba(1, 26, 54, 0.265);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background: rgba(1, 26, 54, 0.165);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border: 1px solid #010d64;
   position: relative;
   overflow: hidden;

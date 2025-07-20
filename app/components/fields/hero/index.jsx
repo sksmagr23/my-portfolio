@@ -106,7 +106,7 @@ function HeroSection() {
                     target="_blank"
                     aria-label={item.tooltip}
                     data-social={item.social}
-                    className="relative overflow-hidden flex justify-center items-center w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full bg-cyan-900 text-cyan-300 transition-all duration-300 ease-in-out hover:shadow-lg"
+                    className="relative overflow-hidden flex justify-center items-center w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full bg-blue-900 text-blue-300 transition-all duration-300 ease-in-out hover:shadow-lg"
                   >
                     <div className={`absolute bottom-0 left-0 w-full h-0 ${item.bgColor} transition-all duration-300 ease-in-out group-hover:h-full`}></div>
                     <span className="relative z-10 group-hover:text-white">{item.icon}</span>
@@ -125,9 +125,9 @@ function HeroSection() {
               target="_blank"
               className=""
             >
-              <button className="bg-cyan-950 text-cyan-400 border border-cyan-400 border-b-4 font-medium overflow-hidden relative px-3 py-2 rounded-xl hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
-                <span className="bg-cyan-400 shadow-cyan-400 absolute -top-[150%] left-0 inline-flex w-full h-[5px] rounded-xl opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-                <span className="flex items-center gap-3 whitespace-nowrap">My Terminal <FaTerminal size={15} className="text-blue-300" /></span>
+              <button className="bg-blue-950 text-blue-300 border border-blue-400 border-b-4 font-medium overflow-hidden relative px-3 py-2 rounded-xl hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                <span className="bg-blue-300 shadow-blue-400 absolute -top-[150%] left-0 inline-flex w-full h-[5px] rounded-xl opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                <span className="flex items-center gap-3 whitespace-nowrap">My Terminal <FaTerminal size={15} className="text-blue-200" /></span>
               </button>
             </Link>
 

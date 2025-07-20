@@ -37,14 +37,14 @@ function Experience() {
                 </div>
                 
                 <div className="flex items-start gap-x-5 pt-2">
-                  <div className="text-[#6b9dd1] transition-all duration-300 p-2 rounded-full">
+                  <div className="text-[#57a8ff] transition-all duration-300 p-2 rounded-full">
                     <FaCodeBranch size={32} />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-base sm:text-xl mb-3 font-semibold text-white">
                       {experience.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-[#6b9dd1] font-medium mb-4">
+                    <p className="text-sm sm:text-base text-[#57a8ff] font-medium mb-4">
                       {experience.company}
                     </p>
                     

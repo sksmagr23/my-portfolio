@@ -40,14 +40,14 @@ function Education() {
                     </div>
                     
                     <div className="flex items-start gap-x-6">
-                      <div className="text-[#6b9dd1] transition-all duration-300 p-2 rounded-full">
+                      <div className="text-[#57a8ff] transition-all duration-300 p-2 rounded-full">
                         <HiAcademicCap size={36} />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-base sm:text-xl mb-2 font-medium text-white">
                           {education.title}
                         </h3>
-                        <p className="text-sm sm:text-base text-[#6b9dd1] mb-3">
+                        <p className="text-sm sm:text-base text-[#57a8ff] mb-3">
                           {education.institution}
                         </p>
                         
