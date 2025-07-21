@@ -12,7 +12,7 @@ function Navbar() {
     { href: "/#education", label: "Education" },
     { href: "/#projects", label: "Projects" },
     { href: "/#achievement", label: "Achievements" },
-    { href: "/#github", label: "Contrib Stats" },
+    { href: "/#stats", label: "Stats" },
     { href: "/#contact", label: "Contact" }
   ];
 

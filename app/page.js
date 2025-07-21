@@ -6,7 +6,7 @@ import Hero from "./components/fields/hero";
 import Projects from "./components/fields/projects";
 import Skills from "./components/fields/skills";
 import Achievement from "./components/fields/achievements";
-import GitHubStats from "./components/fields/github";
+import Stats from "./components/fields/stats";
 import ContactSection from "./components/fields/contact";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
       <Achievement />
       <Education />
       <Projects />
-      <GitHubStats />
+      <Stats />
       <ContactSection />
     </div>
   )
