@@ -11,5 +11,5 @@ export const personalData = {
   linkedIn: 'https://linkedin.com/in/saksham-agrawal-a10387286',
   twitter: 'https://x.com/Agr49081Saksham',
   leetcode : 'https://leetcode.com/u/algofire24/',
-  resume: '/ext_resume.pdf',
+  resume: '/resume_saksham_2.pdf',
 }
