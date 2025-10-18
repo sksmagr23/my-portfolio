@@ -1,5 +1,4 @@
 'use client';
-import ThreeJSBackground from './code-background-3d';
 import Squares from './squares';
 
 export default function BackgroundWrapper() {
@@ -14,7 +13,6 @@ export default function BackgroundWrapper() {
           borderColor="#1c3ff9"
           hoverFillColor="#222"
         />
-        <ThreeJSBackground />
       </div>
     </>
   );

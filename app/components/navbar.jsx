@@ -15,7 +15,7 @@ function Navbar() {
     { href: "/#stats", label: "Stats" },
     { href: "/#contact", label: "Contact" }
   ];
-
+  
   return (
     <nav className="z-50 transition-all duration-300 bg-transparent py-4">
       <div className="container mx-auto px-2">

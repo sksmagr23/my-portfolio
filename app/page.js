@@ -1,13 +1,16 @@
 'use client';
-import AboutSection from "./components/fields/about";
-import Education from "./components/fields/education";
-import Experience from "./components/fields/experience";
-import Hero from "./components/fields/hero";
-import Projects from "./components/fields/projects";
-import Skills from "./components/fields/skills";
-import Achievement from "./components/fields/achievements";
-import Stats from "./components/fields/stats";
-import ContactSection from "./components/fields/contact";
+import dynamic from 'next/dynamic';
+
+const Hero = dynamic(() => import("./components/fields/hero"));
+const AboutSection = dynamic(() => import("./components/fields/about"));
+const Skills = dynamic(() => import("./components/fields/skills"));
+const Experience = dynamic(() => import("./components/fields/experience"));
+const Achievement = dynamic(() => import("./components/fields/achievements"));
+const Education = dynamic(() => import("./components/fields/education"));
+const Projects = dynamic(() => import("./components/fields/projects"));
+const Stats = dynamic(() => import("./components/fields/stats"));
+const ContactSection = dynamic(() => import("./components/fields/contact"));
+
 
 export default function Home() {
   return (

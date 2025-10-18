@@ -18,7 +18,7 @@ function Experience() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <h2 className="text-2xl lg:text-3xl font-bold text-center mb-8 mt-8">
-          <span className="text-gradient">DEV EXPERIENCE</span>
+          <span className="text-gradient">WORK EXPERIENCE</span>
         </h2>
       </div>
 

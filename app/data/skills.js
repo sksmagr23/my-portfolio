@@ -3,6 +3,7 @@ export const skillsData = [
   'CSS',
   'Javascript',
   'Typescript',
+  'Python',
   'Go',
   'React',
   'Next JS',
@@ -10,11 +11,16 @@ export const skillsData = [
   'Node JS',
   'Express',
   'MongoDB',
+  'MySQL',
   'Firebase',
+  'Django',
   'Git',
   'C++',
   'Ubuntu',
-  'Linux'
+  'Linux',
+  'Docker',
+  'Markdown',
+  'Bash',
 ];
 
 export const skillsImage = (skill) => {
@@ -23,6 +29,7 @@ export const skillsImage = (skill) => {
     'css': 'css',
     'javascript': 'js',
     'typescript': 'ts',
+    'python': 'python',
     'go': 'go',
     'react': 'react',
     'next js': 'nextjs',
@@ -30,11 +37,16 @@ export const skillsImage = (skill) => {
     'node js': 'nodejs',
     'express': 'express',
     'mongodb': 'mongodb',
+    'mysql': 'mysql',
     'firebase': 'firebase',
+    'django': 'django',
     'git': 'git',
     'c++': 'cpp',
     'ubuntu': 'ubuntu',
     'linux': 'linux',
+    'docker': 'docker',
+    'markdown': 'markdown',
+    'bash': 'bash',
   };
 
   const skillID = skill.toLowerCase();

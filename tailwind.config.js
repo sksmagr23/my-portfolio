@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
-        quantico: ['var(--font-quantico)', 'sans-serif'],
+        sans: ['var(--font-inter)', 'serif'],
+        quantico: ['var(--font-quantico)', 'serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
