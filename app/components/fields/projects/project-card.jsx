@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 function ProjectCard({ project }) {

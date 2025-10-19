@@ -2,7 +2,7 @@
 import { experiences } from "@/app/data/experience";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaCodeBranch } from "react-icons/fa6";
-import GlowCard from "../../utils/glow-card";
+import SimpleCard from "../../utils/simple-card";
 
 function Experience() {
   return (
@@ -25,7 +25,7 @@ function Experience() {
       <div className="py-8 max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10">
           {experiences.map(experience => (
-            <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
+            <SimpleCard key={experience.id}>
               <div className="p-3 sm:p-5 relative glass-panel rounded-xl">
                 <div className="flex justify-between items-center mb-3">
                   <div className="flex items-center gap-2">
@@ -51,7 +51,7 @@ function Experience() {
                   </div>
                 </div>
               </div>
-            </GlowCard>
+            </SimpleCard>
           ))}
         </div>
       </div>

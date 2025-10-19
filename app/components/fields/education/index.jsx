@@ -1,7 +1,7 @@
 'use client';
 import { educations } from "@/app/data/educations";
 import { HiAcademicCap } from "react-icons/hi";
-import GlowCard from "../../utils/glow-card";
+import SimpleCard from "../../utils/simple-card";
 
 function Education() {
   return (
@@ -24,7 +24,7 @@ function Education() {
       <div className="py-8 max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               {educations.map(education => (
-                <GlowCard key={education.id} identifier={`education-${education.id}`}>
+                <SimpleCard key={education.id}>
                   <div className="p-5 sm:p-6 relative glass-panel rounded-xl">
                     <div className="flex justify-between items-center mb-4">
                       <div className="flex items-center gap-2">
@@ -75,7 +75,7 @@ function Education() {
                       </div>
                     </div>
                   </div>
-                </GlowCard>
+                </SimpleCard>
               ))}
           </div>
       </div>

@@ -7,12 +7,37 @@ import "./globals.scss";
 
 export const metadata = {
   title: "Portfolio | Saksham Agrawal",
-  description:
-    "Saksham Agrawal's Portfolio",
+  description: "Saksham Agrawal's Portfolio",
+  authors: [{ name: "Saksham Agrawal", url: "https://github.com/sksmagr23" }],
+  creator: "Saksham Agrawal",
+  publisher: "Saksham Agrawal",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://sksm.tech'),
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export const viewport = {
   themeColor: "#1c3aa5",
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({ children }) {

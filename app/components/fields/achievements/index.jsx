@@ -2,7 +2,7 @@
 import { achievements } from "@/app/data/achievements";
 import { BsTrophy } from "react-icons/bs";
 import { FaMedal} from "react-icons/fa";
-import GlowCard from "../../utils/glow-card";
+import SimpleCard from "../../utils/simple-card";
 
 function Achievement() {
   return (
@@ -28,9 +28,8 @@ function Achievement() {
       <div className="py-4 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8">
           {achievements.map((achievement) => (
-            <GlowCard
+            <SimpleCard
               key={achievement.id}
-              identifier={`achievement-${achievement.id}`}
             >
               <div className="p-5 sm:p-6 relative glass-panel rounded-xl">
                 <div className="flex flex-col sm:flex-row items-center sm:items-center gap-5 sm:gap-8">
@@ -65,7 +64,7 @@ function Achievement() {
                   </div>
                 </div>
               </div>
-            </GlowCard>
+            </SimpleCard>
           ))}
         </div>
       </div>
