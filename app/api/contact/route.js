@@ -1,16 +1,40 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+function escapeHtml(str = '') {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 export async function POST(request) {
   try {
     const { name, email, subject, message } = await request.json();
 
-    if (!name || !email || !subject || !message) {
+    if (!name?.trim() || !email?.trim() || !subject?.trim() || !message?.trim()) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
       );
     }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+      return NextResponse.json(
+        { error: 'Invalid email address' },
+        { status: 400 }
+      );
+    }
+
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      return NextResponse.json(
+        { error: 'Email service is not configured in environment variables' },
+        { status: 503 }
+      );
+    }
+
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -19,92 +43,36 @@ export async function POST(request) {
       },
     });
 
+    const safeName = escapeHtml(name.trim());
+    const safeEmail = escapeHtml(email.trim());
+    const safeSubject = escapeHtml(subject.trim());
+    const safeMessage = escapeHtml(message.trim()).replace(/\n/g, '<br>');
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'sakshamag34@gmail.com',
-      replyTo: email,
-      subject: `🚀 New Message from Your Portfolio: ${subject}`,
+      replyTo: email.trim(),
+      subject: `Portfolio Inquiry: ${subject.trim()}`,
       html: `
       <!DOCTYPE html>
       <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>New Portfolio Contact Message</title>
-          <style>
-              body {
-                  margin: 0;
-                  padding: 0;
-                  background-color: #f4f4f4;
-              }
-              table {
-                  border-spacing: 0;
-              }
-              td {
-                  padding: 0;
-              }
-              img {
-                  border: 0;
-              }
-          </style>
-      </head>
-      <body style="font-family: Arial, sans-serif; background-color: #050a1b; color: #ffffff; margin: 0; padding: 0;">
-          <center style="width: 100%; table-layout: fixed; background-color: #050a1b; padding-top: 10px; padding-bottom: 10px;">
-              <div style="max-width: 700px; margin: 0 auto; background-color: #0a1128; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);">
-                  
-                  <table align="center" style="width: 100%; border-collapse: collapse;">
-                      <tr>
-                          <td style="padding: 10px 0; text-align: center;">
-                              <img src="/sym.png" alt="Portfolio Banner" style="max-width: 80%; height: auto; border-radius: 8px;">
-                          </td>
-                      </tr>
-                  </table>
-      
-                  <table align="center" style="width: 100%; border-collapse: collapse; padding: 15px;">
-                      <tr>
-                          <td style="padding: 10px 0; border-top: 1px solid #1c2e6e;">
-                              <p style="font-size: 16px; color: #cdd6f4; line-height: 1.5; margin: 0;">
-                                  You've received a new message from the contact form on your portfolio website.
-                              </p>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td style="background-color: #111a36; padding: 10px; border-radius: 8px;">
-                              <p style="margin: 0 0 10px 0; font-size: 16px; color: #a6b0cf;">
-                                  <strong>From:</strong> 
-                                  <span style="color: #89b4fa;">${name}</span>
-                              </p>
-                              <p style="margin: 0 0 10px 0; font-size: 16px; color: #a6b0cf;">
-                                  <strong>Email:</strong> 
-                                  <a href="mailto:${email}" style="color: #89b4fa; text-decoration: none;">${email}</a>
-                              </p>
-                              <p style="margin: 0; font-size: 16px; color: #a6b0cf;">
-                                  <strong>Subject:</strong> 
-                                  <span style="color: #89b4fa;">${subject}</span>
-                              </p>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td style="padding: 15px 0;">
-                              <h2 style="font-size: 18px; color: #57a8ff; margin: 0 0 10px 0; border-bottom: 2px solid #64ffb9a8; padding-bottom: 5px;">Message Content</h2>
-                              <div style="font-size: 14px; color: #cdd6f4; line-height: 1.6; padding: 10px; background-color: #0e1b711f; border-left: 3px solid #1c4aff; border-radius: 4px;">
-                                  ${message.replace(/\n/g, '<br>')}
-                              </div>
-                          </td>
-                      </tr>
-                  </table>
-      
-                  <table align="center" style="width: 100%; border-collapse: collapse;">
-                      <tr>
-                          <td style="padding: 10px; text-align: center; font-size: 12px; color: #7f8ca3; border-top: 1px solid #1c2e6e;">
-                              <p style="margin: 0;">Sent from your Next.js Portfolio App</p>
-                              <p style="margin: 5px 0 0 0;">Generated on: ${new Date().toUTCString()}</p>
-                          </td>
-                      </tr>
-                  </table>
-      
-              </div>
-          </center>
+      <body style="font-family: Inter, Arial, sans-serif; background-color: #1E1F25; color: #E6EDF3; margin: 0; padding: 24px;">
+        <div style="max-width: 640px; margin: 0 auto; background-color: #24262E; border: 1px solid #3B4353; border-radius: 8px; overflow: hidden;">
+          <div style="background-color: #18191E; padding: 14px 20px; border-bottom: 1px solid #3B4353; font-family: monospace; font-size: 13px; color: #58B4FF;">
+            portfolio/contact.tsx — New Message
+          </div>
+          <div style="padding: 20px;">
+            <p style="margin: 0 0 8px; color: #94A3B8; font-size: 14px;"><strong style="color: #E6EDF3;">From:</strong> ${safeName}</p>
+            <p style="margin: 0 0 8px; color: #94A3B8; font-size: 14px;"><strong style="color: #E6EDF3;">Email:</strong> <a href="mailto:${safeEmail}" style="color: #58B4FF;">${safeEmail}</a></p>
+            <p style="margin: 0 0 16px; color: #94A3B8; font-size: 14px;"><strong style="color: #E6EDF3;">Subject:</strong> ${safeSubject}</p>
+            <div style="background-color: #1E1F25; border-left: 3px solid #58B4FF; padding: 14px; border-radius: 4px; color: #CBD5E1; font-size: 14px; line-height: 1.6;">
+              ${safeMessage}
+            </div>
+            <p style="margin: 18px 0 0; font-size: 11px; color: #64748B; font-family: monospace;">
+              Sent on ${new Date().toUTCString()}
+            </p>
+          </div>
+        </div>
       </body>
       </html>
       `,
@@ -113,7 +81,7 @@ export async function POST(request) {
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to send message' },
       { status: 500 }

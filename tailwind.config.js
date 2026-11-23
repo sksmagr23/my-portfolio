@@ -8,28 +8,26 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'serif'],
-        quantico: ['var(--font-quantico)', 'serif'],
+        sans: ['var(--app-font-sans)', "'Space Grotesk'", "'Inter'", 'sans-serif'],
+        mono: ['var(--app-font-sans)', "'Space Grotesk'", "'Inter'", 'sans-serif'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      container: {
-        center: true,
-      },
-      keyframes: {
-        gradient: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+      colors: {
+        ide: {
+          bg: '#1E1F25',
+          chrome: '#18191E',
+          surface: '#24262E',
+          surfaceHover: '#2A2D37',
+          border: '#3B4353',
+          borderSubtle: '#2E3340',
+          accent: '#58B4FF',
+          accentBright: '#7CC4FF',
+          accentDeep: '#2563EB',
+          text: '#E6EDF3',
+          muted: '#94A3B8',
+          subtle: '#64748B',
         },
-      },
-      animation: {
-        gradient: 'gradient 8s linear infinite'
       },
     },
   },
   plugins: [],
-}
+};
