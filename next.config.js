@@ -4,19 +4,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'github-readme-stats.vercel.app',
-        pathname: '**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'github-readme-streak-stats.herokuapp.com',
+        hostname: 'avatars.githubusercontent.com',
         pathname: '**',
       },
     ],
-    domains: ['skillicons.dev'],
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
