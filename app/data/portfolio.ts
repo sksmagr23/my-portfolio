@@ -243,7 +243,7 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/sksmagr23/QueryPilot',
     liveUrl: null,
     demoVideoUrl: null,
-    image: null
+    image: '/projects/querypilot.png'
   },
   {
     id: 'codementor-ai',

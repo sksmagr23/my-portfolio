@@ -53,16 +53,21 @@
   }
 }
 
-.bg-dot-grid {
-  background-color: #161821;
-  background-image: radial-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px);
-  background-size: 16px 16px;
+.bg-workspace-blue {
+  background-color: #11131ea4;
+  background-image: url('/blue.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode:lighten;
 }
 
 .ide-panel {
-  background-color: #1c203187;
+  background-color: #1c213832;
   border: 1px solid #2e3446;
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.429);
+  backdrop-filter: blur(10px);
 }
 
 * {

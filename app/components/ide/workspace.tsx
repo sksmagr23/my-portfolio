@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PanelLeft, X, ArrowUp, FileText } from 'lucide-react';
@@ -109,7 +109,7 @@ export function IDEWorkspace() {
   };
 
   return (
-    <div className="min-h-screen lg:h-screen lg:overflow-hidden bg-dot-grid text-[#E6EDF3] flex flex-col lg:flex-row lg:p-4 lg:gap-4">
+    <div className="min-h-screen lg:h-screen lg:overflow-hidden bg-workspace-blue text-[#E6EDF3] flex flex-col lg:flex-row lg:p-4 lg:gap-4">
       <div className="hidden lg:block w-[328px] xl:w-[344px] shrink-0 h-full overflow-hidden">
         <Sidebar
           onSelectTab={selectTab}
@@ -134,7 +134,7 @@ export function IDEWorkspace() {
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ duration: 0.2 }}
-              className="relative z-10 w-[86vw] max-w-[348px] h-full bg-dot-grid border-r border-[#2E3446] p-3.5 flex flex-col gap-3"
+              className="relative z-10 w-[86vw] max-w-[348px] h-full bg-workspace-blue border-r border-[#2E3446] p-3.5 flex flex-col gap-3"
             >
               <div className="flex items-center justify-between px-1">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#58B4FF]">

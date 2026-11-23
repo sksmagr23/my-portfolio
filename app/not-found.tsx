@@ -4,8 +4,8 @@ import { buttonClasses } from './components/ide/button';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#1E1F25] text-[#E6EDF3] flex items-center justify-center p-6">
-      <div className="w-full max-w-md rounded-lg bg-[#24262E] border border-[#3B4353] p-6 space-y-4">
+    <div className="min-h-screen bg-workspace-blue text-[#E6EDF3] flex items-center justify-center p-6">
+      <div className="w-full max-w-md ide-panel border-t-[3px] border-t-[#58B4FF] p-6 space-y-4">
         <div className="text-4xl font-bold text-[#58B4FF]">404</div>
         <h1 className="text-lg font-bold text-[#E6EDF3]">Page Not Found</h1>
         <p className="text-sm text-[#94A3B8]">
