@@ -99,6 +99,7 @@ export const personalInfo = {
   },
   avatar: '/profile.png',
   resumeUrl: '/Saksham_Agrawal_Resume.pdf',
+  terminalUrl: 'https://sksm-terminal.vercel.app',
   email: 'sakshamag34@gmail.com',
   sidebarCoreSkills: [
     'C++',
@@ -231,9 +232,9 @@ export const projectsData: ProjectItem[] = [
     id: 'querypilot',
     name: 'QueryPilot',
     shortDescription:
-      'Agentic Text-to-SQL analytics platform with SQLGlot AST guardrails, EXPLAIN cost gates, and HITL approvals.',
+      'An Agentic analytics platform that translates natural-language business questions into validated SQL queries, delivering interactive charts, queries, data-backed insights and cost estimates',
     featured: true,
-    techStack: ['Python', 'FastAPI', 'LangGraph', 'PostgreSQL', 'React', 'TypeScript'],
+    techStack: ['Python', 'FastAPI', 'LangGraph', 'PostgreSQL', 'React'],
     description: [
       'Schema-grounded natural-language to SQL generation with bounded self-correction retries (99.05% accuracy across 105 tests).',
       'Blocks destructive statements via SQLGlot AST inspection and executes exclusively on a read-only PostgreSQL role.',
@@ -242,26 +243,24 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/sksmagr23/QueryPilot',
     liveUrl: null,
     demoVideoUrl: null,
-    image: null,
-    previewKind: 'querypilot',
+    image: null
   },
   {
     id: 'codementor-ai',
     name: 'CodeMentor AI',
     shortDescription:
-      'Agentic DSA assistant that diagnoses C++ bugs, surfaces failing counterexamples, and renders dry-run traces.',
+      'An AI-powered DSA mentorship platform that helps developers understand algorithms, debug code, and improve problem-solving through conversational & visual AI',
     featured: true,
-    techStack: ['TypeScript', 'React', 'FastAPI', 'Google ADK', 'Gemini', 'MongoDB'],
+    techStack: ['TS', 'React', 'FastAPI', 'Google ADK', 'Gemini', 'MongoDB'],
     description: [
-      'Analyzes problem statements and submitted C++ solutions to pinpoint logical errors and edge-case bugs.',
-      'Explains root causes, generates corrected solutions, and compares complexity against optimal approaches.',
-      'Session-based conversational context powered by Google ADK, CopilotKit dynamic UI, and visual dry-run traces.',
+      'Built an AI agent using Google ADK and Gemini for contextual DSA mentorship and code analysis',
+      'Implemented automated bug detection, counterexample generation, and optimal solution comparisons',
+      'Developed interactive execution visualizations with AI-generated dry-run diagrams.',
     ],
     githubUrl: 'https://github.com/sksmagr23/CodeMentor-AI',
     liveUrl: null,
     demoVideoUrl: null,
-    image: null,
-    previewKind: 'codementor',
+    image: null
   },
   {
     id: 'url-shortener',
@@ -278,18 +277,17 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/sksmagr23/url-shortener',
     liveUrl: null,
     demoVideoUrl: null,
-    image: null,
-    previewKind: 'url-shortener',
+    image: '/projects/godr.png',
   },
   {
     id: 'renewable-energy-forecasting',
     name: 'Renewable Energy Forecasting',
     shortDescription:
-      'AI forecasting platform for solar, wind, and hydro output using a GRU + XGBoost ensemble (R² = 0.7359).',
+      'Web-based AI-powered renewable energy forecasting system to accurately predict solar and wind energy generation from historical weather data (R² = 0.7359).',
     featured: true,
-    techStack: ['Python', 'Recharts', 'XGBoost', 'Next.js', 'FastAPI', 'Mapbox'],
+    techStack: ['Python', 'XGBoost', 'Next.js', 'FastAPI', 'Mapbox'],
     description: [
-      'Secured 2nd position at Hack It Out, Technex ’25 (IIT BHU) using historical weather data and ensemble modeling.',
+      'Developed GRU + XGBoost ensemble models with GridSearchCV on Open-Meteo & NITI Aayog data',
       'Interactive Mapbox geospatial selection paired with Recharts forecast dashboards and Groq AI recommendations.',
       'FastAPI-based ML inference backend serving real-time location forecasts to the Next.js web app.',
     ],
@@ -297,6 +295,22 @@ export const projectsData: ProjectItem[] = [
     liveUrl: 'https://shannonntpc.vercel.app/',
     demoVideoUrl: null,
     image: '/projects/2.png',
+  },
+  {
+    id: 'microbubble-analyzer',
+    name: 'Microbubble Stability Analyzer',
+    shortDescription:
+      'Platform to analyze emulsion morphology and predict stability using kinetic modeling',
+    techStack: ['Python', 'Scikit-learn', 'CV', 'JS'],
+    description: [
+      'Marker-controlled Watershed segmentation for automated droplet sizing and Polydispersity Index evaluation.',
+      'First-order exponential decay modeling and OLS regression to estimate stability constants, half-life',
+      'Trained Gradient Boosting Regressors to predict droplet size distribution from homogenizer RPM, mixing time, and pH'
+    ],
+    githubUrl: 'https://github.com/sksmagr23/Microbubble-analyzer',
+    liveUrl: 'https://microbubble-analyzer.vercel.app',
+    demoVideoUrl: null,
+    image: '/projects/bubble.png',
   },
   {
     id: 'flood-detection-unet',
@@ -311,14 +325,14 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/sksmagr23/Flood-_mapping_ML',
     liveUrl: null,
     demoVideoUrl: null,
-    image: '/projects/flood-sample.png',
+    image: '/projects/flood.png',
   },
   {
     id: 'codeexchange',
     name: 'CodeExchange',
     shortDescription:
-      'Stack Overflow-inspired developer Q&A platform with JWT & Google OAuth, Markdown, and Stack Exchange API search.',
-    techStack: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'EJS', 'Tailwind CSS'],
+      'Stack Overflow-inspired developer Q&A platform',
+    techStack: ['Node.js', 'Express.js', 'MongoDB', 'EJS', 'Tailwind CSS'],
     description: [
       'Full CRUD Q&A workflows with JWT + Google OAuth authentication, Markdown posts, tags, and answer reactions.',
       'Integrated Stack Exchange API to search live Stack Overflow discussions alongside community posts.',
@@ -341,22 +355,7 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/sksmagr23/restaurant-service',
     liveUrl: null,
     demoVideoUrl: null,
-    image: '/projects/restaurant-service.jpg',
-  },
-  {
-    id: 'microbubble-analyzer',
-    name: 'Microbubble Stability Analyzer',
-    shortDescription:
-      'Computer vision and kinetic modeling platform characterizing emulsion droplet morphology and stability.',
-    techStack: ['Python', 'Scikit-learn', 'CV', 'JS'],
-    description: [
-      'Marker-controlled Watershed segmentation for automated droplet sizing and Polydispersity Index evaluation.',
-      'First-order decay kinetic modeling and ML micrograph synthesis across formulation parameters.',
-    ],
-    githubUrl: 'https://github.com/sksmagr23/Microbubble-analyzer',
-    liveUrl: 'https://microbubble-analyzer.vercel.app',
-    demoVideoUrl: null,
-    image: '/projects/microbubble.png',
+    image: '/projects/restaurant.png',
   },
 ];
 

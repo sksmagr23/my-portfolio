@@ -9,11 +9,11 @@ export default function NotFound() {
         <div className="text-4xl font-bold text-[#58B4FF]">404</div>
         <h1 className="text-lg font-bold text-[#E6EDF3]">Page Not Found</h1>
         <p className="text-sm text-[#94A3B8]">
-          The requested route does not exist in this portfolio workspace.
+          The requested route does not exist in this portfolio.
         </p>
         <Link href="/" className={buttonClasses('primary', 'md')}>
           <ArrowLeft className="w-4 h-4" />
-          <span>Return to Workspace</span>
+          <span>Back</span>
         </Link>
       </div>
     </div>

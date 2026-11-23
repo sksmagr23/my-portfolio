@@ -5,10 +5,10 @@
 :root {
   color-scheme: dark;
   --app-font-sans: var(--font-space-grotesk), var(--font-inter), 'Space Grotesk', 'Inter', sans-serif;
-  --ide-bg: #15171e;
+  --ide-bg: #090a0e;
   --ide-surface: #1b1e27;
-  --ide-surface-elevated: #202430;
-  --ide-border: #2c3242;
+  --ide-surface-elevated: #22283b;
+  --ide-border: #393d47;
   --ide-border-strong: #3b4459;
   --ide-accent: #44a8fb;
 }
@@ -26,7 +26,7 @@
   }
 
   html {
-    background-color: #15171e;
+    background-color: #21326f;
     color: #e6edf3;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -34,7 +34,7 @@
   }
 
   body {
-    background-color: #15171e;
+    background-color: #202f65;
     color: #e6edf3;
     overflow-x: hidden;
   }
@@ -54,15 +54,15 @@
 }
 
 .bg-dot-grid {
-  background-color: #15171e;
+  background-color: #161821;
   background-image: radial-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px);
   background-size: 16px 16px;
 }
 
 .ide-panel {
-  background-color: #191c24;
+  background-color: #1c203187;
   border: 1px solid #2e3446;
-  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.429);
 }
 
 * {

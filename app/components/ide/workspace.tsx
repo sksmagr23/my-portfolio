@@ -74,7 +74,6 @@ export function IDEWorkspace() {
       setCopiedEmail(true);
       setTimeout(() => setCopiedEmail(false), 2200);
     } catch {
-      // Clipboard fallback ignored
     }
   }, []);
 

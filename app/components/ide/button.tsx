@@ -8,11 +8,11 @@ const BASE_STYLES =
 
 const VARIANT_STYLES: Record<ButtonVariant, string> = {
   primary:
-    'bg-[#58B4FF] text-[#0D1117] border border-[#7CC4FF] shadow-[2px_2px_0px_rgba(0,0,0,0.55),0_0_18px_-4px_rgba(88,180,255,0.55)] hover:bg-[#7CC4FF] active:translate-y-[1px]',
+    'bg-[#58B4FF] text-[#0D1117] border border-[#7CC4FF] hover:bg-[#7CC4FF]',
   secondary:
-    'bg-[#1B2232] text-[#6CB8FF] border border-[#58B4FF] shadow-[2px_2px_0px_rgba(0,0,0,0.45)] hover:bg-[#58B4FF] hover:text-[#0D1117] active:translate-y-[1px]',
+    'bg-[#1B2232] text-[#6CB8FF] border border-[#58B4FF] hover:bg-[#58B4FF] hover:text-[#0D1117]',
   outline:
-    'bg-[#171A22] text-[#CBD5E1] border border-[#3B4459] shadow-[2px_2px_0px_rgba(0,0,0,0.35)] hover:border-[#58B4FF] hover:text-[#58B4FF] hover:bg-[#1D2434] active:translate-y-[1px]',
+    'bg-[#171A22] text-[#CBD5E1] border border-[#3B4459] hover:border-[#58B4FF] hover:text-[#58B4FF] hover:bg-[#1D2434]',
   ghost:
     'bg-transparent text-[#58B4FF] border border-transparent hover:text-[#7CC4FF] hover:bg-[#58B4FF]/10',
 };

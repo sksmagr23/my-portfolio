@@ -10,6 +10,7 @@ import {
   FileText,
   MessageSquare,
   ArrowUpRight,
+  Terminal
 } from 'lucide-react';
 import { personalInfo, socialLinks, type TabId } from '@/app/data/portfolio';
 import { PlatformIcon } from './icons';
@@ -156,30 +157,43 @@ export function Sidebar({
         </div>
 
         <div className="space-y-2.5 pt-1">
-          <ActionLink
-            href={personalInfo.resumeUrl}
-            external
-            variant="primary"
-            size="lg"
-            className="w-full"
-          >
-            <FileText className="w-4 h-4" />
-            <span>Resume</span>
-          </ActionLink>
+  <div className="grid grid-cols-2 gap-2.5">
+    <ActionLink
+      href={personalInfo.resumeUrl}
+      external
+      variant="primary"
+      size="lg"
+      className="w-full"
+    >
+      <FileText className="w-4 h-4" />
+      <span>Resume</span>
+    </ActionLink>
 
-          <ActionButton
-            variant="secondary"
-            size="lg"
-            onClick={() => {
-              onSelectTab('contact');
-              onCloseMobile?.();
-            }}
-            className="w-full"
-          >
-            <MessageSquare className="w-4 h-4" />
-            <span>Send a Message</span>
-          </ActionButton>
-        </div>
+    <ActionLink
+      href={personalInfo.terminalUrl}
+      external
+      variant="secondary"
+      size="lg"
+      className="w-full"
+    >
+      <Terminal className="w-4 h-4" />
+      <span>Terminal</span>
+    </ActionLink>
+  </div>
+
+  <ActionButton
+    variant="secondary"
+    size="lg"
+    onClick={() => {
+      onSelectTab('contact');
+      onCloseMobile?.();
+    }}
+    className="w-full"
+  >
+    <MessageSquare className="w-4 h-4" />
+    <span>Send a Message</span>
+  </ActionButton>
+</div>
       </section>
     </aside>
   );
