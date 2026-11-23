@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Saksham Agrawal | Software Engineer · Agentic AI · Full-Stack & Backend',
+  title: 'Saksham Agrawal | Portfolio',
   description:
     'Developer portfolio of Saksham Agrawal — final-year student at IIT (BHU) Varanasi specializing in scalable backend systems, full-stack engineering, Agentic AI, and Forward Deployed Engineering (FDE).',
   keywords: [

@@ -33,7 +33,8 @@ export interface ExperienceItem {
   role: string;
   duration: string;
   highlightBadge: string;
-  logoText: string;
+  logo?: string;
+  logoText?: string;
   responsibilities: string[];
   techStack: string[];
   link?: string;
@@ -366,6 +367,7 @@ export const experienceData: ExperienceItem[] = [
     role: 'Software Developer Intern',
     duration: 'May 2026 – Aug 2026',
     highlightBadge: 'Agentic CRM',
+    logo: '/irisidea.png',
     logoText: 'IR',
     responsibilities: [
       'Built agentic CRM workflows using Pydantic and Google ADK for context-aware customer management.',
@@ -380,6 +382,7 @@ export const experienceData: ExperienceItem[] = [
     role: 'Template Track Contributor',
     duration: 'June 2025 – Oct 2025',
     highlightBadge: 'Open Source',
+    logo: '/gofr.png',
     logoText: 'GF',
     responsibilities: [
       'Built a GoFr URL shortening & tracking service supporting aliases, expiration, versioning, rollback, and QR codes.',
@@ -395,6 +398,7 @@ export const experienceData: ExperienceItem[] = [
     role: 'Full-Stack Developer Intern',
     duration: 'April 2025 – May 2025',
     highlightBadge: 'Full-Stack',
+    logo: '/mittal_alliance.png',
     logoText: 'MA',
     responsibilities: [
       'Built responsive interactive UI components using React, HTML, CSS, and JavaScript, improving UX and accessibility.',

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 import { experienceData } from '@/app/data/portfolio';
 import { ActionLink } from '../button';
@@ -9,7 +10,7 @@ export function ExperienceSection() {
   return (
     <div className="space-y-4">
       <h2 className="text-base font-bold text-[#58B4FF] flex items-center gap-2">
-        <span className="text-[#58B4FF]" >#</span>
+        <span className="text-[#58B4FF]">#</span>
         <span>Experience</span>
       </h2>
 
@@ -17,11 +18,18 @@ export function ExperienceSection() {
         {experienceData.map((item) => (
           <article key={item.id} className="p-5 sm:p-6">
             <div className="flex items-start gap-4">
-              <div
-                className="w-11 h-11 bg-[#1B2232] border border-[#58B4FF]/50 text-[#58B4FF] flex items-center justify-center text-sm font-bold shrink-0"
-                aria-hidden="true"
-              >
-                {item.logoText}
+              <div className="relative w-11 h-11 overflow-hidden bg-[#1B2232] flex items-center justify-center text-sm font-bold shrink-0">
+                {item.logo ? (
+                  <Image
+                    src={item.logo}
+                    alt={`${item.company} logo`}
+                    fill
+                    sizes="44px"
+                    className="object-cover"
+                  />
+                ) : (
+                  <span aria-hidden="true">{item.logoText}</span>
+                )}
               </div>
 
               <div className="flex-1 min-w-0 space-y-2.5">
