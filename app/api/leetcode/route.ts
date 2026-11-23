@@ -2,29 +2,19 @@ import { NextResponse } from 'next/server';
 import { codingProfiles } from '@/app/data/portfolio';
 
 const FALLBACK_LEETCODE = {
-  ...codingProfiles.leetcode,
+  username: codingProfiles.leetcode.username,
+  contestRating: codingProfiles.leetcode.contestRating,
+  contestTopPercentage: codingProfiles.leetcode.contestTopPercentage,
+  badge: codingProfiles.leetcode.badge,
   live: false,
 };
 
 export async function GET() {
   try {
     const query = `
-      query userProfile($username: String!) {
-        matchedUser(username: $username) {
-          submitStatsGlobal {
-            acSubmissionNum {
-              difficulty
-              count
-            }
-          }
-          profile {
-            ranking
-          }
-        }
+      query userContest($username: String!) {
         userContestRanking(username: $username) {
-          attendedContestsCount
           rating
-          globalRanking
           topPercentage
           badge {
             name
@@ -52,31 +42,19 @@ export async function GET() {
     }
 
     const json = await response.json();
-    const matchedUser = json?.data?.matchedUser;
     const contest = json?.data?.userContestRanking;
 
-    if (!matchedUser) {
+    if (!contest) {
       return NextResponse.json(FALLBACK_LEETCODE);
     }
 
-    const submissions = matchedUser.submitStatsGlobal?.acSubmissionNum ?? [];
-    const getCount = (diff: string) =>
-      submissions.find((s: { difficulty: string; count: number }) => s.difficulty === diff)?.count ?? 0;
-
     return NextResponse.json({
       username: codingProfiles.leetcode.username,
-      totalSolved: getCount('All') || FALLBACK_LEETCODE.totalSolved,
-      easySolved: getCount('Easy') || FALLBACK_LEETCODE.easySolved,
-      mediumSolved: getCount('Medium') || FALLBACK_LEETCODE.mediumSolved,
-      hardSolved: getCount('Hard') || FALLBACK_LEETCODE.hardSolved,
-      ranking: matchedUser.profile?.ranking ?? FALLBACK_LEETCODE.ranking,
-      contestRating: contest?.rating ? Math.round(contest.rating) : FALLBACK_LEETCODE.contestRating,
-      contestGlobalRanking: contest?.globalRanking ?? FALLBACK_LEETCODE.contestGlobalRanking,
-      contestTopPercentage: contest?.topPercentage
+      contestRating: contest.rating ? Math.round(contest.rating) : FALLBACK_LEETCODE.contestRating,
+      contestTopPercentage: contest.topPercentage
         ? Number(contest.topPercentage.toFixed(2))
         : FALLBACK_LEETCODE.contestTopPercentage,
-      attendedContests: contest?.attendedContestsCount ?? FALLBACK_LEETCODE.attendedContests,
-      badge: contest?.badge?.name ?? FALLBACK_LEETCODE.badge,
+      badge: contest.badge?.name ?? FALLBACK_LEETCODE.badge,
       live: true,
     });
   } catch {

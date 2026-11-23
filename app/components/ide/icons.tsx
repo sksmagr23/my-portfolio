@@ -2,10 +2,6 @@
 
 import React from 'react';
 import {
-  FileCode2,
-  FileJson,
-  FileText,
-  Terminal,
   Mail,
   Code2,
   Database,
@@ -22,29 +18,6 @@ import {
   Palette,
   Braces,
 } from 'lucide-react';
-import type { WorkspaceTab } from '@/app/data/portfolio';
-
-export function FileTabIcon({
-  ext,
-  active = false,
-  className = 'w-3.5 h-3.5',
-}: {
-  ext: WorkspaceTab['ext'];
-  active?: boolean;
-  className?: string;
-}) {
-  const color = active ? 'text-[#58B4FF]' : 'text-[#60A5FA]/80';
-  switch (ext) {
-    case 'ts':
-    case 'tsx':
-      return <FileCode2 className={`${className} ${color}`} />;
-    case 'json':
-      return <FileJson className={`${className} ${color}`} />;
-    case 'md':
-    default:
-      return <FileText className={`${className} ${color}`} />;
-  }
-}
 
 export function GitHubIcon({ className = 'w-4 h-4' }: { className?: string }) {
   return (
@@ -78,21 +51,37 @@ export function InstagramIcon({ className = 'w-4 h-4' }: { className?: string })
   );
 }
 
+
 export function CodeChefIcon({ className = 'w-4 h-4' }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M11.257.004c-.37 0-.74.014-1.106.042C5.293.413 1.473 4.307 1.17 9.17c-.276 4.442 2.346 8.414 6.265 9.93.41.158.854-.144.854-.584v-2.104c0-.325-.203-.614-.507-.727-2.423-.905-4.086-3.326-3.835-6.122.271-3.016 2.754-5.43 5.774-5.635 3.606-.244 6.607 2.596 6.607 6.143 0 2.617-1.637 4.85-3.941 5.744a.776.776 0 0 0-.496.724v2.113c0 .442.448.742.858.58 3.662-1.447 6.256-5.02 6.256-9.193C19.005 4.502 15.537.004 11.257.004zm1.132 7.213c-.86 0-1.557.697-1.557 1.557 0 .86.697 1.557 1.557 1.557.86 0 1.557-.697 1.557-1.557 0-.86-.697-1.557-1.557-1.557zM9.2 19.72c-.662 0-1.2.538-1.2 1.2v1.88c0 .662.538 1.2 1.2 1.2h5.6c.662 0 1.2-.538 1.2-1.2v-1.88c0-.662-.538-1.2-1.2-1.2H9.2z" />
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M7.1 18.5h9.8a3.1 3.1 0 0 0 1.55-5.78
+        4.65 4.65 0 0 0-4.15-7.15
+        4.2 4.2 0 0 0-7.9 1.5
+        3.55 3.55 0 0 0 .7 7.05v4.38Z"
+        fill="currentColor"
+      />
+      <path
+        d="M7.1 18.5h9.8v2.3H7.1z"
+        fill="currentColor"
+        opacity=".85"
+      />
+      <path
+        d="M9 11.2c.7-1.2 1.4-1.8 2.2-1.8m3.8 1.8c-.7-1.2-1.4-1.8-2.2-1.8"
+        stroke="white"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
 
-export function GfgIcon({ className = 'w-4 h-4' }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M21.45 14.315c-.143.28-.334.532-.565.745a3.691 3.691 0 0 1-1.104.695 4.51 4.51 0 0 1-3.116-.016 3.79 3.79 0 0 1-2.135-2.078 3.571 3.571 0 0 1-.13-.353h7.418a4.26 4.26 0 0 1-.368 1.007zm-11.99-.654a3.793 3.793 0 0 1-2.134 2.078 4.51 4.51 0 0 1-3.117.016 3.7 3.7 0 0 1-1.104-.695 2.652 2.652 0 0 1-.564-.745 4.221 4.221 0 0 1-.368-1.006h7.418c-.04.119-.083.237-.131.352zm14.501-1.758a3.849 3.849 0 0 0-.082-.475H14.34a3.53 3.53 0 0 1 .279-.821 3.79 3.79 0 0 1 2.134-2.078 4.51 4.51 0 0 1 3.117.016c.42.165.804.402 1.132.7l1.394-1.394a5.966 5.966 0 0 0-1.77-1.113 6.46 6.46 0 0 0-4.46-.024 5.745 5.745 0 0 0-3.235 3.151 5.647 5.647 0 0 0-.427 1.563h-1.008a5.647 5.647 0 0 0-.427-1.563 5.745 5.745 0 0 0-3.235-3.151 6.46 6.46 0 0 0-4.46.024 5.966 5.966 0 0 0-1.77 1.113l1.394 1.394c.328-.298.712-.535 1.132-.7a4.51 4.51 0 0 1 3.117-.016 3.79 3.79 0 0 1 2.134 2.078c.134.262.228.538.279.821H.121a3.849 3.849 0 0 0-.082.475A5.774 5.774 0 0 0 0 12.63c0 .388.039.774.116 1.154a5.88 5.88 0 0 0 1.483 2.86 5.833 5.833 0 0 0 2.01 1.353 6.46 6.46 0 0 0 4.46-.024 5.745 5.745 0 0 0 3.235-3.151c.134-.262.238-.535.311-.815h.77c.073.28.177.553.311.815a5.745 5.745 0 0 0 3.235 3.151 6.46 6.46 0 0 0 4.46.024 5.833 5.833 0 0 0 2.01-1.353 5.88 5.88 0 0 0 1.483-2.86A5.95 5.95 0 0 0 24 12.63c0-.244-.013-.488-.039-.727z" />
-    </svg>
-  );
-}
 
 export function PlatformIcon({ id, className = 'w-4 h-4' }: { id: string; className?: string }) {
   switch (id) {
@@ -104,12 +93,8 @@ export function PlatformIcon({ id, className = 'w-4 h-4' }: { id: string; classN
       return <LeetCodeIcon className={className} />;
     case 'codechef':
       return <CodeChefIcon className={className} />;
-    case 'gfg':
-      return <GfgIcon className={className} />;
     case 'instagram':
       return <InstagramIcon className={className} />;
-    case 'terminal':
-      return <Terminal className={className} />;
     case 'email':
     default:
       return <Mail className={className} />;

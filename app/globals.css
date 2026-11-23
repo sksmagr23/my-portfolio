@@ -5,12 +5,12 @@
 :root {
   color-scheme: dark;
   --app-font-sans: var(--font-space-grotesk), var(--font-inter), 'Space Grotesk', 'Inter', sans-serif;
-  --ide-bg: #1e1f25;
-  --ide-chrome: #18191e;
-  --ide-surface: #24262e;
-  --ide-border: #3b4353;
-  --ide-border-subtle: #2e3340;
-  --ide-accent: #58b4ee;
+  --ide-bg: #15171e;
+  --ide-surface: #1b1e27;
+  --ide-surface-elevated: #202430;
+  --ide-border: #2c3242;
+  --ide-border-strong: #3b4459;
+  --ide-accent: #44a8fb;
 }
 
 @layer base {
@@ -26,7 +26,7 @@
   }
 
   html {
-    background-color: #1e1f25;
+    background-color: #15171e;
     color: #e6edf3;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -34,7 +34,7 @@
   }
 
   body {
-    background-color: #1e1f25;
+    background-color: #15171e;
     color: #e6edf3;
     overflow-x: hidden;
   }
@@ -53,24 +53,34 @@
   }
 }
 
+.bg-dot-grid {
+  background-color: #15171e;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.ide-panel {
+  background-color: #191c24;
+  border: 1px solid #2e3446;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.38);
+}
+
 * {
   scrollbar-width: thin;
-  scrollbar-color: #3b4353 #18191e;
+  scrollbar-color: #353d50 #15171e;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #18191e;
+  background: #15171e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #3b4353;
-  border-radius: 4px;
-  border: 2px solid #18191e;
+  background-color: #353d50;
 }
 
 ::-webkit-scrollbar-thumb:hover {
