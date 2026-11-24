@@ -1,22 +1,47 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useSyncExternalStore } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Tag, X, PlayCircle } from 'lucide-react';
 import { projectsData, type ProjectItem } from '@/app/data/portfolio';
 import { ProjectPreview } from '../project-preview';
 import { ActionButton, ActionLink } from '../button';
 
+const XL_MEDIA_QUERY = '(min-width: 1280px)';
+
+function subscribeXl(callback: () => void) {
+  const mql = window.matchMedia(XL_MEDIA_QUERY);
+  mql.addEventListener('change', callback);
+  return () => mql.removeEventListener('change', callback);
+}
+
+function getXlSnapshot() {
+  return window.matchMedia(XL_MEDIA_QUERY).matches;
+}
+
+function getXlServerSnapshot() {
+  return false;
+}
+
 interface ProjectCardProps {
   project: ProjectItem;
   onExpandImage: (project: ProjectItem) => void;
+  expanded?: boolean;
+  onToggleExpand?: () => void;
 }
 
-export function ProjectCard({ project, onExpandImage }: ProjectCardProps) {
-  const [expanded, setExpanded] = useState(false);
+export function ProjectCard({
+  project,
+  onExpandImage,
+  expanded: controlledExpanded,
+  onToggleExpand,
+}: ProjectCardProps) {
+  const [localExpanded, setLocalExpanded] = useState(false);
+  const expanded = controlledExpanded ?? localExpanded;
+  const handleToggle = onToggleExpand ?? (() => setLocalExpanded((prev) => !prev));
 
   return (
-    <article className="bg-[#12172e91] border border-[#2C3242] hover:border-[#3D4760] transition-colors p-4 flex flex-col justify-between gap-4 shadow-[2px_2px_0px_rgba(0,0,0,0.3)]">
+    <article className="bg-[#12172e91] border border-[#2C3242] hover:border-[#3D4760] transition-colors p-4 flex flex-col gap-4 shadow-[2px_2px_0px_rgba(0,0,0,0.3)]">
       <div className="space-y-3.5">
         {project.image && (
           <ProjectPreview project={project} onExpandImage={onExpandImage} />
@@ -35,7 +60,7 @@ export function ProjectCard({ project, onExpandImage }: ProjectCardProps) {
         <div>
           <button
             type="button"
-            onClick={() => setExpanded((prev) => !prev)}
+            onClick={handleToggle}
             aria-expanded={expanded}
             className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.07em] text-[#58B4EE] hover:text-[#7CC4FF] transition-colors"
           >
@@ -116,18 +141,60 @@ export function ProjectCard({ project, onExpandImage }: ProjectCardProps) {
 
 export function ProjectsSection() {
   const [previewProject, setPreviewProject] = useState<ProjectItem | null>(null);
+  const [expandedIds, setExpandedIds] = useState<Record<string, boolean>>({});
+  const isTwoCol = useSyncExternalStore(
+    subscribeXl,
+    getXlSnapshot,
+    getXlServerSnapshot
+  );
+
+  const toggleExpanded = (id: string) => {
+    setExpandedIds((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const leftColumnProjects = projectsData.filter((_, idx) => idx % 2 === 0);
+  const rightColumnProjects = projectsData.filter((_, idx) => idx % 2 === 1);
 
   return (
     <div className="space-y-5">
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-        {projectsData.map((project) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            onExpandImage={setPreviewProject}
-          />
-        ))}
-      </div>
+      {isTwoCol ? (
+        <div className="grid grid-cols-2 gap-4 items-start">
+          <div className="flex flex-col gap-4 min-w-0">
+            {leftColumnProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                expanded={!!expandedIds[project.id]}
+                onToggleExpand={() => toggleExpanded(project.id)}
+                onExpandImage={setPreviewProject}
+              />
+            ))}
+          </div>
+          <div className="flex flex-col gap-4 min-w-0">
+            {rightColumnProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                expanded={!!expandedIds[project.id]}
+                onToggleExpand={() => toggleExpanded(project.id)}
+                onExpandImage={setPreviewProject}
+              />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="flex flex-col gap-4">
+          {projectsData.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              expanded={!!expandedIds[project.id]}
+              onToggleExpand={() => toggleExpanded(project.id)}
+              onExpandImage={setPreviewProject}
+            />
+          ))}
+        </div>
+      )}
 
       {previewProject?.image && (
         <div
