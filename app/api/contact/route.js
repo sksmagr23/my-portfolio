@@ -58,14 +58,14 @@ export async function POST(request) {
       <html lang="en">
       <body style="font-family: Inter, Arial, sans-serif; background-color: #1E1F25; color: #E6EDF3; margin: 0; padding: 24px;">
         <div style="max-width: 640px; margin: 0 auto; background-color: #24262E; border: 1px solid #3B4353; border-radius: 8px; overflow: hidden;">
-          <div style="background-color: #18191E; padding: 14px 20px; border-bottom: 1px solid #3B4353; font-family: monospace; font-size: 13px; color: #58B4FF;">
+          <div style="background-color: #18191E; padding: 14px 20px; border-bottom: 1px solid #3B4353; font-family: monospace; font-size: 13px; color: #58B4EE;">
             portfolio/contact.tsx — New Message
           </div>
           <div style="padding: 20px;">
             <p style="margin: 0 0 8px; color: #94A3B8; font-size: 14px;"><strong style="color: #E6EDF3;">From:</strong> ${safeName}</p>
-            <p style="margin: 0 0 8px; color: #94A3B8; font-size: 14px;"><strong style="color: #E6EDF3;">Email:</strong> <a href="mailto:${safeEmail}" style="color: #58B4FF;">${safeEmail}</a></p>
+            <p style="margin: 0 0 8px; color: #94A3B8; font-size: 14px;"><strong style="color: #E6EDF3;">Email:</strong> <a href="mailto:${safeEmail}" style="color: #58B4EE;">${safeEmail}</a></p>
             <p style="margin: 0 0 16px; color: #94A3B8; font-size: 14px;"><strong style="color: #E6EDF3;">Subject:</strong> ${safeSubject}</p>
-            <div style="background-color: #1E1F25; border-left: 3px solid #58B4FF; padding: 14px; border-radius: 4px; color: #CBD5E1; font-size: 14px; line-height: 1.6;">
+            <div style="background-color: #1E1F25; border-left: 3px solid #58B4EE; padding: 14px; border-radius: 4px; color: #CBD5E1; font-size: 14px; line-height: 1.6;">
               ${safeMessage}
             </div>
             <p style="margin: 18px 0 0; font-size: 11px; color: #64748B; font-family: monospace;">

@@ -41,8 +41,8 @@ export function AchievementsSection() {
   return (
     <div className="space-y-6">
       <section className="space-y-3">
-        <h2 className="text-sm font-bold text-[#58B4FF] flex items-center gap-2">
-          <span className="text-[#58B4FF]" >#</span>
+        <h2 className="text-sm font-bold text-[#58B4EE] flex items-center gap-2">
+          <span className="text-[#58B4EE]" >#</span>
           <span>Coding Profiles</span>
         </h2>
 
@@ -51,25 +51,25 @@ export function AchievementsSection() {
             href={codingProfiles.leetcode.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#161820] border border-[#2C3242] hover:border-[#58B4FF] p-5 space-y-3.5 transition-colors group"
+            className="bg-[#12172e91] border border-[#2C3242] hover:border-[#58B4EE] p-5 space-y-3.5 transition-colors group"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="w-10 h-10 bg-[#1B2232] border border-[#58B4FF]/45 text-[#58B4FF] flex items-center justify-center">
+                <span className="w-10 h-10 bg-[#1B2232] border border-[#58B4EE]/45 text-[#58B4EE] flex items-center justify-center">
                   <LeetCodeIcon className="w-4 h-4" />
                 </span>
                 <div>
-                  <h3 className="text-sm font-bold text-[#E6EDF3] group-hover:text-[#58B4FF] transition-colors">
+                  <h3 className="text-sm font-bold text-[#E6EDF3] group-hover:text-[#58B4EE] transition-colors">
                     LeetCode · {lcBadge}
                   </h3>
                   <div className="text-xs text-[#7C8BA1]">@{codingProfiles.leetcode.username}</div>
                 </div>
               </div>
-              <ExternalLink className="w-4 h-4 text-[#7C8BA1] group-hover:text-[#58B4FF]" />
+              <ExternalLink className="w-4 h-4 text-[#7C8BA1] group-hover:text-[#58B4EE]" />
             </div>
 
             <div className="flex items-baseline gap-3">
-              <span className="text-2xl font-bold text-[#58B4FF]">{lcRating}</span>
+              <span className="text-2xl font-bold text-[#58B4EE]">{lcRating}</span>
               <span className="text-xs text-[#94A3B8]">
                 Contest Rating · Top {lcTop}% Global
               </span>
@@ -91,25 +91,25 @@ export function AchievementsSection() {
             href={codingProfiles.codechef.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#161820] border border-[#2C3242] hover:border-[#58B4FF] p-5 space-y-3.5 transition-colors group"
+            className="bg-[#12172e91] border border-[#2C3242] hover:border-[#58B4EE] p-5 space-y-3.5 transition-colors group"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="w-10 h-10 bg-[#1B2232] border border-[#58B4FF]/45 text-[#58B4FF] flex items-center justify-center">
+                <span className="w-10 h-10 bg-[#1B2232] border border-[#58B4EE]/45 text-[#58B4EE] flex items-center justify-center">
                   <CodeChefIcon className="w-4 h-4" />
                 </span>
                 <div>
-                  <h3 className="text-sm font-bold text-[#E6EDF3] group-hover:text-[#58B4FF] transition-colors">
+                  <h3 className="text-sm font-bold text-[#E6EDF3] group-hover:text-[#58B4EE] transition-colors">
                     CodeChef · {codingProfiles.codechef.stars}
                   </h3>
                   <div className="text-xs text-[#7C8BA1]">@{codingProfiles.codechef.username}</div>
                 </div>
               </div>
-              <ExternalLink className="w-4 h-4 text-[#7C8BA1] group-hover:text-[#58B4FF]" />
+              <ExternalLink className="w-4 h-4 text-[#7C8BA1] group-hover:text-[#58B4EE]" />
             </div>
 
             <div className="flex items-baseline gap-3">
-              <span className="text-2xl font-bold text-[#58B4FF]">
+              <span className="text-2xl font-bold text-[#58B4EE]">
                 {codingProfiles.codechef.rating}
               </span>
               <span className="text-xs text-[#94A3B8]">
@@ -135,18 +135,18 @@ export function AchievementsSection() {
         const items = achievementsData.filter((a) => a.category === category);
         return (
           <section key={category} className="space-y-3">
-            <h3 className="text-sm font-bold text-[#58B4FF] flex items-center gap-2">
-              <span className="text-[#58B4FF]" >#</span>
+            <h3 className="text-sm font-bold text-[#58B4EE] flex items-center gap-2">
+              <span className="text-[#58B4EE]" >#</span>
               <span>{category}</span>
             </h3>
-            <div className="bg-[#161820] border border-[#2C3242] divide-y divide-[#252A38]">
+            <div className="bg-[#12172e91] border border-[#2C3242] divide-y divide-[#252A38]">
               {items.map((item) => (
                 <article
                   key={item.id}
                   className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-start justify-between gap-3"
                 >
                   <div className="flex items-start gap-3.5 min-w-0">
-                    <span className="w-9 h-9 bg-[#1B2232] border border-[#58B4FF]/40 text-[#58B4FF] flex items-center justify-center shrink-0">
+                    <span className="w-9 h-9 bg-[#1B2232] border border-[#58B4EE]/40 text-[#58B4EE] flex items-center justify-center shrink-0">
                       <Award className="w-4 h-4" />
                     </span>
                     <div className="min-w-0 space-y-1">
@@ -161,7 +161,7 @@ export function AchievementsSection() {
                   </div>
 
                   <div className="flex sm:flex-col items-end justify-between gap-2 shrink-0">
-                    <span className="px-2.5 py-1 bg-[#1B2232] border border-[#58B4FF]/45 text-[10px] font-bold uppercase tracking-wider text-[#93C5FD]">
+                    <span className="px-2.5 py-1 bg-[#1B2232] border border-[#58B4EE]/45 text-[10px] font-bold uppercase tracking-wider text-[#93C5FD]">
                       {item.highlight}
                     </span>
                     {item.link && (
@@ -178,10 +178,10 @@ export function AchievementsSection() {
         );
       })}
 
-      <section className="bg-[#161820] border border-[#2C3242]">
+      <section className="bg-[#12172e91] border border-[#2C3242]">
         <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 border-b border-[#252A38]">
-          <h3 className="text-xs font-bold text-[#58B4FF] flex items-center gap-2">
-            <span className="text-[#58B4FF]" >#</span>
+          <h3 className="text-xs font-bold text-[#58B4EE] flex items-center gap-2">
+            <span className="text-[#58B4EE]" >#</span>
             <span>GitHub Activity (@{personalInfo.githubUsername})</span>
           </h3>
           <ActionLink href={personalInfo.contact.github} external variant="outline" size="sm">
@@ -197,7 +197,7 @@ export function AchievementsSection() {
             fontSize={12}
             colorScheme="dark"
             theme={{
-              dark: ['#1B1E28', '#1E3A5F', '#2563EB', '#3B82F6', '#58B4FF'],
+              dark: ['#1B1E28', '#1E3A5F', '#2563EB', '#3B82F6', '#58B4EE'],
             }}
             style={{ color: '#94A3B8' }}
           />

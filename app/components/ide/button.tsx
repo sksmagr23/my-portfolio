@@ -4,17 +4,17 @@ export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
 const BASE_STYLES =
-  'inline-flex items-center justify-center gap-2 font-semibold uppercase tracking-[0.07em] transition-all duration-150 select-none disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#58B4FF]';
+  'inline-flex items-center justify-center gap-2 font-semibold uppercase tracking-[0.07em] transition-all duration-150 select-none disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#58B4EE]';
 
 const VARIANT_STYLES: Record<ButtonVariant, string> = {
   primary:
-    'bg-[#58B4FF] text-[#0D1117] border border-[#7CC4FF] hover:bg-[#7CC4FF]',
+    'bg-[#58B4EE] text-[#0D1117] border border-[#7CC4FF] hover:bg-[#7CC4FF]',
   secondary:
-    'bg-[#1B2232] text-[#6CB8FF] border border-[#58B4FF] hover:bg-[#58B4FF] hover:text-[#0D1117]',
+    'bg-[#1B2339] text-[#6CB8FF] border border-[#58B4EE] hover:bg-[#58B4EE] hover:text-[#0D1117]',
   outline:
-    'bg-[#171A22] text-[#CBD5E1] border border-[#3B4459] hover:border-[#58B4FF] hover:text-[#58B4FF] hover:bg-[#1D2434]',
+    'bg-[#171A22] text-[#CBD5E1] border border-[#3B4459] hover:border-[#58B4EE] hover:text-[#58B4EE] hover:bg-[#1D2434]',
   ghost:
-    'bg-transparent text-[#58B4FF] border border-transparent hover:text-[#7CC4FF] hover:bg-[#58B4FF]/10',
+    'bg-transparent text-[#58B4EE] border border-transparent hover:text-[#7CC4FF] hover:bg-[#58B4EE]/10',
 };
 
 const SIZE_STYLES: Record<ButtonSize, string> = {

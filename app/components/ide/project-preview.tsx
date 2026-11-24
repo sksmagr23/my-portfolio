@@ -35,7 +35,7 @@ export function ProjectPreview({ project, onExpandImage, large = false }: Projec
           type="button"
           onClick={() => onExpandImage(project)}
           aria-label={`Preview ${project.name}`}
-          className="absolute bottom-2 right-2 inline-flex items-center gap-1 px-2 py-1 bg-[#14161D]/90 border border-[#3B4459] text-[10px] font-semibold uppercase tracking-wider text-[#CBD5E1] hover:border-[#58B4FF] hover:text-[#58B4FF] opacity-90 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 transition-opacity"
+          className="absolute bottom-2 right-2 inline-flex items-center gap-1 px-2 py-1 bg-[#14161D]/90 border border-[#3B4459] text-[10px] font-semibold uppercase tracking-wider text-[#CBD5E1] hover:border-[#58B4EE] hover:text-[#58B4EE] opacity-90 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 transition-opacity"
         >
           <Maximize2 className="w-3 h-3" />
           <span>Zoom</span>

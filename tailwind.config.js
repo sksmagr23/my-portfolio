@@ -19,7 +19,7 @@ module.exports = {
           surfaceHover: '#2A2D37',
           border: '#3B4353',
           borderSubtle: '#2E3340',
-          accent: '#58B4FF',
+          accent: '#58B4EE',
           accentBright: '#7CC4FF',
           accentDeep: '#2563EB',
           text: '#E6EDF3',

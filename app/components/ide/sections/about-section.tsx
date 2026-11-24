@@ -35,12 +35,12 @@ export function AboutSection() {
 
   return (
     <div className="space-y-6">
-      <section className="bg-[#161820] border border-[#2C3242] p-5 sm:p-6 space-y-4">
+      <section className="bg-[#12172e91] border border-[#2C3242] p-5 sm:p-6 space-y-4">
         <div className="flex flex-wrap gap-1.5">
           {personalInfo.roles.map((role) => (
             <span
               key={role}
-              className="px-2.5 py-1 bg-[#1B2232] border border-[#58B4FF]/45 text-[11px] font-semibold uppercase tracking-wider text-[#93C5FD]"
+              className="px-2.5 py-1 bg-[#1B2232] border border-[#58B4EE]/45 text-[11px] font-semibold uppercase tracking-wider text-[#93C5FD]"
             >
               {role}
             </span>
@@ -56,8 +56,8 @@ export function AboutSection() {
         </p>
 
         <div className="pt-4 border-t border-[#252A38] space-y-2.5">
-          <h3 className="text-xs font-bold text-[#58B4FF] flex items-center gap-2">
-            <span className="text-[#58B4FF]" >#</span>
+          <h3 className="text-xs font-bold text-[#58B4EE] flex items-center gap-2">
+            <span className="text-[#58B4EE]" >#</span>
             <span>Education</span>
           </h3>
           <div className="divide-y divide-[#232735]">
@@ -72,7 +72,7 @@ export function AboutSection() {
                   </div>
                   <div className="text-[13px] text-[#94A3B8]">{edu.degree}</div>
                 </div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#58B4FF] shrink-0">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#58B4EE] shrink-0">
                   {edu.status}
                 </span>
               </div>
@@ -84,9 +84,9 @@ export function AboutSection() {
       
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="bg-[#161820] border border-[#2C3242] p-5 space-y-3">
-          <h3 className="text-xs font-bold text-[#58B4FF] flex items-center gap-2">
-            <span className="text-[#58B4FF]" >#</span>
+        <div className="bg-[#12172e91] border border-[#2C3242] p-5 space-y-3">
+          <h3 className="text-xs font-bold text-[#58B4EE] flex items-center gap-2">
+            <span className="text-[#58B4EE]" >#</span>
             <span>Interests</span>
           </h3>
           <div className="flex flex-wrap gap-1.5">
@@ -101,9 +101,9 @@ export function AboutSection() {
           </div>
         </div>
 
-        <div className="bg-[#161820] border border-[#2C3242] p-5 space-y-3">
-          <h3 className="text-xs font-bold text-[#58B4FF] flex items-center gap-2">
-            <span className="text-[#58B4FF]" >#</span>
+        <div className="bg-[#12172e91] border border-[#2C3242] p-5 space-y-3">
+          <h3 className="text-xs font-bold text-[#58B4EE] flex items-center gap-2">
+            <span className="text-[#58B4EE]" >#</span>
             <span>Extra Curricular</span>
           </h3>
           <div className="flex flex-wrap gap-1.5">

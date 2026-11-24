@@ -36,9 +36,9 @@ export function Sidebar({
       aria-label="Developer profile sidebar"
       className="flex flex-col h-full overflow-y-auto space-y-3.5 text-[#E6EDF3]"
     >
-      <section className="ide-panel border-t-[3px] border-t-[#58B4FF] p-4 space-y-3.5">
+      <section className="ide-panel border-t-[3px] border-t-[#58B4EE] p-4 space-y-3.5">
         <div className="flex items-start gap-3.5">
-          <div className="relative w-16 h-16 overflow-hidden border-2 border-[#58B4FF] bg-[#DCE4F0] shrink-0">
+          <div className="relative w-16 h-16 overflow-hidden border-2 border-[#58B4EE] bg-[#DCE4F0] shrink-0">
             <Image
               src={personalInfo.avatar}
               alt={personalInfo.name}
@@ -52,14 +52,14 @@ export function Sidebar({
             <h1 className="text-[17px] font-bold text-[#E6EDF3] leading-tight">
               {personalInfo.name}
             </h1>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[#58B4FF] mt-1 leading-snug">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[#58B4EE] mt-1 leading-snug">
               {personalInfo.rolesLine}
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-1.5 text-xs text-[#94A3B8]">
-          <MapPin className="w-3.5 h-3.5 text-[#58B4FF] shrink-0" />
+          <MapPin className="w-3.5 h-3.5 text-[#58B4EE] shrink-0" />
           <span>{personalInfo.location}</span>
         </div>
 
@@ -70,8 +70,8 @@ export function Sidebar({
 
       <section className="ide-panel p-4 space-y-2.5">
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 bg-[#58B4FF] inline-block shrink-0" />
-          <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#58B4FF]">
+          <span className="text-[#58B4EE]" >$</span>
+          <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#58B4EE]">
             {personalInfo.availability.status}
           </span>
         </div>
@@ -81,7 +81,7 @@ export function Sidebar({
         <div className="flex items-center justify-between gap-2 text-[13px] text-[#CBD5E1]">
           <a
             href={`mailto:${personalInfo.email}`}
-            className="flex items-center gap-2 hover:text-[#58B4FF] truncate transition-colors"
+            className="flex items-center gap-2 hover:text-[#58B4EE] truncate transition-colors"
           >
             <Mail className="w-3.5 h-3.5 text-[#7C8BA1] shrink-0" />
             <span className="truncate">{personalInfo.email}</span>
@@ -91,8 +91,8 @@ export function Sidebar({
 
       <section className="ide-panel p-4 space-y-3">
         <div className="flex items-center justify-between gap-2">
-          <h4 className="text-xs font-bold text-[#58B4FF] flex items-center gap-2">
-            <span className="text-[#58B4FF]" >#</span>
+          <h4 className="text-xs font-bold text-[#58B4EE] flex items-center gap-2">
+            <span className="text-[#58B4EE]" >#</span>
             <span>Tech Stack</span>
           </h4>
           <button
@@ -101,7 +101,7 @@ export function Sidebar({
               onCloseMobile?.();
               onOpenSkills();
             }}
-            className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-[#93C5FD] hover:text-[#58B4FF] transition-colors"
+            className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-[#93C5FD] hover:text-[#58B4EE] transition-colors"
           >
             <span>View More</span>
             <ArrowUpRight className="w-3 h-3" />
@@ -121,8 +121,8 @@ export function Sidebar({
       </section>
 
       <section className="ide-panel p-4 space-y-3.5">
-        <h4 className="text-xs font-bold text-[#58B4FF] flex items-center gap-2">
-          <span className="text-[#58B4FF]" >#</span>
+        <h4 className="text-xs font-bold text-[#58B4EE] flex items-center gap-2">
+          <span className="text-[#58B4EE]" >#</span>
           <span>Socials</span>
         </h4>
 
@@ -135,7 +135,7 @@ export function Sidebar({
               rel={item.id === 'email' ? undefined : 'noopener noreferrer'}
               title={item.name}
               aria-label={item.name}
-              className="h-9 flex items-center justify-center bg-[#151821] border border-[#2E3446] text-[#94A3B8] hover:border-[#58B4FF] hover:text-[#58B4FF] transition-colors"
+              className="h-9 flex items-center justify-center bg-[#151821] border border-[#2E3446] text-[#94A3B8] hover:border-[#58B4EE] hover:text-[#58B4EE] transition-colors"
             >
               <PlatformIcon id={item.id} className="w-4 h-4" />
             </a>

@@ -90,7 +90,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} dark`}>
-      <body className="font-sans bg-[#1E1F25] text-[#E6EDF3] antialiased selection:bg-[#58B4FF]/25 selection:text-white">
+      <body className="font-sans bg-[#1E1F25] text-[#E6EDF3] antialiased selection:bg-[#58B4EE]/25 selection:text-white">
         {children}
       </body>
     </html>

@@ -32,10 +32,10 @@ export function SkillsModal({ open, onClose }: SkillsModalProps) {
       aria-label="Full technical stack"
     >
       <div
-        className="w-full max-w-3xl max-h-[86vh] flex flex-col ide-panel border-t-[3px] border-t-[#58B4FF] overflow-hidden"
+        className="w-full max-w-3xl max-h-[86vh] flex flex-col ide-panel border-t-[3px] border-t-[#58B4EE] overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between px-5 py-4 border-b border-[#2C3242] bg-[#161820]">
+        <div className="flex items-center justify-between px-5 py-4 border-b border-[#2C3242] bg-[#12172e91]">
           <div>
             <h2 className="text-base font-bold text-[#E6EDF3]">Technical Stack</h2>
           </div>
@@ -58,7 +58,7 @@ export function SkillsModal({ open, onClose }: SkillsModalProps) {
             >
               <div className="flex items-center justify-between gap-2 pb-2 border-b border-[#252A38]">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#58B4FF]">
+                  <span className="text-[#58B4EE]">
                     <CategoryIcon id={category.id} className="w-4 h-4" />
                   </span>
                   <h3 className="text-xs font-bold text-[#E6EDF3]">{category.name}</h3>
@@ -71,7 +71,7 @@ export function SkillsModal({ open, onClose }: SkillsModalProps) {
                     key={`${category.id}-${skill}`}
                     className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#1C202B] border border-[#2E3547] text-xs text-[#CBD5E1]"
                   >
-                    <span className="text-[#58B4FF]">
+                    <span className="text-[#58B4EE]">
                       <SkillMiniIcon name={skill} className="w-3 h-3" />
                     </span>
                     <span>{skill}</span>

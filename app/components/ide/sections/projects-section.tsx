@@ -16,7 +16,7 @@ export function ProjectCard({ project, onExpandImage }: ProjectCardProps) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <article className="bg-[#161820] border border-[#2C3242] hover:border-[#3D4760] transition-colors p-4 flex flex-col justify-between gap-4 shadow-[2px_2px_0px_rgba(0,0,0,0.3)]">
+    <article className="bg-[#12172e91] border border-[#2C3242] hover:border-[#3D4760] transition-colors p-4 flex flex-col justify-between gap-4 shadow-[2px_2px_0px_rgba(0,0,0,0.3)]">
       <div className="space-y-3.5">
         {project.image && (
           <ProjectPreview project={project} onExpandImage={onExpandImage} />
@@ -37,7 +37,7 @@ export function ProjectCard({ project, onExpandImage }: ProjectCardProps) {
             type="button"
             onClick={() => setExpanded((prev) => !prev)}
             aria-expanded={expanded}
-            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.07em] text-[#58B4FF] hover:text-[#7CC4FF] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.07em] text-[#58B4EE] hover:text-[#7CC4FF] transition-colors"
           >
             <span className="text-[10px]" aria-hidden="true">
               {expanded ? '▼' : '▶'}
@@ -56,7 +56,7 @@ export function ProjectCard({ project, onExpandImage }: ProjectCardProps) {
               >
                 {project.description.map((point, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <span className="text-[#58B4FF] shrink-0">→</span>
+                    <span className="text-[#58B4EE] shrink-0">→</span>
                     <span>{point}</span>
                   </li>
                 ))}
@@ -72,7 +72,7 @@ export function ProjectCard({ project, onExpandImage }: ProjectCardProps) {
               key={tech}
               className="inline-flex items-center gap-1 px-2 py-0.5 bg-[#1B1E28] border border-[#2C3242] text-[12px] text-[#94A3B8]"
             >
-              <Tag className="w-2.5 h-2.5 text-[#58B4FF]/70" />
+              <Tag className="w-2.5 h-2.5 text-[#58B4EE]/70" />
               <span>{tech}</span>
             </span>
           ))}
@@ -129,7 +129,6 @@ export function ProjectsSection() {
         ))}
       </div>
 
-      {/* Lightbox Modal */}
       {previewProject?.image && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-[2px]"
@@ -139,7 +138,7 @@ export function ProjectsSection() {
           aria-label={`${previewProject.name} preview`}
         >
           <div
-            className="w-full max-w-4xl ide-panel border-t-[3px] border-t-[#58B4FF] overflow-hidden"
+            className="w-full max-w-4xl ide-panel border-t-[3px] border-t-[#58B4EE] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between px-4 py-3 bg-[#14161D] border-b border-[#2C3242]">

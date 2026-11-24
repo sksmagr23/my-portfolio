@@ -137,7 +137,7 @@ export function IDEWorkspace() {
               className="relative z-10 w-[86vw] max-w-[348px] h-full bg-workspace-blue border-r border-[#2E3446] p-3.5 flex flex-col gap-3"
             >
               <div className="flex items-center justify-between px-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#58B4FF]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#58B4EE]">
                   Profile
                 </span>
                 <ActionButton
@@ -166,7 +166,7 @@ export function IDEWorkspace() {
 
       <div className="flex-1 flex flex-col min-w-0 lg:overflow-hidden ide-panel">
        
-        <div className="lg:hidden bg-[#161820] border-b border-[#2E3446] px-3.5 py-3 flex items-center justify-between gap-3">
+        <div className="lg:hidden bg-[#12172e91] border-b border-[#2E3446] px-3.5 py-3 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2.5 min-w-0">
             <ActionButton
               variant="outline"
@@ -177,7 +177,7 @@ export function IDEWorkspace() {
             >
               <PanelLeft className="w-4 h-4" />
             </ActionButton>
-            <div className="relative w-9 h-9 overflow-hidden border border-[#58B4FF] bg-[#DCE4F0] shrink-0">
+            <div className="relative w-9 h-9 overflow-hidden border border-[#58B4EE] bg-[#DCE4F0] shrink-0">
               <Image
                 src={personalInfo.avatar}
                 alt={personalInfo.name}
@@ -191,7 +191,7 @@ export function IDEWorkspace() {
               <div className="text-sm font-bold uppercase tracking-wide text-[#E6EDF3] truncate">
                 {personalInfo.name}
               </div>
-              <div className="text-[11px] text-[#58B4FF] truncate">
+              <div className="text-[11px] text-[#58B4EE] truncate">
                 {personalInfo.rolesLine}
               </div>
             </div>
@@ -231,13 +231,13 @@ export function IDEWorkspace() {
               >
                 {isActive && (
                   <span
-                    className="absolute top-0 left-0 right-0 h-[2px] bg-[#58B4FF]"
+                    className="absolute top-0 left-0 right-0 h-[2px] bg-[#58B4EE]"
                     aria-hidden="true"
                   />
                 )}
                 <span
                   className={`text-[10px] font-bold tracking-wider ${
-                    isActive ? 'text-[#58B4FF]' : 'text-[#526078]'
+                    isActive ? 'text-[#58B4EE]' : 'text-[#526078]'
                   }`}
                 >
                   {tab.prefix}

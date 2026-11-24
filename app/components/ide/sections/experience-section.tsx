@@ -9,12 +9,12 @@ import { ActionLink } from '../button';
 export function ExperienceSection() {
   return (
     <div className="space-y-4">
-      <h2 className="text-base font-bold text-[#58B4FF] flex items-center gap-2">
-        <span className="text-[#58B4FF]">#</span>
+      <h2 className="text-base font-bold text-[#58B4EE] flex items-center gap-2">
+        <span className="text-[#58B4EE]">#</span>
         <span>Experience</span>
       </h2>
 
-      <div className="bg-[#161820] border border-[#2C3242] divide-y divide-[#252A38]">
+      <div className="bg-[#12172e91] border border-[#3c445b] divide-y divide-[#363d50]">
         {experienceData.map((item) => (
           <article key={item.id} className="p-5 sm:p-6">
             <div className="flex items-start gap-4">
@@ -43,7 +43,7 @@ export function ExperienceSection() {
                     </div>
                   </div>
 
-                  <span className="px-2.5 py-1 bg-[#1B2232] border border-[#58B4FF]/45 text-[10px] font-bold uppercase tracking-wider text-[#93C5FD] self-start shrink-0">
+                  <span className="px-2.5 py-1 bg-[#1B2232] border border-[#58B4EE]/45 text-[10px] font-bold uppercase tracking-wider text-[#93C5FD] self-start shrink-0">
                     {item.highlightBadge}
                   </span>
                 </div>
@@ -51,7 +51,7 @@ export function ExperienceSection() {
                 <ul className="space-y-1.5 text-[14px] text-[#94A3B8] leading-relaxed">
                   {item.responsibilities.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
-                      <span className="text-[#58B4FF] shrink-0">→</span>
+                      <span className="text-[#58B4EE] shrink-0">→</span>
                       <span>{point}</span>
                     </li>
                   ))}
