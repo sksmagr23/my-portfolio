@@ -20,7 +20,7 @@ export function ProjectPreview({ project, onExpandImage, large = false }: Projec
 
   return (
     <div
-      className={`relative w-full ${heightClass} bg-[#111319] border border-[#262B3A] overflow-hidden group`}
+      className={`relative w-full ${heightClass} bg-[#111319] overflow-hidden group`}
     >
       <Image
         src={project.image}

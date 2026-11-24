@@ -41,7 +41,7 @@ export function ProjectCard({
   const handleToggle = onToggleExpand ?? (() => setLocalExpanded((prev) => !prev));
 
   return (
-    <article className="bg-[#12172e91] border border-[#2C3242] hover:border-[#3D4760] transition-colors p-4 flex flex-col gap-4 shadow-[2px_2px_0px_rgba(0,0,0,0.3)]">
+    <article className="bg-[#12172e91] border-[2px] border-[#212b42d7] hover:border-[#3D4760] transition-colors p-3 flex flex-col gap-y-4 gap-x-6 shadow-[4px_4px_0px_rgba(0,37,150,0.6)]">
       <div className="space-y-3.5">
         {project.image && (
           <ProjectPreview project={project} onExpandImage={onExpandImage} />

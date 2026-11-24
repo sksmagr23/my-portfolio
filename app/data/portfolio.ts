@@ -310,7 +310,7 @@ export const projectsData: ProjectItem[] = [
     githubUrl: 'https://github.com/sksmagr23/Microbubble-analyzer',
     liveUrl: 'https://microbubble-analyzer.vercel.app',
     demoVideoUrl: null,
-    image: '/projects/bubble.png',
+    image: '/projects/bubbles.png',
   },
   {
     id: 'flood-detection-unet',
