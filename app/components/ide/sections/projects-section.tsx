@@ -41,19 +41,19 @@ export function ProjectCard({
   const handleToggle = onToggleExpand ?? (() => setLocalExpanded((prev) => !prev));
 
   return (
-    <article className="bg-[#12172e91] border-[2px] border-[#283148f7] hover:border-[#3D4760] transition-colors p-3 flex flex-col gap-y-4 gap-x-6 shadow-[6px_6px_0px_rgba(40,49,72)] rounded-md">
+    <article className="bg-theme-card border-[2px] border-[var(--theme-panel-border)] hover:border-theme-borderHover transition-colors p-3 flex flex-col gap-y-4 gap-x-6 shadow-[var(--theme-card-shadow)] rounded-md">
       <div className="space-y-3.5">
         {project.image && (
           <ProjectPreview project={project} onExpandImage={onExpandImage} />
         )}
 
         <div className="flex items-start justify-between gap-3 pt-0.5">
-          <h3 className="text-[16px] font-bold text-[#E6EDF3] leading-snug">
+          <h3 className="text-[16px] font-bold text-theme-text leading-snug">
             {project.name}
           </h3>
         </div>
 
-        <p className="text-[14px] text-[#94A3B8] leading-relaxed">
+        <p className="text-[14px] text-theme-textMuted leading-relaxed">
           {project.shortDescription}
         </p>
 
@@ -62,7 +62,7 @@ export function ProjectCard({
             type="button"
             onClick={handleToggle}
             aria-expanded={expanded}
-            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.07em] text-[#58B4EE] hover:text-[#7CC4FF] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.07em] text-theme-accent hover:text-theme-accentBright transition-colors"
           >
             <span className="text-[10px]" aria-hidden="true">
               {expanded ? '▼' : '▶'}
@@ -77,11 +77,11 @@ export function ProjectCard({
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.18 }}
-                className="overflow-hidden mt-2.5 space-y-2 text-[13.5px] text-[#94A3B8] leading-relaxed"
+                className="overflow-hidden mt-2.5 space-y-2 text-[13.5px] text-theme-textMuted leading-relaxed"
               >
                 {project.description.map((point, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <span className="text-[#58B4EE] shrink-0">→</span>
+                    <span className="text-theme-accent shrink-0">→</span>
                     <span>{point}</span>
                   </li>
                 ))}
@@ -95,16 +95,16 @@ export function ProjectCard({
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="inline-flex items-center gap-1 px-2 py-0.5 bg-[#1B1E28] border border-[#2C3242] text-[12px] text-[#94A3B8]"
+              className="inline-flex items-center gap-1 px-2 py-0.5 bg-theme-surfaceChip border border-theme-border text-[12px] text-theme-textMuted"
             >
-              <Tag className="w-2.5 h-2.5 text-[#58B4EE]/70" />
+              <Tag className="w-2.5 h-2.5 text-theme-accent/70" />
               <span>{tech}</span>
             </span>
           ))}
         </div>
       </div>
 
-      <div className="pt-3.5 border-t border-[#252A38] flex flex-wrap items-center gap-2">
+      <div className="pt-3.5 border-t border-theme-borderSubtle flex flex-wrap items-center gap-2">
         {project.liveUrl && (
           <ActionLink href={project.liveUrl} external variant="secondary" size="sm">
             <ExternalLink className="w-3.5 h-3.5" />
@@ -205,11 +205,11 @@ export function ProjectsSection() {
           aria-label={`${previewProject.name} preview`}
         >
           <div
-            className="w-full max-w-4xl ide-panel border-t-[3px] border-t-[#58B4EE] overflow-hidden"
+            className="w-full max-w-4xl ide-panel border-t-[3px] border-t-theme-accent overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between px-4 py-3 bg-[#14161D] border-b border-[#2C3242]">
-              <h3 className="text-sm font-bold text-[#E6EDF3] truncate">
+            <div className="flex items-center justify-between px-4 py-3 bg-theme-surface border-b border-theme-border">
+              <h3 className="text-sm font-bold text-theme-text truncate">
                 {previewProject.name}
               </h3>
               <ActionButton

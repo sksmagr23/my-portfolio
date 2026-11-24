@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import { ThemeProvider } from './components/ide/theme-context';
+
+const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('portfolio-theme');document.documentElement.dataset.theme=(t==='green')?'green':'blue';}catch(e){document.documentElement.dataset.theme='blue';}})();`;
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -89,9 +92,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} dark`}>
-      <body className="font-sans bg-[#1E1F25] text-[#E6EDF3] antialiased selection:bg-[#58B4EE]/25 selection:text-white">
-        {children}
+    <html
+      lang="en"
+      data-theme="blue"
+      suppressHydrationWarning
+      className={`${spaceGrotesk.variable} ${inter.variable} dark`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
+      <body className="font-sans bg-[var(--theme-body-bg)] text-theme-text antialiased selection:bg-theme-accent/25 selection:text-white">
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

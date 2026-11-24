@@ -34,11 +34,11 @@ export function Sidebar({
   return (
     <aside
       aria-label="Developer profile sidebar"
-      className="flex flex-col h-full overflow-y-auto space-y-3.5 text-[#E6EDF3]"
+      className="flex flex-col h-full overflow-y-auto space-y-3.5 text-theme-text"
     >
-      <section className="ide-panel border-t-[3px] border-t-[#58B4EE] p-4 space-y-3.5">
+      <section className="ide-panel border-t-[3px] border-t-theme-accent p-4 space-y-3.5">
         <div className="flex items-start gap-3.5">
-          <div className="relative w-16 h-16 overflow-hidden border-2 border-[#58B4EE] bg-[#DCE4F0] shrink-0">
+          <div className="relative w-16 h-16 overflow-hidden border-2 border-theme-accent bg-[#DCE4F0] shrink-0">
             <Image
               src={personalInfo.avatar}
               alt={personalInfo.name}
@@ -49,41 +49,41 @@ export function Sidebar({
             />
           </div>
           <div className="min-w-0 pt-0.5">
-            <h1 className="text-[17px] font-bold text-[#E6EDF3] leading-tight">
+            <h1 className="text-[17px] font-bold text-theme-text leading-tight">
               {personalInfo.name}
             </h1>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[#58B4EE] mt-1 leading-snug">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.06em] text-theme-accent mt-1 leading-snug">
               {personalInfo.rolesLine}
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-1.5 text-xs text-[#94A3B8]">
-          <MapPin className="w-3.5 h-3.5 text-[#58B4EE] shrink-0" />
+        <div className="flex items-center gap-1.5 text-xs text-theme-textMuted">
+          <MapPin className="w-3.5 h-3.5 text-theme-accent shrink-0" />
           <span>{personalInfo.location}</span>
         </div>
 
-        <p className="text-[13px] text-[#94A3B8] leading-relaxed">
+        <p className="text-[13px] text-theme-textMuted leading-relaxed">
           Final-year B.Tech · IIT (BHU) Varanasi
         </p>
       </section>
 
       <section className="ide-panel p-4 space-y-2.5">
         <div className="flex items-center gap-2">
-          <span className="text-[#58B4EE]" >$</span>
-          <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#58B4EE]">
+          <span className="text-theme-accent">$</span>
+          <span className="text-xs font-bold uppercase tracking-[0.08em] text-theme-accent">
             {personalInfo.availability.status}
           </span>
         </div>
 
-        <div className="text-xs text-[#94A3B8]">{personalInfo.availability.detail}</div>
+        <div className="text-xs text-theme-textMuted">{personalInfo.availability.detail}</div>
 
-        <div className="flex items-center justify-between gap-2 text-[13px] text-[#CBD5E1]">
+        <div className="flex items-center justify-between gap-2 text-[13px] text-theme-textSecondary">
           <a
             href={`mailto:${personalInfo.email}`}
-            className="flex items-center gap-2 hover:text-[#58B4EE] truncate transition-colors"
+            className="flex items-center gap-2 hover:text-theme-accent truncate transition-colors"
           >
-            <Mail className="w-3.5 h-3.5 text-[#7C8BA1] shrink-0" />
+            <Mail className="w-3.5 h-3.5 text-theme-textDim shrink-0" />
             <span className="truncate">{personalInfo.email}</span>
           </a>
         </div>
@@ -91,8 +91,8 @@ export function Sidebar({
 
       <section className="ide-panel p-4 space-y-3">
         <div className="flex items-center justify-between gap-2">
-          <h4 className="text-xs font-bold text-[#58B4EE] flex items-center gap-2">
-            <span className="text-[#58B4EE]" >#</span>
+          <h4 className="text-xs font-bold text-theme-accent flex items-center gap-2">
+            <span className="text-theme-accent">#</span>
             <span>Tech Stack</span>
           </h4>
           <button
@@ -101,7 +101,7 @@ export function Sidebar({
               onCloseMobile?.();
               onOpenSkills();
             }}
-            className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-[#93C5FD] hover:text-[#58B4EE] transition-colors"
+            className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-theme-accentSoft hover:text-theme-accent transition-colors"
           >
             <span>View More</span>
             <ArrowUpRight className="w-3 h-3" />
@@ -112,7 +112,7 @@ export function Sidebar({
           {personalInfo.sidebarCoreSkills.map((skill) => (
             <span
               key={skill}
-              className="px-2 py-1 bg-[#141720] border border-[#2C3347] text-[12px] text-[#CBD5E1]"
+              className="px-2 py-1 bg-theme-surface border border-theme-border text-[12px] text-theme-textSecondary"
             >
               {skill}
             </span>
@@ -121,8 +121,8 @@ export function Sidebar({
       </section>
 
       <section className="ide-panel p-4 space-y-3.5">
-        <h4 className="text-xs font-bold text-[#58B4EE] flex items-center gap-2">
-          <span className="text-[#58B4EE]" >#</span>
+        <h4 className="text-xs font-bold text-theme-accent flex items-center gap-2">
+          <span className="text-theme-accent">#</span>
           <span>Socials</span>
         </h4>
 
@@ -135,7 +135,7 @@ export function Sidebar({
               rel={item.id === 'email' ? undefined : 'noopener noreferrer'}
               title={item.name}
               aria-label={item.name}
-              className="h-9 flex items-center justify-center bg-[#151821] border border-[#2E3446] text-[#94A3B8] hover:border-[#58B4EE] hover:text-[#58B4EE] transition-colors"
+              className="h-9 flex items-center justify-center bg-theme-surfaceSubtle border border-theme-borderPanel text-theme-textMuted hover:border-theme-accent hover:text-theme-accent transition-colors"
             >
               <PlatformIcon id={item.id} className="w-4 h-4" />
             </a>

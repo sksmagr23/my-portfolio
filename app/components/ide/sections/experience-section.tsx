@@ -9,16 +9,16 @@ import { ActionLink } from '../button';
 export function ExperienceSection() {
   return (
     <div className="space-y-4">
-      <h2 className="text-base font-bold text-[#58B4EE] flex items-center gap-2">
-        <span className="text-[#58B4EE]">#</span>
+      <h2 className="text-base font-bold text-theme-accent flex items-center gap-2">
+        <span className="text-theme-accent">#</span>
         <span>Experience</span>
       </h2>
 
-      <div className="bg-[#12172e91] border border-[#283148f7] divide-y divide-[#363d50]">
+      <div className="bg-theme-card border border-[var(--theme-panel-border)] divide-y divide-theme-borderDivider">
         {experienceData.map((item) => (
           <article key={item.id} className="p-5 sm:p-6">
             <div className="flex items-start gap-4">
-              <div className="relative w-11 h-11 overflow-hidden bg-[#1B2232] flex items-center justify-center text-sm font-bold shrink-0">
+              <div className="relative w-11 h-11 overflow-hidden bg-theme-surfaceTint flex items-center justify-center text-sm font-bold shrink-0">
                 {item.logo ? (
                   <Image
                     src={item.logo}
@@ -35,23 +35,23 @@ export function ExperienceSection() {
               <div className="flex-1 min-w-0 space-y-2.5">
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
                   <div>
-                    <h3 className="text-[16px] font-bold text-[#E6EDF3] leading-snug">
+                    <h3 className="text-[16px] font-bold text-theme-text leading-snug">
                       {item.role}
                     </h3>
-                    <div className="text-[13.5px] text-[#7C8BA1] mt-0.5">
+                    <div className="text-[13.5px] text-theme-textDim mt-0.5">
                       {item.company} · {item.duration}
                     </div>
                   </div>
 
-                  <span className="px-2.5 py-1 bg-[#1B2232] border border-[#58B4EE]/45 text-[10px] font-bold uppercase tracking-wider text-[#93C5FD] self-start shrink-0">
+                  <span className="px-2.5 py-1 bg-theme-surfaceTint border border-theme-accent/45 text-[10px] font-bold uppercase tracking-wider text-theme-accentSoft self-start shrink-0">
                     {item.highlightBadge}
                   </span>
                 </div>
 
-                <ul className="space-y-1.5 text-[14px] text-[#94A3B8] leading-relaxed">
+                <ul className="space-y-1.5 text-[14px] text-theme-textMuted leading-relaxed">
                   {item.responsibilities.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
-                      <span className="text-[#58B4EE] shrink-0">→</span>
+                      <span className="text-theme-accent shrink-0">→</span>
                       <span>{point}</span>
                     </li>
                   ))}
@@ -62,7 +62,7 @@ export function ExperienceSection() {
                     {item.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-0.5 bg-[#1B1E28] border border-[#2C3242] text-[11.5px] text-[#94A3B8]"
+                        className="px-2 py-0.5 bg-theme-surfaceChip border border-theme-border text-[11.5px] text-theme-textMuted"
                       >
                         {tech}
                       </span>

@@ -32,12 +32,12 @@ export function SkillsModal({ open, onClose }: SkillsModalProps) {
       aria-label="Full technical stack"
     >
       <div
-        className="w-full max-w-3xl max-h-[86vh] flex flex-col ide-panel border-t-[3px] border-t-[#58B4EE] overflow-hidden"
+        className="w-full max-w-3xl max-h-[86vh] flex flex-col ide-panel border-t-[3px] border-t-theme-accent overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between px-5 py-4 border-b border-[#2C3242] bg-[#12172e91]">
+        <div className="flex items-center justify-between px-5 py-4 border-b border-theme-border bg-theme-card">
           <div>
-            <h2 className="text-base font-bold text-[#E6EDF3]">Technical Stack</h2>
+            <h2 className="text-base font-bold text-theme-text">Technical Stack</h2>
           </div>
           <ActionButton
             variant="outline"
@@ -54,14 +54,14 @@ export function SkillsModal({ open, onClose }: SkillsModalProps) {
           {skillCategories.map((category) => (
             <section
               key={category.id}
-              className="bg-[#151820] border border-[#2A3040] p-4 space-y-3"
+              className="bg-theme-surfaceSubtle border border-theme-border p-4 space-y-3"
             >
-              <div className="flex items-center justify-between gap-2 pb-2 border-b border-[#252A38]">
+              <div className="flex items-center justify-between gap-2 pb-2 border-b border-theme-borderSubtle">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#58B4EE]">
+                  <span className="text-theme-accent">
                     <CategoryIcon id={category.id} className="w-4 h-4" />
                   </span>
-                  <h3 className="text-xs font-bold text-[#E6EDF3]">{category.name}</h3>
+                  <h3 className="text-xs font-bold text-theme-text">{category.name}</h3>
                 </div>
               </div>
 
@@ -69,9 +69,9 @@ export function SkillsModal({ open, onClose }: SkillsModalProps) {
                 {category.skills.map((skill) => (
                   <span
                     key={`${category.id}-${skill}`}
-                    className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#1C202B] border border-[#2E3547] text-xs text-[#CBD5E1]"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-theme-surfaceChip border border-theme-borderPanel text-xs text-theme-textSecondary"
                   >
-                    <span className="text-[#58B4EE]">
+                    <span className="text-theme-accent">
                       <SkillMiniIcon name={skill} className="w-3 h-3" />
                     </span>
                     <span>{skill}</span>

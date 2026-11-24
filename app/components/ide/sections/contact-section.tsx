@@ -99,26 +99,26 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
   return (
     <div className="space-y-5">
       <div className="space-y-1">
-        <h2 className="text-base font-bold text-[#58B4EE] flex items-center gap-2">
-          <span className="text-[#58B4EE]" >#</span>
+        <h2 className="text-base font-bold text-theme-accent flex items-center gap-2">
+          <span className="text-theme-accent">#</span>
           <span>{contactContent.heading}</span>
         </h2>
-        <p className="text-[14px] text-[#94A3B8]">{contactContent.subtitle}</p>
+        <p className="text-[14px] text-theme-textMuted">{contactContent.subtitle}</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         <div className="lg:col-span-5 space-y-2.5">
-          <div className="bg-[#12172e91] border border-[#2C3242] p-4 flex items-center justify-between gap-3">
+          <div className="bg-theme-card border border-theme-border p-4 flex items-center justify-between gap-3">
             <a
               href={`mailto:${personalInfo.email}`}
               className="flex items-center gap-3 min-w-0 group"
             >
-              <span className="text-[#58B4EE] flex items-center justify-center shrink-0">
+              <span className="text-theme-accent flex items-center justify-center shrink-0">
                 <Mail className="w-6 h-6" />
               </span>
               <div className="min-w-0">
-                <div className="text-[11px] uppercase tracking-wider text-[#7C8BA1]">Email</div>
-                <div className="text-sm text-[#E6EDF3] group-hover:text-[#58B4EE] truncate transition-colors">
+                <div className="text-[11px] uppercase tracking-wider text-theme-textDim">Email</div>
+                <div className="text-sm text-theme-text group-hover:text-theme-accent truncate transition-colors">
                   {personalInfo.email}
                 </div>
               </div>
@@ -142,50 +142,50 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
             href={personalInfo.contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#12172e91] border border-[#2C3242] hover:border-[#58B4EE] p-4 flex items-center justify-between gap-3 transition-colors group"
+            className="bg-theme-card border border-theme-border hover:border-theme-accent p-4 flex items-center justify-between gap-3 transition-colors group"
           >
             <div className="flex items-center gap-3 min-w-0">
-              <span className="text-[#58B4EE] flex items-center justify-center shrink-0">
+              <span className="text-theme-accent flex items-center justify-center shrink-0">
                 <LinkedInIcon className="w-6 h-6" />
               </span>
               <div className="min-w-0">
-                <div className="text-[11px] uppercase tracking-wider text-[#7C8BA1]">LinkedIn</div>
-                <div className="text-sm text-[#E6EDF3] group-hover:text-[#58B4EE] truncate transition-colors">
+                <div className="text-[11px] uppercase tracking-wider text-theme-textDim">LinkedIn</div>
+                <div className="text-sm text-theme-text group-hover:text-theme-accent truncate transition-colors">
                   linkedin.com/in/saksham-agrawal
                 </div>
               </div>
             </div>
-            <ExternalLink className="w-4 h-4 text-[#7C8BA1] group-hover:text-[#58B4EE] shrink-0" />
+            <ExternalLink className="w-4 h-4 text-theme-textDim group-hover:text-theme-accent shrink-0" />
           </a>
 
           <a
             href={personalInfo.contact.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#12172e91] border border-[#2C3242] hover:border-[#58B4EE] p-4 flex items-center justify-between gap-3 transition-colors group"
+            className="bg-theme-card border border-theme-border hover:border-theme-accent p-4 flex items-center justify-between gap-3 transition-colors group"
           >
             <div className="flex items-center gap-3 min-w-0">
-              <span className="text-[#58B4EE] flex items-center justify-center shrink-0">
+              <span className="text-theme-accent flex items-center justify-center shrink-0">
                 <GitHubIcon className="w-6 h-6" />
               </span>
               <div className="min-w-0">
-                <div className="text-[11px] uppercase tracking-wider text-[#7C8BA1]">GitHub</div>
-                <div className="text-sm text-[#E6EDF3] group-hover:text-[#58B4EE] truncate transition-colors">
+                <div className="text-[11px] uppercase tracking-wider text-theme-textDim">GitHub</div>
+                <div className="text-sm text-theme-text group-hover:text-theme-accent truncate transition-colors">
                   github.com/{personalInfo.githubUsername}
                 </div>
               </div>
             </div>
-            <ExternalLink className="w-4 h-4 text-[#7C8BA1] group-hover:text-[#58B4EE] shrink-0" />
+            <ExternalLink className="w-4 h-4 text-theme-textDim group-hover:text-theme-accent shrink-0" />
           </a>
         </div>
 
-        <div className="lg:col-span-7 bg-[#12172e91] border border-[#2C3242] p-5">
+        <div className="lg:col-span-7 bg-theme-card border border-theme-border p-5">
           <form onSubmit={handleSubmit} noValidate className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label
                   htmlFor="contact-name"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#CBD5E1] mb-1.5"
+                  className="block text-xs font-semibold uppercase tracking-wider text-theme-textSecondary mb-1.5"
                 >
                   Name *
                 </label>
@@ -196,15 +196,15 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                  className="w-full px-3 py-2 bg-[#111319] border border-[#2C3242] text-sm text-[#E6EDF3] placeholder-[#526078] focus:border-[#58B4EE] focus:outline-none"
+                  className="w-full px-3 py-2 bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:outline-none"
                 />
-                {errors.name && <p className="mt-1 text-xs text-[#93C5FD]">{errors.name}</p>}
+                {errors.name && <p className="mt-1 text-xs text-theme-accentSoft">{errors.name}</p>}
               </div>
 
               <div>
                 <label
                   htmlFor="contact-email"
-                  className="block text-xs font-semibold uppercase tracking-wider text-[#CBD5E1] mb-1.5"
+                  className="block text-xs font-semibold uppercase tracking-wider text-theme-textSecondary mb-1.5"
                 >
                   Email *
                 </label>
@@ -215,16 +215,16 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="you@gmail.com"
-                  className="w-full px-3 py-2 bg-[#111319] border border-[#2C3242] text-sm text-[#E6EDF3] placeholder-[#526078] focus:border-[#58B4EE] focus:outline-none"
+                  className="w-full px-3 py-2 bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:outline-none"
                 />
-                {errors.email && <p className="mt-1 text-xs text-[#93C5FD]">{errors.email}</p>}
+                {errors.email && <p className="mt-1 text-xs text-theme-accentSoft">{errors.email}</p>}
               </div>
             </div>
 
             <div>
               <label
                 htmlFor="contact-subject"
-                className="block text-xs font-semibold uppercase tracking-wider text-[#CBD5E1] mb-1.5"
+                className="block text-xs font-semibold uppercase tracking-wider text-theme-textSecondary mb-1.5"
               >
                 Subject *
               </label>
@@ -235,15 +235,15 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Role opportunity or collaboration"
-                className="w-full px-3 py-2 bg-[#111319] border border-[#2C3242] text-sm text-[#E6EDF3] placeholder-[#526078] focus:border-[#58B4EE] focus:outline-none"
+                className="w-full px-3 py-2 bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:outline-none"
               />
-              {errors.subject && <p className="mt-1 text-xs text-[#93C5FD]">{errors.subject}</p>}
+              {errors.subject && <p className="mt-1 text-xs text-theme-accentSoft">{errors.subject}</p>}
             </div>
 
             <div>
               <label
                 htmlFor="contact-message"
-                className="block text-xs font-semibold uppercase tracking-wider text-[#CBD5E1] mb-1.5"
+                className="block text-xs font-semibold uppercase tracking-wider text-theme-textSecondary mb-1.5"
               >
                 Message *
               </label>
@@ -254,9 +254,9 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Share description..."
-                className="w-full px-3 py-2 bg-[#111319] border border-[#2C3242] text-sm text-[#E6EDF3] placeholder-[#526078] focus:border-[#58B4EE] focus:outline-none resize-y"
+                className="w-full px-3 py-2 bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:outline-none resize-y"
               />
-              {errors.message && <p className="mt-1 text-xs text-[#93C5FD]">{errors.message}</p>}
+              {errors.message && <p className="mt-1 text-xs text-theme-accentSoft">{errors.message}</p>}
             </div>
 
             <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
@@ -278,15 +278,15 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
             </div>
 
             {status === 'success' && (
-              <div className="flex items-center gap-2 p-3 bg-[#1B2232] border border-[#58B4EE] text-xs text-[#93C5FD]">
-                <CheckCircle2 className="w-4 h-4 shrink-0 text-[#58B4EE]" />
+              <div className="flex items-center gap-2 p-3 bg-theme-surfaceTint border border-theme-accent text-xs text-theme-accentSoft">
+                <CheckCircle2 className="w-4 h-4 shrink-0 text-theme-accent" />
                 <span>{statusMessage}</span>
               </div>
             )}
 
             {status === 'error' && (
-              <div className="flex items-center gap-2 p-3 bg-[#1B2232] border border-[#58B4EE]/60 text-xs text-[#CBD5E1]">
-                <AlertCircle className="w-4 h-4 shrink-0 text-[#58B4EE]" />
+              <div className="flex items-center gap-2 p-3 bg-theme-surfaceTint border border-theme-accent/60 text-xs text-theme-textSecondary">
+                <AlertCircle className="w-4 h-4 shrink-0 text-theme-accent" />
                 <span>{statusMessage}</span>
               </div>
             )}

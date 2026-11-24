@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root,
+[data-theme='blue'] {
   color-scheme: dark;
   --app-font-sans: var(--font-space-grotesk), var(--font-inter), 'Space Grotesk', 'Inter', sans-serif;
   --ide-bg: #090a0e;
@@ -11,6 +12,104 @@
   --ide-border: #393d47;
   --ide-border-strong: #3b4459;
   --ide-accent: #44a8fb;
+
+  --theme-accent: 88 180 238;
+  --theme-accent-bright: 124 196 255;
+  --theme-accent-soft: 147 197 253;
+  --theme-accent-sec-text: 108 184 255;
+  --theme-accent-contrast: 13 17 23;
+
+  --theme-html-bg: #21326f;
+  --theme-body-bg: #1e1f25;
+  --theme-workspace-bg: #11131ea4;
+  --theme-panel-bg: #1c213832;
+  --theme-panel-border: #283148f7;
+  --theme-panel-shadow: 5px 5px 0px rgba(40, 49, 72, 0.5);
+  --theme-card-shadow: 6px 6px 0px rgba(40, 49, 72);
+
+  --theme-card-bg: #12172e91;
+  --theme-surface: #14161d;
+  --theme-surface-2: 25 28 36;
+  --theme-surface-subtle: #151821;
+  --theme-surface-input: #111319;
+  --theme-surface-chip: #1b1e28;
+  --theme-surface-tint: #1b2232;
+  --theme-surface-tint-hover: #1d2434;
+  --theme-surface-btn-sec: #1b2339;
+  --theme-surface-btn-out: #171a22;
+
+  --theme-border: #2c3242;
+  --theme-border-subtle: #252a38;
+  --theme-border-strong: #3b4459;
+  --theme-border-hover: #3d4760;
+  --theme-border-panel: #2e3446;
+  --theme-border-divider: #363d50;
+
+  --theme-text: #e6edf3;
+  --theme-text-secondary: #cbd5e1;
+  --theme-text-muted: #94a3b8;
+  --theme-text-dim: #7c8ba1;
+  --theme-text-faint: #526078;
+
+  --theme-selection: rgba(88, 180, 255, 0.28);
+  --theme-scroll-track: #15171e;
+  --theme-scroll-thumb: #252b3a;
+  --theme-scroll-thumb-hover: #1e6dae;
+  --theme-scroll-ff: #2228371e #0f1015;
+}
+
+[data-theme='green'] {
+  color-scheme: dark;
+  --ide-bg: #050a07;
+  --ide-surface: #0d1912;
+  --ide-surface-elevated: #122419;
+  --ide-border: #1e3b2a;
+  --ide-border-strong: #27523a;
+  --ide-accent: #24ed74;
+
+  --theme-accent: 57 255 136;
+  --theme-accent-bright: 125 255 178;
+  --theme-accent-soft: 134 239 172;
+  --theme-accent-sec-text: 74 246 146;
+  --theme-accent-contrast: 5 14 9;
+
+  --theme-html-bg: #061b10;
+  --theme-body-bg: #070d0a;
+  --theme-workspace-bg: #07110ba8;
+  --theme-panel-bg: #0b1a1242;
+  --theme-panel-border: #1c3d2af7;
+  --theme-panel-shadow: 5px 5px 0px rgba(13, 56, 31, 0.58), 0 0 24px rgba(57, 255, 136, 0.06);
+  --theme-card-shadow: 6px 6px 0px rgba(20, 66, 39, 0.9);
+
+  --theme-card-bg: #0a17109c;
+  --theme-surface: #0a120d;
+  --theme-surface-2: 15 27 20;
+  --theme-surface-subtle: #0c1510;
+  --theme-surface-input: #080f0b;
+  --theme-surface-chip: #101c15;
+  --theme-surface-tint: #0f2619;
+  --theme-surface-tint-hover: #133020;
+  --theme-surface-btn-sec: #0e281a;
+  --theme-surface-btn-out: #0b1510;
+
+  --theme-border: #1d3527;
+  --theme-border-subtle: #16291e;
+  --theme-border-strong: #284b37;
+  --theme-border-hover: #2f6043;
+  --theme-border-panel: #1f392a;
+  --theme-border-divider: #213d2d;
+
+  --theme-text: #e4f5ea;
+  --theme-text-secondary: #c2dfcc;
+  --theme-text-muted: #86ab95;
+  --theme-text-dim: #648c74;
+  --theme-text-faint: #426652;
+
+  --theme-selection: rgba(57, 255, 136, 0.24);
+  --theme-scroll-track: #09110c;
+  --theme-scroll-thumb: #1c3527;
+  --theme-scroll-thumb-hover: #24a85a;
+  --theme-scroll-ff: #1c352766 #080f0b;
 }
 
 @layer base {
@@ -26,16 +125,17 @@
   }
 
   html {
-    background-color: #21326f;
-    color: #e6edf3;
+    background-color: var(--theme-html-bg);
+    color: var(--theme-text);
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 200ms ease, color 200ms ease;
   }
 
   body {
-    background-color: #202f65;
-    color: #e6edf3;
+    background-color: var(--theme-body-bg);
+    color: var(--theme-text);
     overflow-x: hidden;
   }
 
@@ -48,31 +148,68 @@
   }
 
   ::selection {
-    background-color: rgba(88, 180, 255, 0.28);
+    background-color: var(--theme-selection);
     color: #ffffff;
   }
 }
 
 .bg-workspace-blue {
-  background-color: #11131ea4;
+  position: relative;
+  isolation: isolate;
+  background-color: var(--theme-workspace-bg);
   background-image: url('/bgblue.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-blend-mode:multiply;
+  background-blend-mode: multiply;
+}
+
+[data-theme='green'] .bg-workspace-blue {
+  background-image: none;
+  background-color: #06100a;
+}
+
+[data-theme='green'] .bg-workspace-blue::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: #07110ba8;
+  background-image: url('/bgblue.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  filter: hue-rotate(-76deg) saturate(1.3) brightness(0.9);
+}
+
+[data-theme='green'] .bg-workspace-blue::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 12% 10%, rgba(57, 255, 136, 0.1), transparent 40%),
+    radial-gradient(circle at 88% 90%, rgba(57, 255, 136, 0.08), transparent 42%),
+    linear-gradient(rgba(57, 255, 136, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 136, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
 }
 
 .ide-panel {
-  background-color: #1c213832;
-  border: 1px solid #283148f7;
-  box-shadow: 5px 5px 0px rgba(40,49,72,0.5);
+  background-color: var(--theme-panel-bg);
+  border: 1px solid var(--theme-panel-border);
+  box-shadow: var(--theme-panel-shadow);
   backdrop-filter: blur(20px);
+  transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #2228371e #0f1015;
+  scrollbar-color: var(--theme-scroll-ff);
 }
 
 ::-webkit-scrollbar {
@@ -81,15 +218,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #15171e;
+  background: var(--theme-scroll-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #252b3a;
+  background-color: var(--theme-scroll-thumb);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #1e6dae;
+  background-color: var(--theme-scroll-thumb-hover);
 }
 
 .no-scrollbar::-webkit-scrollbar {

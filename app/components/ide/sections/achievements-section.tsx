@@ -11,8 +11,11 @@ import {
 } from '@/app/data/portfolio';
 import { LeetCodeIcon, CodeChefIcon, GitHubIcon } from '../icons';
 import { ActionLink } from '../button';
+import { useTheme } from '../theme-context';
 
 export function AchievementsSection() {
+  const { theme } = useTheme();
+  const isGreen = theme === 'green';
   const [lcRating, setLcRating] = useState(codingProfiles.leetcode.contestRating);
   const [lcTop, setLcTop] = useState(codingProfiles.leetcode.contestTopPercentage);
   const [lcBadge, setLcBadge] = useState(codingProfiles.leetcode.badge);
@@ -41,8 +44,8 @@ export function AchievementsSection() {
   return (
     <div className="space-y-6">
       <section className="space-y-3">
-        <h2 className="text-sm font-bold text-[#58B4EE] flex items-center gap-2">
-          <span className="text-[#58B4EE]" >#</span>
+        <h2 className="text-sm font-bold text-theme-accent flex items-center gap-2">
+          <span className="text-theme-accent">#</span>
           <span>Coding Profiles</span>
         </h2>
 
@@ -51,35 +54,35 @@ export function AchievementsSection() {
             href={codingProfiles.leetcode.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#12172e91] border border-[#2C3242] hover:border-[#58B4EE] p-5 space-y-3.5 transition-colors group"
+            className="bg-theme-card border border-theme-border hover:border-theme-accent p-5 space-y-3.5 transition-colors group"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="w-10 h-10 bg-[#1B2232] border border-[#58B4EE]/45 text-[#58B4EE] flex items-center justify-center">
+                <span className="w-10 h-10 bg-theme-surfaceTint border border-theme-accent/45 text-theme-accent flex items-center justify-center">
                   <LeetCodeIcon className="w-4 h-4" />
                 </span>
                 <div>
-                  <h3 className="text-sm font-bold text-[#E6EDF3] group-hover:text-[#58B4EE] transition-colors">
+                  <h3 className="text-sm font-bold text-theme-text group-hover:text-theme-accent transition-colors">
                     LeetCode · {lcBadge}
                   </h3>
-                  <div className="text-xs text-[#7C8BA1]">@{codingProfiles.leetcode.username}</div>
+                  <div className="text-xs text-theme-textDim">@{codingProfiles.leetcode.username}</div>
                 </div>
               </div>
-              <ExternalLink className="w-4 h-4 text-[#7C8BA1] group-hover:text-[#58B4EE]" />
+              <ExternalLink className="w-4 h-4 text-theme-textDim group-hover:text-theme-accent" />
             </div>
 
             <div className="flex items-baseline gap-3">
-              <span className="text-2xl font-bold text-[#58B4EE]">{lcRating}</span>
-              <span className="text-xs text-[#94A3B8]">
+              <span className="text-2xl font-bold text-theme-accent">{lcRating}</span>
+              <span className="text-xs text-theme-textMuted">
                 Contest Rating · Top {lcTop}% Global
               </span>
             </div>
 
-            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-[#252A38]">
+            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-theme-borderSubtle">
               {codingProfiles.leetcode.badges.map((badge) => (
                 <span
                   key={badge}
-                  className="px-2 py-0.5 bg-[#1B1E28] border border-[#2C3242] text-[11.5px] text-[#93C5FD]"
+                  className="px-2 py-0.5 bg-theme-surfaceChip border border-theme-border text-[11.5px] text-theme-accentSoft"
                 >
                   {badge}
                 </span>
@@ -91,37 +94,37 @@ export function AchievementsSection() {
             href={codingProfiles.codechef.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#12172e91] border border-[#2C3242] hover:border-[#58B4EE] p-5 space-y-3.5 transition-colors group"
+            className="bg-theme-card border border-theme-border hover:border-theme-accent p-5 space-y-3.5 transition-colors group"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="w-10 h-10 bg-[#1B2232] border border-[#58B4EE]/45 text-[#58B4EE] flex items-center justify-center">
+                <span className="w-10 h-10 bg-theme-surfaceTint border border-theme-accent/45 text-theme-accent flex items-center justify-center">
                   <CodeChefIcon className="w-4 h-4" />
                 </span>
                 <div>
-                  <h3 className="text-sm font-bold text-[#E6EDF3] group-hover:text-[#58B4EE] transition-colors">
+                  <h3 className="text-sm font-bold text-theme-text group-hover:text-theme-accent transition-colors">
                     CodeChef · {codingProfiles.codechef.stars}
                   </h3>
-                  <div className="text-xs text-[#7C8BA1]">@{codingProfiles.codechef.username}</div>
+                  <div className="text-xs text-theme-textDim">@{codingProfiles.codechef.username}</div>
                 </div>
               </div>
-              <ExternalLink className="w-4 h-4 text-[#7C8BA1] group-hover:text-[#58B4EE]" />
+              <ExternalLink className="w-4 h-4 text-theme-textDim group-hover:text-theme-accent" />
             </div>
 
             <div className="flex items-baseline gap-3">
-              <span className="text-2xl font-bold text-[#58B4EE]">
+              <span className="text-2xl font-bold text-theme-accent">
                 {codingProfiles.codechef.rating}
               </span>
-              <span className="text-xs text-[#94A3B8]">
+              <span className="text-xs text-theme-textMuted">
                 Contest Rating · DSA Rating {codingProfiles.codechef.dsaRating}
               </span>
             </div>
 
-            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-[#252A38]">
+            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-theme-borderSubtle">
               {codingProfiles.codechef.badges.map((badge) => (
                 <span
                   key={badge}
-                  className="px-2 py-0.5 bg-[#1B1E28] border border-[#2C3242] text-[11.5px] text-[#93C5FD]"
+                  className="px-2 py-0.5 bg-theme-surfaceChip border border-theme-border text-[11.5px] text-theme-accentSoft"
                 >
                   {badge}
                 </span>
@@ -135,33 +138,33 @@ export function AchievementsSection() {
         const items = achievementsData.filter((a) => a.category === category);
         return (
           <section key={category} className="space-y-3">
-            <h3 className="text-sm font-bold text-[#58B4EE] flex items-center gap-2">
-              <span className="text-[#58B4EE]" >#</span>
+            <h3 className="text-sm font-bold text-theme-accent flex items-center gap-2">
+              <span className="text-theme-accent">#</span>
               <span>{category}</span>
             </h3>
-            <div className="bg-[#12172e91] border border-[#2C3242] divide-y divide-[#252A38]">
+            <div className="bg-theme-card border border-theme-border divide-y divide-theme-borderSubtle">
               {items.map((item) => (
                 <article
                   key={item.id}
                   className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-start justify-between gap-3"
                 >
                   <div className="flex items-start gap-3.5 min-w-0">
-                    <span className="w-9 h-9 bg-[#1B2232] border border-[#58B4EE]/40 text-[#58B4EE] flex items-center justify-center shrink-0">
+                    <span className="w-9 h-9 bg-theme-surfaceTint border border-theme-accent/40 text-theme-accent flex items-center justify-center shrink-0">
                       <Award className="w-4 h-4" />
                     </span>
                     <div className="min-w-0 space-y-1">
-                      <h4 className="text-[15px] font-bold text-[#E6EDF3] leading-snug">
+                      <h4 className="text-[15px] font-bold text-theme-text leading-snug">
                         {item.title}
                       </h4>
-                      <div className="text-xs text-[#7C8BA1]">{item.organization}</div>
-                      <p className="text-[13.5px] text-[#94A3B8] leading-relaxed">
+                      <div className="text-xs text-theme-textDim">{item.organization}</div>
+                      <p className="text-[13.5px] text-theme-textMuted leading-relaxed">
                         {item.description}
                       </p>
                     </div>
                   </div>
 
                   <div className="flex sm:flex-col items-end justify-between gap-2 shrink-0">
-                    <span className="px-2.5 py-1 bg-[#1B2232] border border-[#58B4EE]/45 text-[10px] font-bold uppercase tracking-wider text-[#93C5FD]">
+                    <span className="px-2.5 py-1 bg-theme-surfaceTint border border-theme-accent/45 text-[10px] font-bold uppercase tracking-wider text-theme-accentSoft">
                       {item.highlight}
                     </span>
                     {item.link && (
@@ -178,10 +181,10 @@ export function AchievementsSection() {
         );
       })}
 
-      <section className="bg-[#12172e91] border border-[#2C3242]">
-        <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 border-b border-[#252A38]">
-          <h3 className="text-xs font-bold text-[#58B4EE] flex items-center gap-2">
-            <span className="text-[#58B4EE]" >#</span>
+      <section className="bg-theme-card border border-theme-border">
+        <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 border-b border-theme-borderSubtle">
+          <h3 className="text-xs font-bold text-theme-accent flex items-center gap-2">
+            <span className="text-theme-accent">#</span>
             <span>GitHub Activity (@{personalInfo.githubUsername})</span>
           </h3>
           <ActionLink href={personalInfo.contact.github} external variant="outline" size="sm">
@@ -197,9 +200,11 @@ export function AchievementsSection() {
             fontSize={12}
             colorScheme="dark"
             theme={{
-              dark: ['#1B1E28', '#1E3A5F', '#2563EB', '#3B82F6', '#58B4EE'],
+              dark: isGreen
+                ? ['#101C15', '#0E4429', '#006D32', '#26A641', '#39FF88']
+                : ['#1B1E28', '#1E3A5F', '#2563EB', '#3B82F6', '#58B4EE'],
             }}
-            style={{ color: '#94A3B8' }}
+            style={{ color: isGreen ? '#86AB95' : '#94A3B8' }}
           />
         </div>
       </section>
