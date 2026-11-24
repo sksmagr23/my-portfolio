@@ -14,7 +14,7 @@ export function ExperienceSection() {
         <span>Experience</span>
       </h2>
 
-      <div className="bg-[#12172e91] border border-[#3c445b] divide-y divide-[#363d50]">
+      <div className="bg-[#12172e91] border border-[#283148f7] divide-y divide-[#363d50]">
         {experienceData.map((item) => (
           <article key={item.id} className="p-5 sm:p-6">
             <div className="flex items-start gap-4">

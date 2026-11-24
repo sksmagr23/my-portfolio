@@ -409,31 +409,12 @@ export const experienceData: ExperienceItem[] = [
 
 export const achievementsData: AchievementItem[] = [
   {
-    id: 'technex-hackitout',
-    category: 'Key Highlights',
-    title: '2nd Position — Hack It Out, Technex ’25',
-    organization: 'IIT (BHU) Varanasi · Team Shannon',
-    highlight: 'PS by NTPC',
-    description:
-      'Built an AI renewable energy forecasting platform using GRU + XGBoost (R² = 0.7359) and Mapbox geospatial dashboards.',
-    link: 'https://github.com/sksmagr23/shannon_frontend',
-  },
-  {
     id: 'flipkart-grid',
     category: 'Key Highlights',
     title: 'National Semi-Finalist — Flipkart GRiD 8.0',
     organization: 'Flipkart | SDE Track',
     highlight: 'Semi-Finalist',
     description: ''
-  },
-  {
-    id: 'aissce-topper',
-    category: 'Key Highlights',
-    title: 'Science Stream Topper — AISSCE 2023',
-    organization: 'DALIMSS Sunbeam School, Varanasi',
-    highlight: 'Achievers Award',
-    description:
-      'Awarded Science Stream Topper in Class XII CBSE boards with Subject Topper honors in Chemistry & Mathematics.',
   },
   {
     id: 'gofr-soc-25',
@@ -444,6 +425,34 @@ export const achievementsData: AchievementItem[] = [
     description:
       'Selected among top contributors in the Templates Track to deliver an observable GoFr URL management service.',
     link: 'https://github.com/sksmagr23/url-shortener',
+  },
+  {
+    id: 'technex-hackitout',
+    category: 'Key Highlights',
+    title: '2nd Position — Hack It Out, Technex ’25',
+    organization: 'IIT (BHU) Varanasi · Team Shannon',
+    highlight: 'PS by NTPC',
+    description:
+      'Built an AI renewable energy forecasting platform using GRU + XGBoost (R² = 0.7359) and Mapbox geospatial dashboards.',
+    link: 'https://github.com/sksmagr23/shannon_frontend',
+  },
+  {
+  id: 'iit-jee',
+  category: 'Key Highlights',
+  title: 'IIT JEE',
+  organization: '',
+  highlight: 'IIT',
+  description:
+  'Secured an All India Rank of 6225 in JEE Advanced and achieved 99.2 %ile in JEE Mains.',
+},
+  {
+    id: 'aissce-topper',
+    category: 'Key Highlights',
+    title: 'Science Stream Topper — AISSCE 2023',
+    organization: 'DALIMSS Sunbeam School, Varanasi',
+    highlight: 'Achievers Award',
+    description:
+      'Awarded Science Stream Topper in Class XII CBSE boards with Subject Topper honors in Chemistry & Mathematics.',
   }
 ];
 

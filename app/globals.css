@@ -65,14 +65,14 @@
 
 .ide-panel {
   background-color: #1c213832;
-  border: 1px solid #2e3446;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.429);
+  border: 1px solid #283148f7;
+  box-shadow: 5px 5px 0px rgba(40,49,72,0.5);
   backdrop-filter: blur(20px);
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #353d50 #15171e;
+  scrollbar-color: #2228371e #0f1015;
 }
 
 ::-webkit-scrollbar {
