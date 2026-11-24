@@ -24,7 +24,6 @@ export interface ProjectItem {
   liveUrl: string | null;
   demoVideoUrl: string | null;
   image: string | null;
-  previewKind?: 'codementor' | 'url-shortener' | 'querypilot' | 'stocking';
 }
 
 export interface ExperienceItem {
@@ -98,7 +97,7 @@ export const personalInfo = {
     status: 'Open to Work',
     detail: 'SDE · Backend · Agentic AI · FDE',
   },
-  avatar: '/profile.png',
+  avatar: '/profile.jpg',
   resumeUrl: '/Saksham_Agrawal_Resume.pdf',
   terminalUrl: 'https://sksm-terminal.vercel.app',
   email: 'sakshamag34@gmail.com',
@@ -367,7 +366,7 @@ export const experienceData: ExperienceItem[] = [
     role: 'Software Developer Intern',
     duration: 'May 2026 – Aug 2026',
     highlightBadge: 'Agentic CRM',
-    logo: '/irisidea.png',
+    logo: '/iris.png',
     logoText: 'IR',
     responsibilities: [
       'Built agentic CRM workflows using Pydantic and Google ADK for context-aware customer management.',

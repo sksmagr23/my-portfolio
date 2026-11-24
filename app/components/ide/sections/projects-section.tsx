@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Star, Tag, X, PlayCircle } from 'lucide-react';
+import { ExternalLink, Tag, X, PlayCircle } from 'lucide-react';
 import { projectsData, type ProjectItem } from '@/app/data/portfolio';
 import { ProjectPreview } from '../project-preview';
 import { ActionButton, ActionLink } from '../button';
@@ -18,7 +18,9 @@ export function ProjectCard({ project, onExpandImage }: ProjectCardProps) {
   return (
     <article className="bg-[#161820] border border-[#2C3242] hover:border-[#3D4760] transition-colors p-4 flex flex-col justify-between gap-4 shadow-[2px_2px_0px_rgba(0,0,0,0.3)]">
       <div className="space-y-3.5">
-        <ProjectPreview project={project} onExpandImage={onExpandImage} />
+        {project.image && (
+          <ProjectPreview project={project} onExpandImage={onExpandImage} />
+        )}
 
         <div className="flex items-start justify-between gap-3 pt-0.5">
           <h3 className="text-[16px] font-bold text-[#E6EDF3] leading-snug">
@@ -128,7 +130,7 @@ export function ProjectsSection() {
       </div>
 
       {/* Lightbox Modal */}
-      {previewProject && (
+      {previewProject?.image && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-[2px]"
           onClick={() => setPreviewProject(null)}
