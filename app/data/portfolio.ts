@@ -496,5 +496,5 @@ export const leadershipData: LeadershipItem[] = [
 export const contactContent = {
   heading: 'Contact me',
   subtitle:
-    'Reach out for collaborations or just to say hi!. Feel free to drop me a message, and I’ll get back to you as soon as possible.',
+    'Feel free to reach out for collaborations or just to say hi!.  I’ll get back to you as soon as possible.',
 };

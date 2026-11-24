@@ -68,7 +68,6 @@ export function Sidebar({
         </p>
       </section>
 
-      {/* 2. Open To Work Card */}
       <section className="ide-panel p-4 space-y-2.5">
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 bg-[#58B4FF] inline-block shrink-0" />
@@ -87,19 +86,6 @@ export function Sidebar({
             <Mail className="w-3.5 h-3.5 text-[#7C8BA1] shrink-0" />
             <span className="truncate">{personalInfo.email}</span>
           </a>
-          <button
-            type="button"
-            onClick={onCopyEmail}
-            title="Copy email"
-            aria-label="Copy email address"
-            className="p-1 text-[#7C8BA1] hover:text-[#58B4FF] transition-colors shrink-0"
-          >
-            {copiedEmail ? (
-              <Check className="w-3.5 h-3.5 text-[#58B4FF]" />
-            ) : (
-              <Copy className="w-3.5 h-3.5" />
-            )}
-          </button>
         </div>
       </section>
 

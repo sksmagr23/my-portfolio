@@ -113,8 +113,8 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
               href={`mailto:${personalInfo.email}`}
               className="flex items-center gap-3 min-w-0 group"
             >
-              <span className="w-9 h-9 bg-[#1B2232] border border-[#58B4FF]/40 text-[#58B4FF] flex items-center justify-center shrink-0">
-                <Mail className="w-4 h-4" />
+              <span className="text-[#58B4FF] flex items-center justify-center shrink-0">
+                <Mail className="w-6 h-6" />
               </span>
               <div className="min-w-0">
                 <div className="text-[11px] uppercase tracking-wider text-[#7C8BA1]">Email</div>
@@ -145,8 +145,8 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
             className="bg-[#161820] border border-[#2C3242] hover:border-[#58B4FF] p-4 flex items-center justify-between gap-3 transition-colors group"
           >
             <div className="flex items-center gap-3 min-w-0">
-              <span className="w-9 h-9 bg-[#1B2232] border border-[#58B4FF]/40 text-[#58B4FF] flex items-center justify-center shrink-0">
-                <LinkedInIcon className="w-4 h-4" />
+              <span className="text-[#58B4FF] flex items-center justify-center shrink-0">
+                <LinkedInIcon className="w-6 h-6" />
               </span>
               <div className="min-w-0">
                 <div className="text-[11px] uppercase tracking-wider text-[#7C8BA1]">LinkedIn</div>
@@ -165,8 +165,8 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
             className="bg-[#161820] border border-[#2C3242] hover:border-[#58B4FF] p-4 flex items-center justify-between gap-3 transition-colors group"
           >
             <div className="flex items-center gap-3 min-w-0">
-              <span className="w-9 h-9 bg-[#1B2232] border border-[#58B4FF]/40 text-[#58B4FF] flex items-center justify-center shrink-0">
-                <GitHubIcon className="w-4 h-4" />
+              <span className="text-[#58B4FF] flex items-center justify-center shrink-0">
+                <GitHubIcon className="w-6 h-6" />
               </span>
               <div className="min-w-0">
                 <div className="text-[11px] uppercase tracking-wider text-[#7C8BA1]">GitHub</div>
@@ -214,7 +214,7 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="you@company.com"
+                  placeholder="you@gmail.com"
                   className="w-full px-3 py-2 bg-[#111319] border border-[#2C3242] text-sm text-[#E6EDF3] placeholder-[#526078] focus:border-[#58B4FF] focus:outline-none"
                 />
                 {errors.email && <p className="mt-1 text-xs text-[#93C5FD]">{errors.email}</p>}
