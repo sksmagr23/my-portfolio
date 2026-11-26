@@ -18,7 +18,7 @@ module.exports = {
           surface: '#24262E',
           surfaceHover: '#2A2D37',
           border: '#3B4353',
-          borderSubtle: '#2E3340',
+          borderSubtle: '#fff',
           accent: '#58B4EE',
           accentBright: '#7CC4FF',
           accentDeep: '#2563EB',

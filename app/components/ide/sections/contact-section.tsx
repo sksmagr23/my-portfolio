@@ -13,6 +13,7 @@ import {
 import { contactContent, personalInfo } from '@/app/data/portfolio';
 import { GitHubIcon, LinkedInIcon } from '../icons';
 import { ActionButton, ActionLink } from '../button';
+import { SpotlightCard, SpotlightLinkCard } from '../spotlight-card';
 
 interface ContactSectionProps {
   onCopyEmail: () => void;
@@ -107,79 +108,87 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-        <div className="lg:col-span-5 space-y-2.5">
-          <div className="bg-theme-card border border-theme-border p-4 flex items-center justify-between gap-3">
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="flex items-center gap-3 min-w-0 group"
-            >
-              <span className="text-theme-accent flex items-center justify-center shrink-0">
-                <Mail className="w-6 h-6" />
-              </span>
-              <div className="min-w-0">
-                <div className="text-[11px] uppercase tracking-wider text-theme-textDim">Email</div>
-                <div className="text-sm text-theme-text group-hover:text-theme-accent truncate transition-colors">
-                  {personalInfo.email}
+        <div className="lg:col-span-5 space-y-3">
+          <SpotlightCard as="div" interactive index={0} className="p-4">
+            <div className="flex items-center justify-between gap-3">
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="flex items-center gap-3 min-w-0 group"
+              >
+                <span className="w-10 h-10 rounded-[6px] bg-theme-surfaceTint border border-theme-accent/35 text-theme-accent flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:border-theme-accent/70">
+                  <Mail className="w-5 h-5" />
+                </span>
+                <div className="min-w-0">
+                  <div className="text-[11px] uppercase tracking-wider text-theme-textDim">Email</div>
+                  <div className="text-sm text-theme-text group-hover:text-theme-accent truncate transition-colors">
+                    {personalInfo.email}
+                  </div>
                 </div>
-              </div>
-            </a>
-            <ActionButton variant="outline" size="sm" onClick={onCopyEmail} className="shrink-0">
-              {copiedEmail ? (
-                <>
-                  <Check className="w-3.5 h-3.5" />
-                  <span>Copied</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-3.5 h-3.5" />
-                  <span>Copy</span>
-                </>
-              )}
-            </ActionButton>
-          </div>
+              </a>
+              <ActionButton variant="outline" size="sm" onClick={onCopyEmail} className="shrink-0">
+                {copiedEmail ? (
+                  <>
+                    <Check className="w-3.5 h-3.5 text-theme-accent" />
+                    <span>Copied</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3.5 h-3.5" />
+                    <span>Copy</span>
+                  </>
+                )}
+              </ActionButton>
+            </div>
+          </SpotlightCard>
 
-          <a
+          <SpotlightLinkCard
             href={personalInfo.contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-theme-card border border-theme-border hover:border-theme-accent p-4 flex items-center justify-between gap-3 transition-colors group"
+            index={1}
+            className="p-4"
           >
-            <div className="flex items-center gap-3 min-w-0">
-              <span className="text-theme-accent flex items-center justify-center shrink-0">
-                <LinkedInIcon className="w-6 h-6" />
-              </span>
-              <div className="min-w-0">
-                <div className="text-[11px] uppercase tracking-wider text-theme-textDim">LinkedIn</div>
-                <div className="text-sm text-theme-text group-hover:text-theme-accent truncate transition-colors">
-                  linkedin.com/in/saksham-agrawal
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3 min-w-0">
+                <span className="w-10 h-10 rounded-[6px] bg-theme-surfaceTint border border-theme-accent/35 text-theme-accent flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:border-theme-accent group-hover/card:shadow-[0_0_12px_rgb(var(--theme-accent)/0.2)]">
+                  <LinkedInIcon className="w-5 h-5" />
+                </span>
+                <div className="min-w-0">
+                  <div className="text-[11px] uppercase tracking-wider text-theme-textDim">LinkedIn</div>
+                  <div className="text-sm text-theme-text group-hover/card:text-theme-accent truncate transition-colors">
+                    linkedin.com/in/saksham-agrawal
+                  </div>
                 </div>
               </div>
+              <ExternalLink className="w-4 h-4 text-theme-textDim transition-all duration-200 group-hover/card:text-theme-accent group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5 shrink-0" />
             </div>
-            <ExternalLink className="w-4 h-4 text-theme-textDim group-hover:text-theme-accent shrink-0" />
-          </a>
+          </SpotlightLinkCard>
 
-          <a
+          <SpotlightLinkCard
             href={personalInfo.contact.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-theme-card border border-theme-border hover:border-theme-accent p-4 flex items-center justify-between gap-3 transition-colors group"
+            index={2}
+            className="p-4"
           >
-            <div className="flex items-center gap-3 min-w-0">
-              <span className="text-theme-accent flex items-center justify-center shrink-0">
-                <GitHubIcon className="w-6 h-6" />
-              </span>
-              <div className="min-w-0">
-                <div className="text-[11px] uppercase tracking-wider text-theme-textDim">GitHub</div>
-                <div className="text-sm text-theme-text group-hover:text-theme-accent truncate transition-colors">
-                  github.com/{personalInfo.githubUsername}
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3 min-w-0">
+                <span className="w-10 h-10 rounded-[6px] bg-theme-surfaceTint border border-theme-accent/35 text-theme-accent flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:border-theme-accent group-hover/card:shadow-[0_0_12px_rgb(var(--theme-accent)/0.2)]">
+                  <GitHubIcon className="w-5 h-5" />
+                </span>
+                <div className="min-w-0">
+                  <div className="text-[11px] uppercase tracking-wider text-theme-textDim">GitHub</div>
+                  <div className="text-sm text-theme-text group-hover/card:text-theme-accent truncate transition-colors">
+                    github.com/{personalInfo.githubUsername}
+                  </div>
                 </div>
               </div>
+              <ExternalLink className="w-4 h-4 text-theme-textDim transition-all duration-200 group-hover/card:text-theme-accent group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5 shrink-0" />
             </div>
-            <ExternalLink className="w-4 h-4 text-theme-textDim group-hover:text-theme-accent shrink-0" />
-          </a>
+          </SpotlightLinkCard>
         </div>
 
-        <div className="lg:col-span-7 bg-theme-card border border-theme-border p-5">
+        <SpotlightCard as="div" interactive={false} index={1} className="lg:col-span-7 p-5">
           <form onSubmit={handleSubmit} noValidate className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
@@ -196,7 +205,7 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                  className="w-full px-3 py-2 bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:outline-none"
+                  className="w-full px-3 py-2 rounded-[5px] bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:ring-2 focus:ring-theme-accent/20 focus:outline-none transition-all duration-150"
                 />
                 {errors.name && <p className="mt-1 text-xs text-theme-accentSoft">{errors.name}</p>}
               </div>
@@ -215,7 +224,7 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="you@gmail.com"
-                  className="w-full px-3 py-2 bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:outline-none"
+                  className="w-full px-3 py-2 rounded-[5px] bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:ring-2 focus:ring-theme-accent/20 focus:outline-none transition-all duration-150"
                 />
                 {errors.email && <p className="mt-1 text-xs text-theme-accentSoft">{errors.email}</p>}
               </div>
@@ -235,7 +244,7 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Role opportunity or collaboration"
-                className="w-full px-3 py-2 bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:outline-none"
+                className="w-full px-3 py-2 rounded-[5px] bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:ring-2 focus:ring-theme-accent/20 focus:outline-none transition-all duration-150"
               />
               {errors.subject && <p className="mt-1 text-xs text-theme-accentSoft">{errors.subject}</p>}
             </div>
@@ -254,7 +263,7 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Share description..."
-                className="w-full px-3 py-2 bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:outline-none resize-y"
+                className="w-full px-3 py-2 rounded-[5px] bg-theme-surfaceInput border border-theme-border text-sm text-theme-text placeholder:text-theme-textFaint focus:border-theme-accent focus:ring-2 focus:ring-theme-accent/20 focus:outline-none transition-all duration-150 resize-y"
               />
               {errors.message && <p className="mt-1 text-xs text-theme-accentSoft">{errors.message}</p>}
             </div>
@@ -271,27 +280,28 @@ export function ContactSection({ onCopyEmail, copiedEmail }: ContactSectionProps
                 )}`}
                 variant="ghost"
                 size="sm"
+                className="group/btn"
               >
                 <span>Direct Mail</span>
-                <ExternalLink className="w-3.5 h-3.5" />
+                <ExternalLink className="w-3.5 h-3.5 transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
               </ActionLink>
             </div>
 
             {status === 'success' && (
-              <div className="flex items-center gap-2 p-3 bg-theme-surfaceTint border border-theme-accent text-xs text-theme-accentSoft">
+              <div className="flex items-center gap-2 p-3 rounded-[5px] bg-theme-surfaceTint border border-theme-accent text-xs text-theme-accentSoft">
                 <CheckCircle2 className="w-4 h-4 shrink-0 text-theme-accent" />
                 <span>{statusMessage}</span>
               </div>
             )}
 
             {status === 'error' && (
-              <div className="flex items-center gap-2 p-3 bg-theme-surfaceTint border border-theme-accent/60 text-xs text-theme-textSecondary">
+              <div className="flex items-center gap-2 p-3 rounded-[5px] bg-theme-surfaceTint border border-theme-accent/60 text-xs text-theme-textSecondary">
                 <AlertCircle className="w-4 h-4 shrink-0 text-theme-accent" />
                 <span>{statusMessage}</span>
               </div>
             )}
           </form>
-        </div>
+        </SpotlightCard>
       </div>
     </div>
   );

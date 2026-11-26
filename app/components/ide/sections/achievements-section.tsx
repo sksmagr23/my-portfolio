@@ -12,6 +12,7 @@ import {
 import { LeetCodeIcon, CodeChefIcon, GitHubIcon } from '../icons';
 import { ActionLink } from '../button';
 import { useTheme } from '../theme-context';
+import { SpotlightCard, SpotlightLinkCard } from '../spotlight-card';
 
 export function AchievementsSection() {
   const { theme } = useTheme();
@@ -50,87 +51,93 @@ export function AchievementsSection() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a
+          <SpotlightLinkCard
             href={codingProfiles.leetcode.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-theme-card border border-theme-border hover:border-theme-accent p-5 space-y-3.5 transition-colors group"
+            index={0}
+            className="p-5"
           >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <span className="w-10 h-10 bg-theme-surfaceTint border border-theme-accent/45 text-theme-accent flex items-center justify-center">
-                  <LeetCodeIcon className="w-4 h-4" />
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-theme-text group-hover:text-theme-accent transition-colors">
-                    LeetCode · {lcBadge}
-                  </h3>
-                  <div className="text-xs text-theme-textDim">@{codingProfiles.leetcode.username}</div>
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-[6px] bg-theme-surfaceTint border border-theme-accent/45 text-theme-accent flex items-center justify-center transition-all duration-200 group-hover/card:border-theme-accent group-hover/card:shadow-[0_0_14px_rgb(var(--theme-accent)/0.22)]">
+                    <LeetCodeIcon className="w-4 h-4" />
+                  </span>
+                  <div>
+                    <h3 className="text-sm font-bold text-theme-text group-hover/card:text-theme-accent transition-colors">
+                      LeetCode · {lcBadge}
+                    </h3>
+                    <div className="text-xs text-theme-textDim">@{codingProfiles.leetcode.username}</div>
+                  </div>
                 </div>
+                <ExternalLink className="w-4 h-4 text-theme-textDim transition-all duration-200 group-hover/card:text-theme-accent group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5" />
               </div>
-              <ExternalLink className="w-4 h-4 text-theme-textDim group-hover:text-theme-accent" />
-            </div>
 
-            <div className="flex items-baseline gap-3">
-              <span className="text-2xl font-bold text-theme-accent">{lcRating}</span>
-              <span className="text-xs text-theme-textMuted">
-                Contest Rating · Top {lcTop}% Global
-              </span>
-            </div>
-
-            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-theme-borderSubtle">
-              {codingProfiles.leetcode.badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="px-2 py-0.5 bg-theme-surfaceChip border border-theme-border text-[11.5px] text-theme-accentSoft"
-                >
-                  {badge}
+              <div className="flex items-baseline gap-3">
+                <span className="text-2xl font-bold text-theme-accent">{lcRating}</span>
+                <span className="text-xs text-theme-textMuted">
+                  Contest Rating · Top {lcTop}% Global
                 </span>
-              ))}
-            </div>
-          </a>
+              </div>
 
-          <a
+              <div className="flex flex-wrap gap-1.5 pt-2.5 border-t border-theme-borderSubtle">
+                {codingProfiles.leetcode.badges.map((badge) => (
+                  <span
+                    key={badge}
+                    className="tech-pill px-2 py-0.5 rounded-[4px] bg-theme-surfaceChip border border-theme-border text-[11.5px] text-theme-accentSoft"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </SpotlightLinkCard>
+
+          <SpotlightLinkCard
             href={codingProfiles.codechef.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-theme-card border border-theme-border hover:border-theme-accent p-5 space-y-3.5 transition-colors group"
+            index={1}
+            className="p-5"
           >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <span className="w-10 h-10 bg-theme-surfaceTint border border-theme-accent/45 text-theme-accent flex items-center justify-center">
-                  <CodeChefIcon className="w-4 h-4" />
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-theme-text group-hover:text-theme-accent transition-colors">
-                    CodeChef · {codingProfiles.codechef.stars}
-                  </h3>
-                  <div className="text-xs text-theme-textDim">@{codingProfiles.codechef.username}</div>
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-[6px] bg-theme-surfaceTint border border-theme-accent/45 text-theme-accent flex items-center justify-center transition-all duration-200 group-hover/card:border-theme-accent group-hover/card:shadow-[0_0_14px_rgb(var(--theme-accent)/0.22)]">
+                    <CodeChefIcon className="w-4 h-4" />
+                  </span>
+                  <div>
+                    <h3 className="text-sm font-bold text-theme-text group-hover/card:text-theme-accent transition-colors">
+                      CodeChef · {codingProfiles.codechef.stars}
+                    </h3>
+                    <div className="text-xs text-theme-textDim">@{codingProfiles.codechef.username}</div>
+                  </div>
                 </div>
+                <ExternalLink className="w-4 h-4 text-theme-textDim transition-all duration-200 group-hover/card:text-theme-accent group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5" />
               </div>
-              <ExternalLink className="w-4 h-4 text-theme-textDim group-hover:text-theme-accent" />
-            </div>
 
-            <div className="flex items-baseline gap-3">
-              <span className="text-2xl font-bold text-theme-accent">
-                {codingProfiles.codechef.rating}
-              </span>
-              <span className="text-xs text-theme-textMuted">
-                Contest Rating · DSA Rating {codingProfiles.codechef.dsaRating}
-              </span>
-            </div>
-
-            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-theme-borderSubtle">
-              {codingProfiles.codechef.badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="px-2 py-0.5 bg-theme-surfaceChip border border-theme-border text-[11.5px] text-theme-accentSoft"
-                >
-                  {badge}
+              <div className="flex items-baseline gap-3">
+                <span className="text-2xl font-bold text-theme-accent">
+                  {codingProfiles.codechef.rating}
                 </span>
-              ))}
+                <span className="text-xs text-theme-textMuted">
+                  Contest Rating · DSA Rating {codingProfiles.codechef.dsaRating}
+                </span>
+              </div>
+
+              <div className="flex flex-wrap gap-1.5 pt-2.5 border-t border-theme-borderSubtle">
+                {codingProfiles.codechef.badges.map((badge) => (
+                  <span
+                    key={badge}
+                    className="tech-pill px-2 py-0.5 rounded-[4px] bg-theme-surfaceChip border border-theme-border text-[11.5px] text-theme-accentSoft"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
             </div>
-          </a>
+          </SpotlightLinkCard>
         </div>
       </section>
 
@@ -142,46 +149,53 @@ export function AchievementsSection() {
               <span className="text-theme-accent">#</span>
               <span>{category}</span>
             </h3>
-            <div className="bg-theme-card border border-theme-border divide-y divide-theme-borderSubtle">
-              {items.map((item) => (
-                <article
+            <div className="space-y-3">
+              {items.map((item, idx) => (
+                <SpotlightCard
                   key={item.id}
-                  className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-start justify-between gap-3"
+                  as="article"
+                  interactive
+                  index={idx + 2}
+                  className="p-4 sm:p-5"
                 >
-                  <div className="flex items-start gap-3.5 min-w-0">
-                    <span className="w-9 h-9 bg-theme-surfaceTint border border-theme-accent/40 text-theme-accent flex items-center justify-center shrink-0">
-                      <Award className="w-4 h-4" />
-                    </span>
-                    <div className="min-w-0 space-y-1">
-                      <h4 className="text-[15px] font-bold text-theme-text leading-snug">
-                        {item.title}
-                      </h4>
-                      <div className="text-xs text-theme-textDim">{item.organization}</div>
-                      <p className="text-[13.5px] text-theme-textMuted leading-relaxed">
-                        {item.description}
-                      </p>
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+                    <div className="flex items-start gap-3.5 min-w-0">
+                      <span className="w-9 h-9 rounded-[6px] bg-theme-surfaceTint border border-theme-accent/40 text-theme-accent flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:border-theme-accent group-hover/card:shadow-[0_0_12px_rgb(var(--theme-accent)/0.2)]">
+                        <Award className="w-4 h-4" />
+                      </span>
+                      <div className="min-w-0 space-y-1">
+                        <h4 className="text-[15px] font-bold text-theme-text group-hover/card:text-theme-accentBright transition-colors leading-snug">
+                          {item.title}
+                        </h4>
+                        <div className="text-xs text-theme-textDim">{item.organization}</div>
+                        {item.description && (
+                          <p className="text-[13.5px] text-theme-textMuted leading-relaxed">
+                            {item.description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="flex sm:flex-col items-end justify-between gap-2 shrink-0">
+                      <span className="px-2.5 py-1 rounded-[4px] bg-theme-surfaceTint border border-theme-accent/45 text-[10px] font-bold uppercase tracking-wider text-theme-accentSoft">
+                        {item.highlight}
+                      </span>
+                      {item.link && (
+                        <ActionLink href={item.link} external variant="ghost" size="sm" className="!px-1.5 group/btn">
+                          <span>View</span>
+                          <ExternalLink className="w-3 h-3 transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                        </ActionLink>
+                      )}
                     </div>
                   </div>
-
-                  <div className="flex sm:flex-col items-end justify-between gap-2 shrink-0">
-                    <span className="px-2.5 py-1 bg-theme-surfaceTint border border-theme-accent/45 text-[10px] font-bold uppercase tracking-wider text-theme-accentSoft">
-                      {item.highlight}
-                    </span>
-                    {item.link && (
-                      <ActionLink href={item.link} external variant="ghost" size="sm" className="!px-1">
-                        <span>View</span>
-                        <ExternalLink className="w-3 h-3" />
-                      </ActionLink>
-                    )}
-                  </div>
-                </article>
+                </SpotlightCard>
               ))}
             </div>
           </section>
         );
       })}
 
-      <section className="bg-theme-card border border-theme-border">
+      <SpotlightCard as="section" interactive={false} index={6}>
         <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 border-b border-theme-borderSubtle">
           <h3 className="text-xs font-bold text-theme-accent flex items-center gap-2">
             <span className="text-theme-accent">#</span>
@@ -207,7 +221,7 @@ export function AchievementsSection() {
             style={{ color: isGreen ? '#86AB95' : '#94A3B8' }}
           />
         </div>
-      </section>
+      </SpotlightCard>
     </div>
   );
 }

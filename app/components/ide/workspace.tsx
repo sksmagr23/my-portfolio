@@ -234,8 +234,10 @@ export function IDEWorkspace() {
                   }`}
                 >
                   {isActive && (
-                    <span
-                      className="absolute top-0 left-0 right-0 h-[2px] bg-theme-accent"
+                    <motion.span
+                      layoutId="ide-active-tab-bar"
+                      transition={{ type: 'spring', stiffness: 460, damping: 34 }}
+                      className="absolute top-0 left-0 right-0 h-[2px] bg-theme-accent shadow-[0_0_8px_rgb(var(--theme-accent)/0.6)]"
                       aria-hidden="true"
                     />
                   )}

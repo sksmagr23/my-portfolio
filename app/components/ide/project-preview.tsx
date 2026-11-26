@@ -16,31 +16,29 @@ export function ProjectPreview({ project, onExpandImage, large = false }: Projec
     return null;
   }
 
-  const heightClass = large ? 'h-[55vh] max-h-[520px]' : 'h-44 sm:h-48';
+  const heightClass = large ? 'h-[55vh] max-h-[520px]' : 'h-48 sm:h-72';
 
   return (
     <div
-      className={`relative w-full ${heightClass} bg-theme-surfaceInput overflow-hidden group`}
+      className={`relative w-full ${heightClass} border-theme-borderSubtle/20 bg-theme-surfaceInput overflow-hidden group/preview shadow-[0_2px_10px_rgba(0,0,0,0.3)]`}
     >
       <Image
         src={project.image}
         alt={`${project.name} preview`}
         fill
         sizes={large ? '(max-width: 1024px) 95vw, 900px' : '(max-width: 1280px) 100vw, 50vw'}
-        className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+        className={`object-cover object-top transition-transform duration-500 ease-out ${
+          large ? '' : 'group-hover/card:scale-[1.03] group-hover/preview:scale-[1.03]'
+        }`}
       />
 
-      {!large && onExpandImage && (
-        <button
-          type="button"
-          onClick={() => onExpandImage(project)}
-          aria-label={`Preview ${project.name}`}
-          className="absolute bottom-2 right-2 inline-flex items-center gap-1 px-2 py-1 bg-theme-surface2/90 border border-theme-borderStrong text-[10px] font-semibold uppercase tracking-wider text-theme-textSecondary hover:border-theme-accent hover:text-theme-accent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 transition-opacity"
-        >
-          <Maximize2 className="w-3 h-3" />
-          <span>Zoom</span>
-        </button>
+      {!large && (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-60 group-hover/card:opacity-85 transition-opacity duration-300"
+        />
       )}
+
     </div>
   );
 }

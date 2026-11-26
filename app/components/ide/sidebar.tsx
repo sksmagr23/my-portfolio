@@ -38,7 +38,7 @@ export function Sidebar({
     >
       <section className="ide-panel border-t-[3px] border-t-theme-accent p-4 space-y-3.5">
         <div className="flex items-start gap-3.5">
-          <div className="relative w-16 h-16 overflow-hidden border-2 border-theme-accent bg-[#DCE4F0] shrink-0">
+          <div className="relative w-16 h-16 rounded-[6px] overflow-hidden border-2 border-theme-accent bg-[#DCE4F0] shrink-0 shadow-[0_0_14px_rgb(var(--theme-accent)/0.22)]">
             <Image
               src={personalInfo.avatar}
               alt={personalInfo.name}
@@ -70,7 +70,10 @@ export function Sidebar({
 
       <section className="ide-panel p-4 space-y-2.5">
         <div className="flex items-center gap-2">
-          <span className="text-theme-accent">$</span>
+          <span className="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-theme-accent opacity-70" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-theme-accent" />
+          </span>
           <span className="text-xs font-bold uppercase tracking-[0.08em] text-theme-accent">
             {personalInfo.availability.status}
           </span>
@@ -101,10 +104,10 @@ export function Sidebar({
               onCloseMobile?.();
               onOpenSkills();
             }}
-            className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-theme-accentSoft hover:text-theme-accent transition-colors"
+            className="group/more inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-theme-accentSoft hover:text-theme-accent transition-colors"
           >
             <span>View More</span>
-            <ArrowUpRight className="w-3 h-3" />
+            <ArrowUpRight className="w-3 h-3 transition-transform duration-200 group-hover/more:translate-x-0.5 group-hover/more:-translate-y-0.5" />
           </button>
         </div>
 
@@ -112,7 +115,7 @@ export function Sidebar({
           {personalInfo.sidebarCoreSkills.map((skill) => (
             <span
               key={skill}
-              className="px-2 py-1 bg-theme-surface border border-theme-border text-[12px] text-theme-textSecondary"
+              className="tech-pill px-2 py-1 rounded-[4px] bg-theme-surface border border-theme-border text-[12px] text-theme-textSecondary"
             >
               {skill}
             </span>
@@ -135,7 +138,7 @@ export function Sidebar({
               rel={item.id === 'email' ? undefined : 'noopener noreferrer'}
               title={item.name}
               aria-label={item.name}
-              className="h-9 flex items-center justify-center bg-theme-surfaceSubtle border border-theme-borderPanel text-theme-textMuted hover:border-theme-accent hover:text-theme-accent transition-colors"
+              className="h-9 rounded-[5px] flex items-center justify-center bg-theme-surfaceSubtle border border-theme-borderPanel text-theme-textMuted hover:border-theme-accent hover:text-theme-accent hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgb(var(--theme-accent)/0.18)] transition-all duration-200"
             >
               <PlatformIcon id={item.id} className="w-4 h-4" />
             </a>
