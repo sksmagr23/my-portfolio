@@ -204,7 +204,6 @@ export const skillCategories: SkillCategory[] = [
       'Docker',
       'Linux',
       'Git',
-      'GitHub Actions',
     ],
   },
   {
@@ -214,7 +213,6 @@ export const skillCategories: SkillCategory[] = [
       'Google ADK',
       'LangGraph',
       'Agentic AI',
-      'LLM Integration',
       'Prompting',
       'Pydantic',
       'Structured Data',
@@ -251,7 +249,7 @@ export const projectsData: ProjectItem[] = [
     shortDescription:
       'An AI-powered DSA mentorship platform that helps developers understand algorithms, debug code, and improve problem-solving through conversational & visual AI',
     featured: true,
-    techStack: ['TS', 'React', 'FastAPI', 'Google ADK', 'Gemini', 'MongoDB'],
+    techStack: ['React', 'FastAPI', 'Google ADK', 'Gemini', 'MongoDB'],
     description: [
       'Built an AI agent using Google ADK and Gemini for contextual DSA mentorship and code analysis',
       'Implemented automated bug detection, counterexample generation, and optimal solution comparisons',
@@ -317,7 +315,7 @@ export const projectsData: ProjectItem[] = [
     name: 'Flood Detection using U-Net',
     shortDescription:
       'Sentinel-1 SAR satellite imagery segmentation pipeline identifying flood regions through cloud cover.',
-    techStack: ['Python', 'TensorFlow', 'Keras', 'NumPy', 'U-Net'],
+    techStack: ['Python', 'TensorFlow', 'NumPy', 'U-Net'],
     description: [
       'Processes all-weather Sentinel-1 SAR imagery using dual VV and VH polarization channels from ETCI-2021.',
       'Trained a TensorFlow/Keras U-Net semantic segmentation model for pixel-level binary flood mask generation.',

@@ -69,7 +69,7 @@ export function ExperienceSection() {
                     {item.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="tech-pill px-2 py-0.5 rounded-[4px] bg-theme-surfaceChip border border-theme-border text-[11.5px] text-theme-textMuted"
+                        className="tech-pill px-2 py-0.5 rounded-[4px] border border-theme-border text-[11.5px] text-theme-textMuted"
                       >
                         {tech}
                       </span>

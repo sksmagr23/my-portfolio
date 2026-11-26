@@ -2,11 +2,12 @@
 
 import React, { useState, useSyncExternalStore } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Tag, X, PlayCircle, ChevronRight } from 'lucide-react';
+import { ExternalLink, X, PlayCircle, ChevronRight } from 'lucide-react';
 import { projectsData, type ProjectItem } from '@/app/data/portfolio';
 import { ProjectPreview } from '../project-preview';
 import { ActionButton, ActionLink } from '../button';
 import { SpotlightCard } from '../spotlight-card';
+import { SkillMiniIcon } from '../icons';
 
 const XL_MEDIA_QUERY = '(min-width: 1280px)';
 
@@ -102,9 +103,9 @@ export function ProjectCard({
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="tech-pill inline-flex items-center gap-1 px-2 py-0.5 rounded-[4px] bg-theme-surfaceChip border border-theme-border text-[12px] text-theme-textMuted"
+                className="tech-pill inline-flex items-center gap-1.5 px-2 py-0.5 rounded-[4px] border border-theme-border text-[12px] text-theme-textMuted"
               >
-                <Tag className="w-2.5 h-2.5 text-theme-accent/75" />
+                <SkillMiniIcon name={tech} className="w-3.5 h-3.5" />
                 <span>{tech}</span>
               </span>
             ))}

@@ -1,22 +1,14 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Mail,
   Code2,
   Database,
   Cpu,
-  Globe,
   Wrench,
   Layers,
   Server,
-  Sparkles,
-  Box,
-  GitBranch,
-  Flame,
-  ShieldCheck,
-  Palette,
-  Braces,
 } from 'lucide-react';
 
 export function GitHubIcon({ className = 'w-4 h-4' }: { className?: string }) {
@@ -51,7 +43,6 @@ export function InstagramIcon({ className = 'w-4 h-4' }: { className?: string })
   );
 }
 
-
 export function CodeChefIcon({ className = 'w-4 h-4' }: { className?: string }) {
   return (
     <svg
@@ -81,7 +72,6 @@ export function CodeChefIcon({ className = 'w-4 h-4' }: { className?: string }) 
     </svg>
   );
 }
-
 
 export function PlatformIcon({ id, className = 'w-4 h-4' }: { id: string; className?: string }) {
   switch (id) {
@@ -119,43 +109,176 @@ export function CategoryIcon({ id, className = 'w-4 h-4' }: { id: string; classN
   }
 }
 
-export function SkillMiniIcon({ name, className = 'w-3.5 h-3.5' }: { name: string; className?: string }) {
-  const key = name.toLowerCase();
-  if (key.includes('git')) return <GitBranch className={className} />;
-  if (key.includes('docker') || key.includes('kafka')) return <Box className={className} />;
-  if (
-    key.includes('mongo') ||
-    key.includes('postgres') ||
-    key.includes('redis') ||
-    key.includes('sql') ||
-    key.includes('prisma') ||
-    key.includes('supabase')
-  ) {
-    return <Database className={className} />;
+/**
+ * Verified official brand icons & favicons stored locally in /public/icons/skills/
+ */
+const LOCAL_SKILL_ICONS: Record<string, string> = {
+  // Languages
+  'c++': '/icons/skills/cplusplus.svg',
+  cpp: '/icons/skills/cplusplus.svg',
+  javascript: '/icons/skills/javascript.svg',
+  js: '/icons/skills/javascript.svg',
+  typescript: '/icons/skills/typescript.svg',
+  ts: '/icons/skills/typescript.svg',
+  python: '/icons/skills/python.svg',
+  go: '/icons/skills/go.svg',
+  golang: '/icons/skills/go.svg',
+  sql: '/icons/skills/sql.svg',
+
+  // Frontend
+  react: '/icons/skills/react.svg',
+  'react.js': '/icons/skills/react.svg',
+  reactjs: '/icons/skills/react.svg',
+  'next.js': '/icons/skills/nextjs.svg',
+  nextjs: '/icons/skills/nextjs.svg',
+  vite: '/icons/skills/vite.svg',
+  html: '/icons/skills/html5.svg',
+  html5: '/icons/skills/html5.svg',
+  css: '/icons/skills/css3.svg',
+  css3: '/icons/skills/css3.svg',
+  'tailwind css': '/icons/skills/tailwindcss.svg',
+  tailwindcss: '/icons/skills/tailwindcss.svg',
+  tailwind: '/icons/skills/tailwindcss.svg',
+  astro: '/icons/skills/astro.svg',
+  ejs: '/icons/skills/ejs.svg',
+
+  // Backend
+  'node.js': '/icons/skills/nodejs.svg',
+  nodejs: '/icons/skills/nodejs.svg',
+  node: '/icons/skills/nodejs.svg',
+  'express.js': '/icons/skills/express.svg',
+  expressjs: '/icons/skills/express.svg',
+  express: '/icons/skills/express.svg',
+  gofr: '/icons/skills/gofr.png',
+  django: '/icons/skills/django.svg',
+  fastapi: '/icons/skills/fastapi.svg',
+  'rest apis': '/icons/skills/restapi.svg',
+  'rest api': '/icons/skills/restapi.svg',
+  swagger: '/icons/skills/swagger.svg',
+  jwt: '/icons/skills/jwt.png',
+
+  // Databases & Infra
+  mongodb: '/icons/skills/mongodb.svg',
+  postgresql: '/icons/skills/postgresql.svg',
+  postgres: '/icons/skills/postgresql.svg',
+  redis: '/icons/skills/redis.svg',
+  firebase: '/icons/skills/firebase.svg',
+  docker: '/icons/skills/docker.svg',
+  linux: '/icons/skills/linux.svg',
+  git: '/icons/skills/git.svg',
+  'github actions': '/icons/skills/githubactions.svg',
+
+  // AI, ML & Data
+  'google adk': '/icons/skills/google-adk.png',
+  adk: '/icons/skills/google-adk.png',
+  langgraph: '/icons/skills/langgraph.svg',
+  langchain: '/icons/skills/langgraph.svg',
+  pydantic: '/icons/skills/pydantic.svg',
+  'agentic ai': '/icons/skills/agentic-ai.svg',
+  prompting: '/icons/skills/prompting.svg',
+  'structured data': '/icons/skills/structured-data.svg',
+  gemini: '/icons/skills/gemini.svg',
+  xgboost: '/icons/skills/xgboost.png',
+  'scikit-learn': '/icons/skills/scikitlearn.svg',
+  scikitlearn: '/icons/skills/scikitlearn.svg',
+  cv: '/icons/skills/opencv.svg',
+  opencv: '/icons/skills/opencv.svg',
+  tensorflow: '/icons/skills/tensorflow.svg',
+  keras: '/icons/skills/keras.svg',
+  'u-net': '/icons/skills/keras.svg',
+  numpy: '/icons/skills/numpy.svg',
+  mapbox: '/icons/skills/mapbox.svg',
+
+  // Tools & Platforms
+  'vs code': '/icons/skills/vscode.svg',
+  vscode: '/icons/skills/vscode.svg',
+  antigravity: '/icons/skills/antigravity.png',
+  cursor: '/icons/skills/cursor.png',
+  postman: '/icons/skills/postman.svg',
+  github: '/icons/skills/github.svg',
+  chatgpt: '/icons/skills/chatgpt.svg',
+  openai: '/icons/skills/chatgpt.svg',
+  'zoho crm': '/icons/skills/zoho.png',
+  zoho: '/icons/skills/zoho.png',
+};
+
+/**
+ * Domain map for automatic Google Favicon lookup when new tech items are added
+ */
+const FAVICON_DOMAINS: Record<string, string> = {
+  supabase: 'supabase.com',
+  prisma: 'prisma.io',
+  graphql: 'graphql.org',
+  rust: 'rust-lang.org',
+  kubernetes: 'kubernetes.io',
+  aws: 'aws.amazon.com',
+  gcp: 'cloud.google.com',
+  azure: 'azure.microsoft.com',
+  vercel: 'vercel.com',
+  cloudflare: 'cloudflare.com',
+  kafka: 'kafka.apache.org',
+  pytorch: 'pytorch.org',
+  anthropic: 'anthropic.com',
+  claude: 'claude.ai',
+  groq: 'groq.com',
+  streamlit: 'streamlit.io',
+  pinecone: 'pinecone.io',
+  qdrant: 'qdrant.tech',
+};
+
+function getSkillIconCandidates(name: string): string[] {
+  const normalized = name.trim().toLowerCase();
+  const candidates: string[] = [];
+
+  if (LOCAL_SKILL_ICONS[normalized]) {
+    candidates.push(LOCAL_SKILL_ICONS[normalized]);
   }
-  if (key.includes('firebase')) return <Flame className={className} />;
-  if (
-    key.includes('ai') ||
-    key.includes('llm') ||
-    key.includes('adk') ||
-    key.includes('langgraph') ||
-    key.includes('tensor') ||
-    key.includes('keras') ||
-    key.includes('xgb') ||
-    key.includes('gru') ||
-    key.includes('u-net') ||
-    key.includes('scikit')
-  ) {
-    return <Sparkles className={className} />;
+
+  if (FAVICON_DOMAINS[normalized]) {
+    candidates.push(`https://www.google.com/s2/favicons?domain=${FAVICON_DOMAINS[normalized]}&sz=64`);
   }
-  if (key.includes('tailwind') || key.includes('css') || key.includes('figma') || key.includes('ant')) {
-    return <Palette className={className} />;
+
+  const slug = normalized.replace(/[^a-z0-9]/g, '');
+  if (slug) {
+    candidates.push(`https://cdn.simpleicons.org/${slug}`);
+    candidates.push(`https://www.google.com/s2/favicons?domain=${slug}.com&sz=64`);
   }
-  if (key.includes('api') || key.includes('socket') || key.includes('next') || key.includes('html')) {
-    return <Globe className={className} />;
+
+  return candidates;
+}
+
+export function SkillMiniIcon({
+  name,
+  className = 'w-3.5 h-3.5',
+}: {
+  name: string;
+  className?: string;
+}) {
+  const candidates = getSkillIconCandidates(name);
+  const [candidateIdx, setCandidateIdx] = useState(0);
+
+  const src = candidates[candidateIdx];
+
+  if (!src) {
+    return (
+      <span
+        aria-hidden="true"
+        className={`${className} inline-flex items-center justify-center rounded-[2px] bg-theme-surfaceTint text-[8px] font-bold uppercase text-theme-accent shrink-0`}
+      >
+        {name.trim().charAt(0) || '•'}
+      </span>
+    );
   }
-  if (key.includes('linux') || key.includes('action')) {
-    return <ShieldCheck className={className} />;
-  }
-  return <Braces className={className} />;
+
+  return (
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      onError={() => setCandidateIdx((prev) => prev + 1)}
+      className={`${className} object-contain shrink-0 select-none`}
+    />
+  );
 }

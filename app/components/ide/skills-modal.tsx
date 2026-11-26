@@ -83,11 +83,9 @@ export function SkillsModal({ open, onClose }: SkillsModalProps) {
                       {category.skills.map((skill) => (
                         <span
                           key={`${category.id}-${skill}`}
-                          className="tech-pill inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-theme-surfaceChip border border-theme-borderPanel text-xs text-theme-textSecondary"
+                          className="tech-pill inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] border border-theme-borderPanel text-xs text-theme-textSecondary"
                         >
-                          <span className="text-theme-accent">
-                            <SkillMiniIcon name={skill} className="w-3 h-3" />
-                          </span>
+                          <SkillMiniIcon name={skill} className="w-3.5 h-3.5" />
                           <span>{skill}</span>
                         </span>
                       ))}
